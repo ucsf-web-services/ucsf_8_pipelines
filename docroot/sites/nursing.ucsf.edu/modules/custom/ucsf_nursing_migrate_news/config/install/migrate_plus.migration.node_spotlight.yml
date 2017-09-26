@@ -1,0 +1,47 @@
+langcode: en
+status: true
+id: node_spotlight
+dependencies:
+  module:
+    - ucsf_nursing_migrate_news
+  enforced:
+    module:
+      - ucsf_nursing_migrate_news
+migration_group: spotlight
+label: 'Node spotlight'
+source:
+  plugin: csv
+  path: 'public://import_csv/spotlight_node_list.csv'
+  header_row_count: 1
+  keys:
+    - fpid
+  constants:
+    uid: 1
+process:
+  nid: fpid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: constants/uid
+  created: created
+  changed: changed
+  field_spotlight_images:
+    -
+      plugin: gallery_import
+      source: fpid
+    -
+      plugin: iterator
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+destination:
+  plugin: entity:node
+  default_bundle: spotlight
+# migration_dependencies:
+#   required:
+#     - d6_file
+    # - ya_user

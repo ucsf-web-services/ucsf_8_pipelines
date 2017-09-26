@@ -1,0 +1,22 @@
+name: nursing
+type: theme
+description: School of Nursing Theme
+package: Other
+core: 8.x
+libraries:
+  - nursing/global-styling
+  - nursing/font-awesome
+  - nursing/slick
+
+base theme: classy
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
+regions:
+  header_top: Header Top
+  header: Header
+  header_bottom: Header Bottom
+  content_top: Content Top
+  content: Content
+  content_bottom: Content Bottom
+  sidebar: Sidebar
+  footer: Footer

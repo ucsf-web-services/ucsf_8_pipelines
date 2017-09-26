@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Contains nursing_tweaks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+/**
+ * Implements hook_help().
+ */
+function nursing_tweaks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nursing_tweaks module.
+    case 'help.page.nursing_tweaks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('UCSF School of Nursing Tweaks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function nursing_tweaks_theme() {
+  return [
+    'nursing_tweaks' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function nursing_tweaks_entity_base_field_info(EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === 'menu_link_content') {
+    $fields['hero_images'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Hero Images'))
+      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
+      ->setDisplayOptions('view', [
+        'label'   => 'above',
+        'type'    => 'image',
+        'weight'  => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type'    => 'image_image',
+        'weight'  => 0,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    return $fields;
+  }
+}

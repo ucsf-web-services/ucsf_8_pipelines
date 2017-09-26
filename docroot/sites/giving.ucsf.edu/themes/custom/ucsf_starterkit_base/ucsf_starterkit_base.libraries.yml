@@ -1,0 +1,31 @@
+global-css:
+  css:
+    theme:
+      bower_components/slick-carousel/slick/slick.css: {}
+      css/style.css: {}
+global-js:
+  js:
+    bower_components/parallax.js/parallax.min.js: {}
+    bower_components/slick-carousel/slick/slick.min.js: {}
+    bower_components/masonry/dist/masonry.pkgd.min.js: {}
+    bower_components/imagesloaded/imagesloaded.pkgd.min.js: {}
+    scripts/search-form-functions.js: {}
+    scripts/mobile-search-functions.js: {}
+    scripts/mobile-nav-functions.js: {}
+    scripts/nav-behavior.js: {}
+    scripts/ways-to-give-functions.js: {}
+    scripts/article-carousel-functions.js: {}
+    scripts/sliders.js: {}
+    scripts/social-icons-behavior-functions.js: {}
+    scripts/related-articles-large-functions.js: {}
+    scripts/accordion-functions.js: {}
+    scripts/hero-functions.js: {}
+    scripts/homepage-background-functions.js: {}
+    scripts/touch-events-mobile.js: {}
+    scripts/popup-toggle-functions.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

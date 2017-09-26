@@ -1,0 +1,46 @@
+{% extends "@organisms/00-global/header-style-1.twig" %}
+
+{% block upper_menu %}
+    {{ page.topmost_menu }}
+{% endblock %}
+
+{% block search_panel %}
+    {% if page.search %}
+        {{ page.search }}
+    {% endif %}
+{% endblock %}
+
+{% block mobile_search %}
+    {{ block('search_panel') }}
+{% endblock %}
+
+{% block branding %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+        <img class="nav-logo" src="{{ logo_box }}" alt="{{ site_name }}" />
+        <span class="nav-site-title">{{ site_slogan }}</span>
+    </a>
+{% endblock %}
+
+{% block main_navigation %}
+    {{ page.primary_menu }}
+{% endblock %}
+
+{% block mobile_navigation %}
+    {{ page.primary_menu }}
+{% endblock %}
+
+{% block give_button %}
+    <li>
+        <a class="btn btn--with-icon header-give-btn" href="{{ header_give_button }}">
+            Give <span class="fa fa-heart"></span>
+        </a>
+    </li>
+{% endblock %}
+
+{% block toggles %}
+    <ul class="nav-mobile-toggles">
+        <li><button class="mobile-search-form-toggle"><span class="visually-hidden">Search giving.ucsf.edu</span><span class="fa fa-search"></span></button></li>
+        <li><button class="mobile-menu-toggle"><span class="visually-hidden">Toggle Menu</span><span class="fa fa-bars"></span></button></li>
+    </ul>
+{% endblock %}
+

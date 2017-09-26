@@ -1,0 +1,24 @@
+{% set tags = [] %}
+{% set tag_item = {} %}
+
+{% for i in result.node.field_tags %}
+    {% set tag_item = {'tag_link' : '#'  , 'tag_label': i.entity.name.value } %}
+    {% set tags = tags|merge([tag_item]) %}
+{% endfor %}
+
+{% if result.node.type.target_id == "funds" %}
+    {% if result.node.field_no_detail_page.value == "1" %}
+        {% set url = result.node.field_giving_form_url.uri %}
+    {% else %}
+        {% set url = result.link %}
+    {% endif %}
+{% else %}
+    {% set url = result.link %}
+{% endif %}
+
+{% include '@molecules/02-blocks/25-search-result-item.twig' with {
+    "link" : url,
+    "label" : result.title,
+    "summary" : result.snippet['#markup'],
+    "tags" : tags
+} %}

@@ -1,0 +1,31 @@
+uuid: c9f14017-e716-4a0b-a63e-6b9f9ede3cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - nursing
+third_party_settings:
+  block_class:
+    classes: menu--header-top
+id: mainnavigation_3
+theme: nursing
+region: header
+weight: -10
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

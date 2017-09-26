@@ -1,0 +1,24 @@
+uuid: 42848450-5c31-40cb-9464-02799c21c0ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.spotlight
+_core:
+  default_config_hash: GvQrjFo4Mn7nLgQGN5DMTySsjkn604P9dRiNpeTIVHw
+id: node.spotlight.promote
+field_name: promote
+entity_type: node
+bundle: spotlight
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

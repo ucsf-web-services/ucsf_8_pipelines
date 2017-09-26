@@ -1,0 +1,140 @@
+$main-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$main-font--light: "HelveticaNeue-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-font: $main-font;
+$secondary-font: "Granjon", Garamond, serif;
+$font-awesome: "FontAwesome";
+
+$default--font-size: 14px;
+$default--line-height: 1.4;
+
+$font--extra--light: 200;
+$font--light: 300;
+$font--normal: 400;
+$font--bold: 600;
+
+$color--white: #FFF;
+$color--black: #000;
+$color--grey1: #D1D3D3;
+$color--grey2: #B4B9BF;
+
+
+// Primary Palette
+$color--navy: #052049;
+$color--teal: #058488;
+$color--green: #6EA400;
+$color--blue: #007CBE;
+$color--orange: #F26D04;
+$color--grey: $color--grey2;
+
+// Secondary Palette
+$color--purple: #716FB2;
+$color--pink: #EB093C;
+$color--yellow: #FFDD00;
+$color--grey: $color--grey2;
+
+$color--about: $color--teal;
+$color--academics: $color--green;
+$color--admissions: $color--orange;
+$color--research: $color--blue;
+$color--people: $color--navy;
+$color--news: $color--navy;
+
+
+// Tints
+/* Tints could be set with:
+  color: mix($color--navy, #FFF, 10%);
+  But the mix function seems slightly off
+  */
+$color--black--tint05: #3B3B3B;
+$color--black--tint1: #4D4D4D;
+$color--black--tint2: #999999;
+$color--black--tint3: #E5E5E5;
+
+$color--grey1--tint1: #DFE0E0;
+$color--grey1--tint2: #EDEDEE;
+$color--grey1--tint3: #FAFBFB;
+
+$color--grey2--tint1: #CBCED2;
+$color--grey2--tint2: #E1E3E6;
+$color--grey2--tint3: #F8F8F9;
+
+$color--grey--tint1: $color--grey2--tint1;
+
+$color--navy--tint1: #506380;
+$color--navy--tint2: #9BA6B6;
+$color--navy--tint3: #E6E9ED;
+
+$color--blue--tint1: #5DAFDB;
+$color--blue--tint2: #A2D1EA;
+$color--blue--tint3: #E8F4FA;
+
+$color--orange--tint1: #F7A665;
+$color--orange--tint2: #FBCCA7;
+$color--orange--tint3: #FEF2E9;
+
+$color--teal--tint1: #5DBFC5;
+$color--teal--tint2: #A3DADE;
+$color--teal--tint3: #E8F6F7;
+
+$color--green--tint1: #B1D16F;
+$color--green--tint2: #D3E4AD;
+$color--green--tint3: #F4F8EA;
+
+$color--purple--tint1: #9C9AC9;
+$color--purple--tint2: #C6C5E0;
+$color--purple--tint3: #F1F1F7;
+
+$color--pink--tint1: #F25D7F;
+$color--pink--tint2: #F7A3B6;
+$color--pink--tint3: #FDE8ED;
+
+$color--yellow--tint1: #FFE74D;
+$color--yellow--tint2: #FFF199;
+$color--yellow--tint3: #FFFCE6;
+
+
+$color--border: $color--grey2--tint2;
+$color--border--hover: $color--black--tint2;
+$color--border--active: $color--black--tint1;
+
+$color--text: $color--black;
+
+$color--link: $color--blue;
+$color--link--hover: #052049;
+
+$color--empty: #ABABAB;
+
+
+/* Better Breakpoints!*/
+
+$breakpoints: (phone: 320px, tablet: 768px, small_desktop: 1024px, desktop: 1320px);
+
+
+/* Deprecated Breakpoints */
+$width--xsmall  : 320px;
+$width--small   : 480px;
+$width--medium  : 769px;
+$width--medium--main--content  : 768px;
+$width--960  	: 960px;
+$width--large   : 1320px;
+$width--xlarge  : 1170px;
+
+$max-width: $width--large;
+$width--tablet: $width--medium;
+$width--desktop: $width--large;
+
+// Breakpoint variables are prefixed with "$bp--"
+// Mobile-first queries
+$bp--xsmall-up  : $width--xsmall;
+$bp--small-up   : $width--small;
+$bp--medium-up  : $width--medium;
+$bp--medium-up--main--content  : $width--medium--main--content;
+$bp--960-up  	: $width--960;
+$bp--large-up   : $width--large;
+$bp--xlarge-up  : $width--xlarge;
+
+
+// Mobile-last queries (USE SPARINGLY)
+$bp--small-down: max-width $width--medium - 1;
+$bp--medium-down: max-width $width--large - 1;
+$bp--960-down: max-width $width--960 - 1;

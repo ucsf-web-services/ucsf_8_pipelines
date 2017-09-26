@@ -1,0 +1,96 @@
+{% extends "@pages/_full-width-base-template.twig" %}
+
+{% block header %}
+    {% include directory ~ '/templates/includes/header.html.twig' with {
+        'logo' : '/' ~ directory ~ '/images/UCSF_logo_white_RGB.svg',
+        'logo_box' :  '/' ~ directory ~ '/images/UCSF_logobox_navy_RGB.svg',
+        'site_slogan' : site.slogan,
+        'site_name': site.name,
+        'header_give_button' : header_give_button,
+        'global_nav_header_link' : 'http://www.ucsf.edu/',
+        'footer':{
+          'copyright' : copyright_text
+        }
+    } %}
+{% endblock %}
+
+{% block content %}
+  <div class="contents--wrapper">
+    {% block top_section %}
+      {% if node.field_hero_image.value %}
+        {% set image = [{ 'background_image' : file_url(node.field_hero_image['0'].entity.uri.value) }] %}
+        {% include "@molecules/02-blocks/13-landing-hero.twig" with {
+          "backgrounds" : image,
+          "heading" : node.title.value,
+          "alignment" : "left",
+          "body" : node.field_headline.value,
+          "custom_class" : "basic-page--hero",
+        } %}
+      {% else %}
+        <div class="content-area">
+          <div class="column-wrapper">
+            <div class="column-large-8 column-medium-8 column-small-12 column-xsmall-12">
+                {% if node.field_page_name.value %}
+                  {% include "@molecules/01-text/00-section-header.twig" with {
+                      "title" : node.field_page_name.value
+                  } %}
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block middle_section %}
+      <div class="content-area page--content">
+        <div class="column-wrapper">
+            <div class="column-large-9 column-medium-8 column-small-12 column-xsmall-12">
+                <div class="column-wrapper">
+                  {% block left_section %}
+                    {% if node.field_intro_text.value %}
+                      <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12">
+                        <div class="title-and-content-group--wrapper">
+                          {% include "@molecules/01-text/01-section-intro.twig" with {
+                            "intro_text" : node.field_intro_text.value
+                          } %}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if page.content %}
+                      <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12">
+                          <div class="block--wysiwyg">
+                            {{ page.content }}
+                          </div>
+                      </div>
+                    {% endif %}
+                  {% endblock %}
+                </div>
+            </div>
+            <div class="column-large-3 column-medium-4 column-small-12 column-xsmall-12">
+                <div class="column-wrapper">
+                    {% block right_section %}
+                      {% if page.sidebar_right %}
+                          <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                              {{ page.sidebar_right }}
+                          </div>
+                      {% endif %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+      </div>
+    {% endblock %}
+
+    {% block bottom_section %}
+      {% if page.footer %}
+        {{ page.footer }}
+      {% endif %}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block footer %}
+    {% include directory ~ '/templates/includes/footer.html.twig' with {
+      'logo' : '/' ~ directory ~ '/images/UCSF_logobox_white.png'
+    } %}
+{% endblock %}

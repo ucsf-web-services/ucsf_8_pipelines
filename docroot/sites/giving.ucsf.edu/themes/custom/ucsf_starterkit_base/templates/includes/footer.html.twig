@@ -1,0 +1,73 @@
+{% extends "@organisms/00-global/footer.twig" %}
+
+{% block footer_logo %}
+    <img src="{{ logo }}" alt="UCSF" class="footer--logo" />
+{% endblock %}
+
+{% block left_section %}
+    {% if page.footer_left %}
+        {{ page.footer_left }}
+    {% endif %}
+{% endblock %}
+
+{% block center_section %}
+    {% if page.footer_center %}
+        {{ page.footer_center }}
+    {% endif %}
+{% endblock %}
+
+{% block right_section %}
+    {% if page.footer_right %}
+        {{ page.footer_right }}
+    {% endif %}
+    <div class="footer--column-content text-color--dark-gray">
+        {% block contact_section %}
+            {% if contact_number is not empty %}
+                <p>
+                    {{ contact_number }}<br />
+                    <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>
+                </p>
+            {% endif %}
+        {% endblock %}
+
+        {% block address_section %}
+            {% if address is not empty %}
+                <p>{{ address | raw}}</p>
+            {% endif %}
+        {% endblock %}
+        
+        {% block tax_id_number %}
+            {% if tax_id_number is not empty %}
+                <p>Tax ID# {{ tax_id_number }}</p>
+            {% endif %}
+        {% endblock %}
+    </div>
+    <div class="footer--social-links">
+        <div class="footer--social-link-item">
+            <a href="{{ facebook_url }}" target="_blank"><i class="fa fa-facebook-official"></i></a>
+        </div>
+        <div class="footer--social-link-item">
+            <a href="{{ twitter_url }}" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block copyright_text %}
+    <div class="footer--copyright-left footer--copyright-text xsmall--visible">
+        {{ copyright_text }}
+    </div>
+{% endblock %}
+
+{% block footer_links %}
+    {% if page.footer_bottom %}
+        {{ page.footer_bottom }}
+    {% endif %}
+{% endblock %}
+
+{% block copyright_text_mobile %}
+    <div class="footer--copyright-left footer--copyright-text xsmall--hidden">
+        {{ copyright_text }}
+    </div>
+{% endblock %}

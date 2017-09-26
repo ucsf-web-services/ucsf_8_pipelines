@@ -1,0 +1,8 @@
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    {% include '@molecules/02-blocks/22-questions-block.twig' with {
+        "heading" : content['#block_content'].field_block_heading.value,
+        "body" : content['#block_content'].body.value
+    }%}
+{% endblock %}

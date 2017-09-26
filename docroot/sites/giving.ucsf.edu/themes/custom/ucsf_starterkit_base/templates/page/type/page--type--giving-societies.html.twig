@@ -1,0 +1,30 @@
+{% extends directory ~ '/templates/page/type/page--type--stories.html.twig' %}
+
+{% block top_section %}
+  <div class="content-area">
+    <div class="column-wrapper">
+        {% if page.breadcrumb %}
+          <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+            {{ page.breadcrumb }}
+          </div>
+        {% endif %}
+        {% if node.title.value %}
+          <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+            {% include "@molecules/01-text/00-section-header.twig" with {
+              "title" : node.title.value
+            } %}
+          </div>
+        {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block left_section %}
+    {% if page.content %}
+        <div class="block--wysiwyg">
+            {{ page.content }}
+        </div>
+    {% endif %}
+{% endblock %}
+
+

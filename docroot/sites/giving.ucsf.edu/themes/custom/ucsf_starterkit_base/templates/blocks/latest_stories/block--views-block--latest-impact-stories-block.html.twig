@@ -1,0 +1,24 @@
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    {% embed "@organisms/01-content-blocks/06-impact-stories-grid.twig" %}
+        {% block label %}
+            <h3 class="text-align--center">{{ label }}</h3>
+        {% endblock %}
+
+        {% block items %}
+            {{ content }}
+        {% endblock %}
+
+        {% block more_links %}
+            {% set more_link = (content['#view'].query.displayHandler.default_display.options.link_url) ? content['#view'].query.displayHandler.default_display.options.link_url : '/stories'  %}
+
+            <a class="link link--with-icon" href="{{ more_link }}">SEE MORE IMPACT STORIES<span class="fa-stack link--icon">
+                    <i class="fa fa-circle fa-stack-2x icon--visible-hover icon--circle" aria-hidden="true"></i>
+                    <i class="fa fa-circle-thin fa-stack-2x icon--circle" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right fa-stack-1x icon--angle" aria-hidden="true"></i>
+                </span>
+            </a>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

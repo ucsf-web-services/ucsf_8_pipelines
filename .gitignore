@@ -1,0 +1,59 @@
+# Ignore configuration files that may contain sensitive information.
+/docroot/sites/*/*settings*.php
+
+# don't add Drupal core in the event that composer sticks it in as a dependency
+/docroot/core/
+
+# Ignore paths that contain generated content.
+/docroot/files/
+/docroot/sites/*/files
+/docroot/sites/*/private-files
+
+# Ignore default text files
+/docroot/CHANGELOG.txt
+/docroot/COPYRIGHT.txt
+/docroot/INSTALL*.txt
+/docroot/LICENSE.txt
+/docroot/MAINTAINERS.txt
+/docroot/UPGRADE.txt
+/docroot/README.txt
+
+Ignores MacOS files
+.DS_Store
+/**/.DS_Store
+
+Ignore the bin directory
+/docroot/bin/
+
+# Ignore the node modules folder
+node_modules
+/**/node_modules
+
+# Ignore Sass map files since they only work locally anyway
+*.css.map
+
+# Composer dependencies
+/docroot/vendor/
+
+# PhpUnit code coverage generated files
+/docroot/tests/coverage/
+
+# Ignore contrib modules, themes, and libraries
+/docroot/libraries/contrib/
+/docroot/modules/contrib/
+/docroot/themes/contrib/
+/docroot/themes/**/bower_components/
+/docroot/themes/**/.sass-cache
+
+
+# Ignore any .git folders that might come in via composer
+/**/.git
+
+# Behat local config
+/docroot/behat.yml
+
+# PhpUnit local config
+/docroot/phpunit.xml
+
+# log files
+/**/*.log

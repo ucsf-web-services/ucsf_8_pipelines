@@ -1,0 +1,26 @@
+uuid: fb7eff1a-116d-4e32-9aea-0f97e269ec81
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.storage.block_content.field_video
+  module:
+    - video_embed_field
+id: block_content.video_banner.field_video
+field_name: field_video
+entity_type: block_content
+bundle: video_banner
+label: 'Video Banner Autoplay'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    html_5: html_5
+    youtube: '0'
+    vimeo: '0'
+    youtube_playlist: '0'
+field_type: video_embed_field

@@ -1,0 +1,47 @@
+.layout-container,
+main {
+  clear: both;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+main {
+  max-width: $width--large;
+  margin: 0 auto;
+}
+body.no-sidebar {
+  .layout-content {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+body.sidebar {
+  .layout-sidebar {
+    @include media('>tablet') {
+      width: 25%;
+      clear: left;
+      float: left;
+    }
+  }
+  .layout-content {
+    @include media('>tablet') {
+      width: 70%;
+      clear: right;
+      float: right;
+      padding-right: 15px;
+    }
+  }
+}
+
+.layout-container > main {
+  position: relative;
+  background-color: $color--white;
+  padding: 25px 15px 0 15px;
+  min-height: 500px;
+  @include media('>tablet') {
+    padding: 50px 0;
+  }
+}

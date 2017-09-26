@@ -1,0 +1,14 @@
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    {% if content.field_block_heading['#items'].value is not empty %}
+        <div class="footer--column-title">
+            {{ content.field_block_heading['#items'].value }}
+        </div>
+    {% endif %}
+    {% if content.body['#items'].value is not empty %}
+        <div class="footer--column-content">
+            {{ content.body['#items'].value |raw }}
+        </div>
+    {% endif %}
+{% endblock %}

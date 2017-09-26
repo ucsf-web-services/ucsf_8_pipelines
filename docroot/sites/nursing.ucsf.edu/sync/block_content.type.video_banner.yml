@@ -1,0 +1,8 @@
+uuid: 06a8c1b2-26cb-4f08-b6e8-1123df3be7aa
+langcode: en
+status: true
+dependencies: {  }
+id: video_banner
+label: 'Video Banner'
+revision: 1
+description: ''

@@ -1,0 +1,28 @@
+uuid: 275ea189-b9fa-44e6-bb7d-3f2f26edf68a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.storage.block_content.field_link_play_video
+  module:
+    - link
+id: block_content.video_banner.field_link_play_video
+field_name: field_link_play_video
+entity_type: block_content
+bundle: video_banner
+label: 'Link Play Video'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: 'Play Video'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

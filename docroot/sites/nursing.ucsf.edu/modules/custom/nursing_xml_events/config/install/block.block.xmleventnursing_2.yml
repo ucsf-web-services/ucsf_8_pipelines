@@ -1,0 +1,35 @@
+uuid: c6aa16b1-876a-47c7-a069-8f20b1b15eee
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:xml_events:b523a59a-d0f8-4d7d-a3ff-a1f3243adafe'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - nursing
+third_party_settings:
+  block_class:
+    classes: home-events
+id: xmleventnursing_2
+theme: nursing
+region: content_top
+weight: 0
+provider: null
+plugin: 'block_content:b523a59a-d0f8-4d7d-a3ff-a1f3243adafe'
+settings:
+  id: 'block_content:b523a59a-d0f8-4d7d-a3ff-a1f3243adafe'
+  label: 'Upcoming Events'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

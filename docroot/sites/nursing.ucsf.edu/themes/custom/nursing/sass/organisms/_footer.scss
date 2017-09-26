@@ -1,0 +1,18 @@
+footer {
+  margin-top: 50px;
+  background-color: $color--navy;
+  color: $color--white;
+  padding: 20px 0;
+
+  .region-footer {
+    @extend %full-width--inside;
+    font-size: 13px;
+    color: $color--white;
+    p, h1, h2, h3, h4, h5, li, a {
+      color: $color--white;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}

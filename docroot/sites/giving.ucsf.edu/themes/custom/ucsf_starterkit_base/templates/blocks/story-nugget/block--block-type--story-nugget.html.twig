@@ -1,0 +1,15 @@
+{% set link = (content.field_story_link['#items'].entity.nid.value) ? path('entity.node.canonical', {'node': content.field_story_link['#items'].entity.nid.value}) : '' %}
+
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    {% include "@molecules/02-blocks/06-block-story-nugget.twig" with {
+        "image" : file_url(content.field_background_image['#items'].entity.uri.value),
+        "bgcolor" : 'blue',
+        "nugget_title" : content.field_title['#items'].value,
+        "nugget_content" : content.body['#items'].value,
+        "caption" : content.field_caption['#items'].value,
+        "nugget_link_label" : "READ FULL STORY",
+        "nugget_link" : link
+    } %}
+{% endblock %}

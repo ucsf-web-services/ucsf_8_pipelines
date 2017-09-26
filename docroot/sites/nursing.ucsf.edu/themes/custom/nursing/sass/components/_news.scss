@@ -1,0 +1,81 @@
+.page-node-type-news {
+  // legacy for images
+  .ucsf-images-wrapping-left {
+    float:left;
+    margin-right: 5px;
+  }
+  .ucsf-images-wrapping-right {
+    float:right;
+    margin-left: 5px;
+  }
+  .file-sixth {
+    width: 16.67%;
+  }
+  .file-three-quarters {
+    width: 75%;
+  }
+  .field--name-field-ref-spotlight {
+    h2 {
+      display: none;
+    }
+  }
+  .field--name-field-spotlight-images {
+    .slick-slide {
+      position: relative;
+      img {
+        margin: auto;
+      }
+      .image-description {
+        position: absolute;
+        bottom: 0;
+        width: 750px;
+        background: rgba(0, 0, 0, 0.5);
+        color: $color--white;
+        margin-left: -375px;
+        left: 50%;
+        padding: 5px 10px;
+      }
+    }
+    .slick-prev {
+      left: -25px;
+      z-index: 1000;
+      @include media('>=small_desktop') {
+        left: 0;
+      }
+    }
+    .slick-next {
+      right: -25px;
+      z-index: 1000;
+      @include media('>=small_desktop') {
+        right: 0;
+      }
+    }
+    .slick-next:before,
+    .slick-prev:before {
+    //   font-family: "FontAwesome";
+    //   content: "\f054";
+      font-size: 24px;
+      line-height: 24px;
+      color: $color--black;
+    }
+    // .slick-prev:before {
+    //   content: "\f053";
+    // }
+    // .slick-next:before {
+    //   content: "\f054";
+    // }
+  }
+}
+.view-news {
+  .views-row {
+    margin: 30px 0;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 30px;
+  }
+  .views-field-title {
+    font-size: 18px;
+  }
+}
+.sidebar.path-news .layout-sidebar {
+  display: block;
+}

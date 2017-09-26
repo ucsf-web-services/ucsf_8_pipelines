@@ -1,0 +1,18 @@
+uuid: f96563f0-d8d2-46f3-b02f-0768fc055408
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.spotlight
+  module:
+    - user
+id: node.spotlight.teaser
+targetEntityType: node
+bundle: spotlight
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

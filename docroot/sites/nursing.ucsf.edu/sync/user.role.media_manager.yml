@@ -1,0 +1,16 @@
+uuid: bd80425e-5321-44bf-9feb-2dc4abf1dbd9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2y8t4mgLcpgUn1dvycMwIReEEM2klWRiucLgGXvGTdc
+id: media_manager
+label: 'Media manager'
+weight: 6
+is_admin: null
+permissions:
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'administer media'
+  - 'administer media bundles'

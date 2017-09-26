@@ -1,0 +1,21 @@
+uuid: bd26a89a-881b-486d-9eb5-8a5c3bd9e7d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.storage.block_content.field_text_video_description
+  module:
+    - text
+id: block_content.video_banner.field_text_video_description
+field_name: field_text_video_description
+entity_type: block_content
+bundle: video_banner
+label: 'Video Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

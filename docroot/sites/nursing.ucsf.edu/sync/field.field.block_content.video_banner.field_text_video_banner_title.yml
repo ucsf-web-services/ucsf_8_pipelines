@@ -1,0 +1,19 @@
+uuid: 8d33906c-49f5-465d-93ba-a6a57119857c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.storage.block_content.field_text_video_banner_title
+id: block_content.video_banner.field_text_video_banner_title
+field_name: field_text_video_banner_title
+entity_type: block_content
+bundle: video_banner
+label: 'Video Banner Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

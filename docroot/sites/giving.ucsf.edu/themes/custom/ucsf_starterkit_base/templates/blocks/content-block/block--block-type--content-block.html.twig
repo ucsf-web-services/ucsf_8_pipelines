@@ -1,0 +1,20 @@
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    <div class="content-area page-body">
+        {% if label %}
+            <div class="column-wrapper">
+                <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                    <h3>{{ label }}</h3>
+                </div>
+            </div>
+        {% endif %}
+        {% if content %}
+            <div class="column-wrapper">
+                <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                    {{ content }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+uuid: e7b02fde-644e-4dc9-bf11-1275bb0778c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nursing
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: nursing_page_title
+theme: nursing
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

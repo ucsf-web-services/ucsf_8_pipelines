@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains ckeditor_y3ti_plugins.module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+**/
+function ckeditor_y3ti_plugins_page_attachments(&$page) {
+  // $theme = \Drupal::theme()->getActiveTheme()->getName();
+  // kint($page);
+
+  // $page['#attached']['html_head'][] = array(
+  //   array(
+  //     '#type' => 'html_tag',
+  //     '#tag' => 'script',
+  //     '#value' => '!function(){if(window.Polymer)return void console.error("Polymer already initialized!");if(window.performance&&performance.mark&&performance.mark("index.html"),Polymer={lazyRegister:!0,useNativeCSSProperties:!0},"registerElement"in document&&"import"in document.createElement("link")&&"content"in document.createElement("template"));else{for(var e,n=document.querySelectorAll("link[rel=prefetch]"),r=0;r<n.length;r++)e=new XMLHttpRequest,e.open("GET",n[r].href),e.send();var t=document.createElement("script");t.src="/bower_components/webcomponentsjs/webcomponents-lite.js",document.body.appendChild(t)}}();',
+  //     '#attributes' => array('src' => ''),
+  //   ),
+  //   'webcomponents');
+  $page['#attached']['library'][] = 'ckeditor_y3ti_plugins/webcomponents';
+  // $page['#attached']['library'][] = 'ckeditor_y3ti_plugins/extraScript';
+  // $page['#attached']['html_head_link'][] = array(
+  //   array(
+  //     'rel' => 'import',
+  //     'href' =>  '/'.drupal_get_path('module','ckeditor_y3ti_plugins').'/build.html',
+  //   ),
+  //   TRUE,
+  // );
+}

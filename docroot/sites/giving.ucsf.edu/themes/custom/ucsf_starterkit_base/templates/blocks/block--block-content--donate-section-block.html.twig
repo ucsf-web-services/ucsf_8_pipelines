@@ -1,0 +1,48 @@
+{% set giving_amounts = [] %}
+{% set prefix = content.field_amount['#items'].itemDefinition.settings.prefix %}
+
+{% if content.field_amount['#items'] is not empty %}
+    {% for i in content.field_amount['#items'] %}
+        {% set gift_choice_label = prefix ~ i.value %}
+        {% set selected = content.field_giving_form_default_value['#items'].value == loop.index ? true : false %}
+        {% set gift_choice_amount = { 'value' : i.value, 'label': gift_choice_label, 'is_checked' : selected } %}
+        {% set giving_amounts = giving_amounts|merge([gift_choice_amount]) %}
+    {% endfor %}
+{% else %}
+    {% set giving_amounts = [
+        {"label" : "$50", "value":50,  "is_checked":false },
+        {"label" : "$100",  "value":100, "is_checked":true },
+        {"label" : "$250", "value":250, "is_checked":false },
+        {"label" : "$500", "value":500, "is_checked":false }
+    ] %}
+{% endif %}
+
+{% if content.field_other_ways_link['#items'] is not empty %}
+    {% if content.field_other_ways_link[0]['#url'].external %}
+        {% set link_url = content.field_other_ways_link[0]['#url'].uri %}
+    {% else %}
+        {% set link_url = path(content.field_other_ways_link[0]['#url'].routeName, {'node': content.field_other_ways_link[0]['#url'].routeParameters.node }) %}
+    {% endif %}
+{% else %}
+    {% set link_url = '' %}
+{% endif %}
+
+<div{{ attributes.addClass(classes) }}>
+  {% include "@organisms/01-content-blocks/00-ways-to-give.twig" with { 
+    "image": file_url(content.field_background_image['#items'].entity.uri.value),
+    "content" : {
+        "label": label,
+        "body": content.body['#items'].value
+    },
+    "choice_name": "GiftChoice",
+    "amount": "Amount",
+    "anchor": {
+        "text" : content.field_other_ways_link['#items'].title,
+        "href" : link_url
+    },
+    "giving_amounts" : giving_amounts,
+    "post_url" : content.field_post_url['#items'].uri
+  } %}
+</div>
+
+

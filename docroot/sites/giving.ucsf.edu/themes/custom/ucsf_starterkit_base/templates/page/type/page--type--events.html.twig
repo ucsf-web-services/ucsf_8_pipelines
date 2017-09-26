@@ -1,0 +1,98 @@
+{% extends directory ~ '/templates/page/type/page--type--stories.html.twig' %}
+
+{% set emails = [] %}
+{% set contact_numbers = [] %}
+{% set addresses = [] %}
+
+{% for email in node.field_contact_email %}
+    {% set email_item = {'email': email.value} %}
+    {% set emails = emails|merge([email_item]) %}
+{% endfor %}
+
+{% for contact_number in node.field_contact_number %}
+    {% set contact_number_item = {'number': contact_number.value, 'label': contact_number.value} %}
+    {% set contact_numbers = contact_numbers|merge([contact_number_item]) %}
+{% endfor %}
+
+{% for address in node.field_address %}
+    {% set address_item = {'address': address.value} %}
+    {% set addresses = addresses|merge([address_item]) %}
+{% endfor %}
+
+
+{% block top_section %}
+    <div class="content-area">
+        <div class="column-wrapper">
+            <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                {% if page.breadcrumb %}
+                    <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                        {{ page.breadcrumb }}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="column-large-8 column-medium-8 column-small-12 column-xsmall-12">
+                {% block title %}
+                    {% include "@molecules/01-text/08-event-section-header.twig" with {
+                        "title" : node.title.value
+                    } %}
+                {% endblock %}
+                {% include "@molecules/01-text/01-section-intro.twig" with {
+                        "intro_text" : node.field_intro_text.value
+                } %}
+            </div>
+        </div>
+    </div>
+    {% if node.field_hero_image is not empty %}
+        {% include "@molecules/02-blocks/08-article-hero-no-text.twig" with {
+            image: file_url(node.field_hero_image.entity.uri.value)
+        }%}
+    {% endif%}
+    {% if node.field_hero_image_caption.value %}
+        <div class="photo--caption-full large--hidden medium--hidden">
+            <div class="content-area">
+                <div class="column-wrapper xsmall--visible">
+                    {% block hero_image_caption %}
+                        {% include "@molecules/01-text/02-photo-caption.twig" with {
+                            'caption' : node.field_hero_image_caption.value
+                        }%}
+                    {% endblock %}
+                </div>
+                <div class="column-wrapper small--visible">
+                    <div class="column-small-12">
+                        {{ block('hero_image_caption') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block left_section %}
+     {% if page.content %}
+        {{ page.content }}
+    {% endif %}
+{% endblock %}
+
+
+{% block right_section %}
+    {% if node.field_hero_image_caption.value %}
+        <div class="column-large-12 column-medium-12 small--hidden xsmall--hidden photo--caption-side">
+            {{ block('hero_image_caption') }}
+        </div>
+    {% endif %}
+
+    <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+         {% include "@molecules/02-blocks/05-block-contact-us.twig" with {
+            "title" : node.field_contact_block_text.value,
+            "department" : node.field_contact_person.value,
+            "telephone" : contact_numbers,
+            "email" : emails,
+            "address" : addresses
+        } %}
+        {% if page.sidebar_right %}
+            {{ page.sidebar_right }}
+        {% endif %}
+    </div>
+
+{% endblock %}

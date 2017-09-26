@@ -1,0 +1,17 @@
+uuid: 386aff0d-81e5-4603-a78d-fb5cd387e5a9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ucsf_nursing_migrate_news
+_core:
+  default_config_hash: T73-ZRsvFBDoosh4AqypYJZ1Gp491ucGLRg2657iU7M
+id: news
+label: 'D7 imports news'
+description: 'Migrations importing from the legacy D7 Nursing site'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: upgrade

@@ -1,0 +1,22 @@
+{% extends "@molecules/02-blocks/01-block-hero.twig" %}
+
+{% block hero_image %}
+    <div class="hero-background" style="background-image: url('{{ fields.field_hero_image.content }}');"></div>
+{% endblock %}
+
+{% block hero_content %}
+    {% include '@molecules/01-text/05-hero-text.twig' with {
+        "heading" : fields.field_headline.content,
+        "link_text" : 'SEE YOUR IMPACT',
+        "link_href" : field.field_link_to.content,
+        "body" : field.field_link_to.content,
+        "alignment" : "right"
+    } %}
+{% endblock %}
+
+{% block link_to_small %}
+    {% include '@molecules/01-text/06-link-with-icon.twig' with {
+                "link_text" : 'SEE YOUR IMPACT',
+                "link_href" : field.field_link_to.content
+        } %}
+{% endblock %}

@@ -1,0 +1,18 @@
+abs_urls: false
+roles_profiles:
+  administrator:
+    public: admin
+  page_creator:
+    public: member
+  page_reviewer:
+    public: member
+  news_creator:
+    public: member
+  news_reviewer:
+    public: member
+  event_creator:
+    public: member
+  event_reviewer:
+    public: member
+_core:
+  default_config_hash: 6Wk4BLqlH9PdR3lPJohO4Ek3-uRJAgdfrVT4qWYXVMY

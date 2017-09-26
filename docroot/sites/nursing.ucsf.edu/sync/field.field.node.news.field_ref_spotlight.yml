@@ -1,0 +1,30 @@
+uuid: c282374e-5570-43ed-9099-8adcc70ccc5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_spotlight
+    - node.type.news
+    - node.type.spotlight
+_core:
+  default_config_hash: yQhlplBV3nRsWbkc3D7jdBfwOgNXQ1z86eYJpTOQIO4
+id: node.news.field_ref_spotlight
+field_name: field_ref_spotlight
+entity_type: node
+bundle: news
+label: Spotlight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      spotlight: spotlight
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

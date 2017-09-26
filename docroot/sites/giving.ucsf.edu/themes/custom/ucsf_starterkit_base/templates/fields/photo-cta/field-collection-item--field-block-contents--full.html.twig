@@ -1,0 +1,14 @@
+{% set title = content.field_intro_text['#items'].value %}
+{% set label = content.field_link[0]['#title'] %}
+
+{% if content.field_link[0]['#options'].external %}
+    {% set url = content.field_link[0]['#url'].uri %}
+{% else %}
+    {% set url = path(content.field_link[0]['#url'].routeName, {'node': content.field_link[0]['#url'].routeParameters.node }) %}
+{% endif %}
+
+{% include '@molecules/02-blocks/20-photo-cta-item.twig' with {
+    "text" : title,
+    "link_label" : label,
+    "link_href" : url
+} %}

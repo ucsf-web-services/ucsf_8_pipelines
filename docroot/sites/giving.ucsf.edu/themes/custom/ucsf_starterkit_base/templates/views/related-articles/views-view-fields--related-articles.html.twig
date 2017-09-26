@@ -1,0 +1,20 @@
+{% set colors = ['teal', 'green', 'light-blue', 'dark-blue'] %}
+
+{% if(fields.field_category.content == 'Research') %}
+    {% set color = colors[0] %}
+{% elseif(fields.field_category.content == 'Education') %}
+    {% set color = colors[1] %}
+{% elseif(fields.field_category.content == 'Patient Care') %}
+    {% set color = colors[2] %}
+{% elseif(fields.field_category.content == 'News') %}
+    {% set color = colors[3] %}
+{% endif %}
+
+{% include "@molecules/02-blocks/05-impact-story-small.twig" with {
+    'link' : fields.path.content,
+    'classes' : '',
+    'color' : color,
+    'category' : fields.field_category.content,
+    'date' : fields.created.content,
+    'text' : fields.title.content
+} %}

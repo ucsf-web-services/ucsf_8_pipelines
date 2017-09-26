@@ -1,0 +1,8 @@
+{% for item in items %}
+    <div class="contact-detail-item">
+        <span class="fa fa-envelope"></span>
+        <span itemprop="email">
+            <a href="{{ item.content['#url'].uri }}"> Email Us </a>
+        </span>
+    </div>
+{% endfor %}

@@ -1,0 +1,26 @@
+uuid: 45c359f6-af0f-46f1-b908-2ca5799a4660
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.storage.block_content.field_video_banner_on_click
+  module:
+    - video_embed_field
+id: block_content.video_banner.field_video_banner_on_click
+field_name: field_video_banner_on_click
+entity_type: block_content
+bundle: video_banner
+label: 'Video Banner on Click'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    vimeo: vimeo
+    youtube_playlist: '0'
+    html_5: '0'
+field_type: video_embed_field

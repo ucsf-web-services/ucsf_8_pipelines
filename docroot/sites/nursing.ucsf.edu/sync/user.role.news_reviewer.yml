@@ -1,0 +1,13 @@
+uuid: 2992d6fe-a788-4c1f-bd64-af9ecce4a4cd
+langcode: en
+status: true
+dependencies: {  }
+id: news_reviewer
+label: 'News reviewer'
+weight: 14
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any news content'
+  - 'edit any news content'
+  - 'view moderation states'

@@ -1,0 +1,12 @@
+{% extends "@organisms/01-content-blocks/13-stats-card-list.twig" %}
+
+{% block stats %}
+    {% for item in items %}
+        <div class="column-large-4 column-medium-6 column-small-4 column-xsmall-12">
+            {% include '@molecules/02-blocks/16-stats-card.twig' with {
+                "data" : item.content['#field_collection_item'].field_stat_value.value,
+                "description": item.content['#field_collection_item'].field_stat_text.value
+            } %}
+        </div>
+    {% endfor %}
+{% endblock%}

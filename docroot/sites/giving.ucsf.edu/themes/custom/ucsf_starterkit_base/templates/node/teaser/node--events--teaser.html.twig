@@ -1,0 +1,40 @@
+{% if content.field_link['#items'].uri is not empty %}
+    {% if content.field_link[0]['#options'].external %}
+        {% set anchor_link = content.field_link['#items'].uri %}
+    {% else %}
+        {% set anchor_link = path('entity.node.canonical', {'node': content.field_link[0]['#url'].routeParameters.node }) %}
+    {% endif %}
+{% else %}
+    {% set anchor_link = path('entity.node.canonical', {'node': node.nid.value }) %}
+{% endif %}
+
+{% if content.field_text_link['#items'].value is not empty %}
+    {% set label = content.field_text_link['#items'].value %}
+{% else %}
+    {% set label = 'Read Story' %}
+{% endif %}
+
+{% set title = node.title.value %}
+{% set image_url = file_url(content.field_thumbnail['#items'].entity.uri.value) %}
+{% set copy_text = content.field_card_text['#items'].value %}
+
+<div class="featured-event-item">
+    <div class="block--item block--impact-stories-panel">
+        <div class="block--item-image-panel">
+            <div class="image-display" style="background-image: url({{ image_url }});"></div>
+        </div>
+        <div class="block--item-colored-panel background--{{ color }}">
+            <h4>{{ title }}</h4>
+            {{ copy_text |raw }}
+            {% if content.field_display_link['#items'].value == "1" %}
+                <a {% if anchor_link %} href="{{ anchor_link }}" {% endif %} >
+                    {% if anchor_link %}
+                        {% include '@molecules/01-text/07-text-with-icon.twig' with {
+                        "link_text" : label
+                        } %}
+                    {% endif %}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>

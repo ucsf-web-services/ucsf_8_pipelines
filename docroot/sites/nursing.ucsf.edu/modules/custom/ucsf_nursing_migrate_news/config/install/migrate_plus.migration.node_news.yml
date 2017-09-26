@@ -1,0 +1,46 @@
+langcode: en
+status: true
+id: node_news
+dependencies:
+  module:
+    - ucsf_nursing_migrate_news
+  enforced:
+    module:
+      - ucsf_nursing_migrate_news
+migration_group: news
+label: 'News'
+source:
+  plugin: d7_node
+  node_type: son_news_article
+  constants:
+    uid: 1
+    rich_text: 'rich_text'
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  # references ya_user for id migration integrity
+  uid: constants/uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: constants/uid
+  revision_log: log
+  revision_timestamp: timestamp
+  'body/0/value':
+    source: body/0/value
+    plugin: body_treat
+  'body/0/format': constants/rich_text
+destination:
+  plugin: entity:node
+  default_bundle: news
+# migration_dependencies:
+#   required:
+#     - d6_file
+    # - ya_user

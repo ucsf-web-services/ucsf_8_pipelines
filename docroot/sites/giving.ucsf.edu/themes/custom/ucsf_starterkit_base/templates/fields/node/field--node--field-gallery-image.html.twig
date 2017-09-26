@@ -1,0 +1,27 @@
+{% extends "@molecules/02-blocks/11-article-image-carousel.twig" %}
+
+{% block gallery_images %}
+    {% for item in items %}
+        {% if item.content['#field_collection_item'].field_gallery_image_item is not empty %}
+            <div class="item">
+                <img 
+                    class="item-image" 
+                    src="{{file_url(item.content['#field_collection_item'].field_gallery_image_item.entity.uri.value) }}" 
+                    alt="{{ item.content['#field_collection_item'].field_gallery_image_item.alt }}" 
+                    title="{{ item.content['#field_collection_item'].field_gallery_image_item.title }}" />
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{% block gallery_image_content %}
+    {% for item in items %}
+        {% if item.content['#field_collection_item'].field_gallery_image_item is not empty %}
+            <div class="item">
+                <div class="item-content">
+                    <span class="date">{{ "%02d"|format(loop.index) }} / {{ "%02d"|format(loop.length) }}</span> {{ item.content['#field_collection_item'].field_caption.value }}
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

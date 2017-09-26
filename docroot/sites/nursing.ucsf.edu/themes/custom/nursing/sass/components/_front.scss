@@ -1,0 +1,102 @@
+.path-frontpage {
+  overflow: hidden;
+  header {
+    @include media('>=tablet') {
+      height: 636px;
+    }
+    position: relative;
+  }
+  .header-main {
+    min-height: 300px;
+    margin: 0;
+    z-index: 100;
+    position: absolute;
+    top: 36px;
+    width: 100%;
+  }
+  .block-views-blockwelcome-to-ucsf-nursing-block-1 > h2 {
+    position: absolute;
+    z-index: 100;
+    font-size: 36px;
+    color: $color--white;
+    text-align: center;
+    width: 100%;
+    top: 150px;
+  }
+  .welcome-block {
+    @include media('>=tablet') {
+      height: 600px;
+    }
+    width: 100%;
+    overflow: hidden;
+    .views-row {
+      position: relative;
+    }
+    img {
+      object-fit: cover;
+      @include media('>=tablet') {
+        height: 600px;
+      }
+      width: 100%;
+    }
+    .field--name-body {
+      position: relative;
+      @include media('>=tablet') {
+        position: absolute;
+        bottom: 70px;
+        right: 70px;
+        width: 500px;
+        height: 300px;
+        box-shadow: 20px 20px $color--pink;
+      }
+      background: $color--teal;
+      z-index: 100;
+      padding: 25px;
+      & > * {
+        color: $color--white;
+      }
+    }
+
+    .views-row:nth-child(odd) .field--name-body {
+      @include media('>=tablet') {
+        left: 70px;
+        box-shadow: 20px 20px $color--yellow;
+      }
+      background: $color--navy;
+    }
+    .views-row:nth-child(even) .field--name-body {
+      @include media('>=tablet') {
+        right: 70px;
+        box-shadow: 20px 20px $color--pink;
+      }
+      background: $color--teal;
+    }
+  }
+  .homepage-link {
+    background-image: url('../images/bg-link.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: $color--navy;
+    h2 {
+      margin: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 36px;
+      padding-top: 50px;
+    }
+    .field--name-body {
+      max-width: $width--large;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 10px;
+    }
+  }
+  .page-title {
+    display: none;
+  }
+  main {
+    display: none;
+  }
+}

@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Contains nursing_xml_events.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nursing_xml_events_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nursing_xml_events module.
+    case 'help.page.nursing_xml_events':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Import Events in Block') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function nursing_xml_events_theme() {
+  return [
+    'nursing_xml_events' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_block_view_alter().
+ **/
+ function nursing_xml_events_block_content_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  if ($entity->bundle() === "xml_events") {
+    $build['#post_render'][] = 'nursing_xml_events_post_render';
+  }
+ }
+ function nursing_xml_events_post_render($variables) {
+   $xml_url = trim(strip_tags($variables->jsonSerialize()));
+   $xml = simplexml_load_file($xml_url);
+   $content = '<div class="xml-events-wrapper">';
+   if($xml !== FALSE ) {
+    $i = 0;
+    foreach ($xml->channel->item as $event) {
+      $i++;
+      // if($i > 4) continue;
+
+      $date = date('F j, Y',strtotime($event->pubDate));
+      $time = date('g:i a',strtotime($event->pubDate));
+      $calendar_icon_day = date("D", strtotime($event->pubDate));
+      $calendar_icon_date = date("d", strtotime($event->pubDate));
+      $image = '';
+      foreach ($event->children('media', TRUE)->attributes() as $attributes_key => $attributes_value) {
+        if($attributes_key == 'url') {
+          $image = '<img src="' . (string) $attributes_value . '" style=""/>';
+        }
+      }
+      $content .= '<div class="event">';
+      // $content .= '<div class="event-image">' . '<div class="day">' . $calendar_icon_day . '</div>'  . '<div class="number-date">' . $calendar_icon_date . '</div>' . '</div>';
+      $content .= '<div class="event-image">' . $image . '</div>';
+      $content .= '<h3><a href="' . $event->link . '">' . $event->title . '</a></h3>';
+      // $content .= '<p>' . $event->description . '</p>';
+      $content .= '<div class="date">' . '<i class="fa fa-calendar" aria-hidden="true"></i>' . $date . '</div>';
+      $content .= '<div class="time">' . '<i class="fa fa-clock-o" aria-hidden="true"></i>' . $time . '</div>';
+      $content .= '</div>';
+    }
+  } else {
+    $content = '<p class="placeholder">No results found</p>';
+  }
+  $content .= '</div>';
+  return $content;
+}

@@ -1,0 +1,13 @@
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    {% embed "@organisms/01-content-blocks/07-related-articles.twig" %}
+        {% block label %}
+          <h4 class="granjon-heading-text">{{ label }}</h4>
+        {% endblock %}
+
+        {% block related_articles %}
+          {{ content }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

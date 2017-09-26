@@ -1,0 +1,13 @@
+uuid: 9ef5505c-fe1d-4e7e-8f78-ad76786bc758
+langcode: en
+status: true
+dependencies: {  }
+id: event_reviewer
+label: 'Event reviewer'
+weight: 12
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any event content'
+  - 'edit any event content'
+  - 'view moderation states'

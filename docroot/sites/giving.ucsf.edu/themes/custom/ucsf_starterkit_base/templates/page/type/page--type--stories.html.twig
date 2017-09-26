@@ -1,0 +1,91 @@
+{% extends "@pages/_article-base-template.twig" %}
+
+{% block header %}
+    {% include directory ~ '/templates/includes/header.html.twig' with {
+        'logo' : '/' ~ directory ~ '/images/UCSF_logo_white_RGB.svg',
+        'logo_box' :  '/' ~ directory ~ '/images/UCSF_logobox_navy_RGB.svg',
+        'site_slogan' : site.slogan,
+        'site_name': site.name,
+        'header_give_button' : header_give_button,
+        'global_nav_header_link' : 'http://www.ucsf.edu/',
+        'footer':{
+          'copyright' : copyright_text
+        }
+    } %}
+{% endblock %}
+
+{% block top_section %}
+    <div class="content-area">
+        <div class="column-wrapper">
+            {% if page.breadcrumb %}
+                <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                    {{ page.breadcrumb }}
+                </div>
+            {% endif %}
+            {% if node.title.value %}
+                <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                        {% include "@molecules/01-text/04-story-heading.twig"  with {
+                            'story_title' : node.title.value
+                        } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if node.field_hero_image is not empty %}
+        {% include "@molecules/02-blocks/08-article-hero-no-text.twig" with {
+            image: file_url(node.field_hero_image.entity.uri.value)
+        }%}
+    {% endif%}
+    {% if node.field_hero_image_caption.value %}
+        <div class="photo--caption-full large--hidden medium--hidden">
+            <div class="content-area">
+                <div class="column-wrapper xsmall--visible">
+                    {% block hero_image_caption %}
+                        {% include "@molecules/01-text/02-photo-caption.twig" with {
+                            'caption' : node.field_hero_image_caption.value
+                        }%}
+                    {% endblock %}
+                </div>
+                 <div class="column-wrapper small--visible">
+                    <div class="column-small-12">
+                        {{ block('hero_image_caption') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block left_section %}
+    {% if page.content %}
+        <div class="block--wysiwyg">
+            {{ page.content }}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block right_section %}
+    {% if node.field_hero_image_caption.value %}
+        <div class="column-large-12 column-medium-12 small--hidden xsmall--hidden photo--caption-side">
+            {{ block('hero_image_caption') }}
+        </div>
+    {% endif %}
+    {# if page.sidebar_right#}
+        <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+            {{ page.sidebar_right }}
+            {{ drupal_view('news_discoveries_sidebar', 'block', node.field_tags.target_id) }}
+        </div>
+    {# endif #}
+{% endblock %}
+
+{% block bottom_section %}
+    {% if page.footer %}
+        {{ page.footer }}
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    {% include directory ~ '/templates/includes/footer.html.twig' with {
+      'logo' : '/' ~ directory ~ '/images/UCSF_logobox_white.png'
+    } %}
+{% endblock %}

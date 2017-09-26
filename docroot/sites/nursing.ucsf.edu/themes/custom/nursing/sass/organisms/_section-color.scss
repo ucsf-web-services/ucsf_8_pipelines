@@ -1,0 +1,212 @@
+.section-about {
+  #block-mainnavigation-2,
+  &.horizontal-menu--left-aligned #block-mainnavigation-2 .menu {
+    background-color: $color--about;
+  }
+  #block-mainnavigation-2 .menu-item--active-trail {
+    background-color: $color--white;
+    a {
+      color: $color--about;
+    }
+  }
+  .layout-sidebar {
+    .menu {
+      .is-active,
+      a:hover,
+      li.menu-item--expanded:after {
+        color: $color--about;
+      }
+      .menu {
+        background-color: rgba($color--about, 0.05);
+      }
+      .menu-item--active-trail > a {
+        color: $color--about;
+      }
+      .menu-item--expanded.menu-item--active-trail > a {
+        border-color: $color--about;
+      }
+    }
+  }
+  .breadcrumb a,
+  .field--name-body a,
+  .field--type-text-with-summary a {
+    color: $color--about;
+  }
+}
+.section-academics {
+  #block-mainnavigation-2,
+  &.horizontal-menu--left-aligned #block-mainnavigation-2 .menu {
+    background-color: $color--academics;
+  }
+  #block-mainnavigation-2 .menu-item--active-trail {
+    background-color: $color--white;
+    a {
+      color: $color--academics;
+    }
+  }
+  .layout-sidebar {
+    .menu {
+      .is-active,
+      a:hover,
+      li.menu-item--expanded:after {
+        color: $color--academics;
+      }
+      .menu {
+        background-color: rgba($color--academics, 0.05);
+      }
+      .menu-item--active-trail > a {
+        color: $color--academics;
+      }
+      .menu-item--expanded.menu-item--active-trail > a {
+        border-color: $color--academics;
+      }
+    }
+  }
+  .breadcrumb a,
+  .field--name-body a,
+  .field--type-text-with-summary a {
+    color: $color--academics;
+  }
+}
+.section-admissions {
+  #block-mainnavigation-2,
+  &.horizontal-menu--left-aligned #block-mainnavigation-2 .menu {
+    background-color: $color--admissions;
+  }
+  #block-mainnavigation-2 .menu-item--active-trail {
+    background-color: $color--white;
+    a {
+      color: $color--admissions;
+    }
+  }
+  .layout-sidebar {
+    .menu {
+      .is-active,
+      a:hover,
+      li.menu-item--expanded:after {
+        color: $color--admissions;
+      }
+      .menu {
+        background-color: rgba($color--admissions, 0.05);
+      }
+      .menu-item--active-trail > a {
+        color: $color--admissions;
+      }
+      .menu-item--expanded.menu-item--active-trail > a {
+        border-color: $color--admissions;
+      }
+    }
+  }
+  .breadcrumb a,
+  .field--name-body a,
+  .field--type-text-with-summary a {
+    color: $color--admissions;
+  }
+}
+.section-research {
+  #block-mainnavigation-2,
+  &.horizontal-menu--left-aligned #block-mainnavigation-2 .menu {
+    background-color: $color--research;
+  }
+  #block-mainnavigation-2 .menu-item--active-trail {
+    background-color: $color--white;
+    a {
+      color: $color--research;
+    }
+  }
+  .layout-sidebar {
+    .menu {
+      .is-active,
+      a:hover,
+      li.menu-item--expanded:after {
+        color: $color--research;
+      }
+      .menu {
+        background-color: rgba($color--research, 0.05);
+      }
+      .menu-item--active-trail > a {
+        color: $color--research;
+      }
+      .menu-item--expanded.menu-item--active-trail > a {
+        border-color: $color--research;
+      }
+    }
+  }
+  .breadcrumb a,
+  .field--name-body a,
+  .field--type-text-with-summary a {
+    color: $color--research;
+  }
+}
+.section-people {
+  #block-mainnavigation-2,
+  &.horizontal-menu--left-aligned #block-mainnavigation-2 .menu {
+    background-color: $color--people;
+  }
+  #block-mainnavigation-2 .menu-item--active-trail {
+    background-color: $color--white;
+    a {
+      color: $color--people;
+    }
+  }
+  .layout-sidebar {
+    .menu {
+      .is-active,
+      a:hover,
+      li.menu-item--expanded:after {
+        color: $color--people;
+      }
+      .menu {
+        background-color: rgba($color--people, 0.05);
+      }
+      .menu-item--active-trail > a {
+        color: $color--people;
+      }
+      .menu-item--expanded.menu-item--active-trail > a {
+        border-color: $color--people;
+      }
+    }
+  }
+  .breadcrumb a,
+  .field--name-body a,
+  .field--type-text-with-summary a {
+    color: $color--people;
+  }
+}
+
+.section-news {
+  #block-mainnavigation-2,
+  &.horizontal-menu--left-aligned #block-mainnavigation-2 .menu {
+    background-color: $color--news;
+  }
+  #block-mainnavigation-2 .menu-item--active-trail {
+    background-color: $color--white;
+    a {
+      color: $color--news;
+    }
+  }
+  .layout-sidebar {
+    .menu {
+      .is-active,
+      a:hover,
+      li.menu-item--expanded:after {
+        color: $color--news;
+      }
+      .menu {
+        background-color: rgba($color--news, 0.05);
+      }
+      .menu-item--active-trail > a {
+        color: $color--news;
+      }
+      .menu-item--expanded.menu-item--active-trail > a {
+        border-color: $color--news;
+      }
+    }
+  }
+  .breadcrumb a,
+  .field--name-body a,
+  .field--type-text-with-summary a {
+    color: $color--news;
+  }
+}
+

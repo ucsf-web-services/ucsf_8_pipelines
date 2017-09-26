@@ -1,0 +1,26 @@
+{% if content.field_tcb_title['#items'] is not empty %}
+    <h4>{{ content.field_tcb_title['#items'].value }}</h4>
+{% endif %}
+
+{% if content.field_tcb_body_text['#items'] is not empty %}
+    <p>{{ content.field_tcb_body_text['#items'].value }}</p>
+{% endif %}
+
+{% if content.field_tcb_button_link['#items'] is not empty%}
+    {% if content.field_tcb_button_link[0]['#url'].external %}
+        {% set url = content.field_tcb_button_link[0]['#url'].uri %}
+    {% else %}
+         {% set url = path(content.field_tcb_button_link[0]['#url'].routeName, {'node': content.field_tcb_button_link[0]['#url'].routeParameters.node }) %}
+    {% endif %}
+
+
+    {% if content.field_button_style['#items'].value == "1" %}
+        <a href="{{ url }}" class="btn btn--secondary anchor">
+            {{ content.field_tcb_button_link['#items'].title }}
+        </a>
+    {% else %}
+        <a href="{{ url }}" class="btn btn--with-icon anchor">
+            {{ content.field_tcb_button_link['#items'].title }} <i class="fa fa-heart"></i>
+        </a>
+    {% endif %}
+{% endif %}

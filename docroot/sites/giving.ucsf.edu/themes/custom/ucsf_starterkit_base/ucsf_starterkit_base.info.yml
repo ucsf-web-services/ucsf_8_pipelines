@@ -1,0 +1,55 @@
+name: UCSF Starterkit Base Theme Prototype
+type: theme
+description: UCSF Starterkit Base Theme Prototypes
+core: '8.x'
+
+# Todo ~ Add/remove regions depending on the number of regions needed
+regions:
+  header: Header
+  primary_menu : 'Primary Menu'
+  content: Content 
+  sidebar_right: 'Sidebar Right'
+  footer: 'Footer Ankle'
+  topmost_menu: 'Header Menu'
+  branding: 'Branding'
+  breadcrumb: 'Breadcrumb'
+  footer_left: 'Footer Left'
+  footer_center: 'Footer Center'
+  footer_right: 'Footer Right'
+  search: 'Header Search'
+  footer_bottom: 'Footer Bottom'
+
+features:
+  - comment_user_picture
+  - comment_user_verification
+  - favicon
+  - name
+  - node_user_picture
+
+libraries:
+  - ucsf_starterkit_base/global-css
+  - ucsf_starterkit_base/global-js
+
+# Component Libraries
+component-libraries:
+  atoms:
+    paths:
+      - source/_patterns/00-atoms
+  molecules:
+    paths:
+      - source/_patterns/01-molecules
+  organisms:
+    paths:
+      - source/_patterns/02-organisms
+  templates:
+    paths:
+      - source/_patterns/03-templates
+  pages:
+    paths:
+      - source/_patterns/04-pages
+  parts:
+    paths:
+      - templates/includes
+
+ckeditor_stylesheets:
+  - css/style.css

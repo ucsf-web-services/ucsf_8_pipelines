@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      "ucsf_starterkit_base@git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+      "/home/norman/Documents/repos/ucsf/production/ucsf8"
+    ]
+  ],
+  "_from": "git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+  "_id": "ucsf_starterkit_base@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ucsf_starterkit_base",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/cloud23/ucsf-starter-kit/development/package.json",
+      "gitUrl": "git://github.com/cloud23/ucsf-starter-kit.git#development",
+      "httpsUrl": "git+https://github.com/cloud23/ucsf-starter-kit.git#development",
+      "shortcut": "github:cloud23/ucsf-starter-kit#development",
+      "ssh": "git@github.com:cloud23/ucsf-starter-kit.git#development",
+      "sshUrl": "git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+      "type": "github"
+    },
+    "name": "ucsf_starterkit_base",
+    "raw": "ucsf_starterkit_base@git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+    "rawSpec": "git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+    "scope": null,
+    "spec": "git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#a5dae3b6e0af4f0b4ccd8aa9dbdaa0dd04f6be50",
+  "_shasum": "f0aac887f135e58d478f2df1a12244fa8a38c54d",
+  "_shrinkwrap": null,
+  "_spec": "ucsf_starterkit_base@git+ssh://git@github.com/cloud23/ucsf-starter-kit.git#development",
+  "_where": "/home/norman/Documents/repos/ucsf/production/ucsf8",
+  "author": {
+    "name": "Norman Manantan"
+  },
+  "dependencies": {
+    "install": "^0.8.2",
+    "npm": "^3.10.9",
+    "ucsf-pattern-library": "git+ssh://git@github.com/cloud23/ucsf-patternlab.git#master"
+  },
+  "description": "Drupal 8 theme ",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "load-grunt-config": "^0.19.2",
+    "time-grunt": "^1.4.0"
+  },
+  "gitHead": "a5dae3b6e0af4f0b4ccd8aa9dbdaa0dd04f6be50",
+  "keywords": [
+    "drupal",
+    "theme",
+    "theme"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "ucsf_starterkit_base",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git@favmed.unfuddle.com:favmed/ucsfdrupal.git"
+  },
+  "scripts": {
+    "postinstall": "grunt update",
+    "test": "ls",
+    "update": "npm install && grunt update"
+  },
+  "version": "1.0.0"
+}

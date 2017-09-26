@@ -1,0 +1,12 @@
+{% for item in items %}
+    {% if loop.index is odd %}
+        <div class="column-wrapper">
+    {% endif %}
+        <div class="column-large-6 column-medium-6 column-small-12 column-xsmall-12">
+            {{ item.content }}
+        </div>
+    {% if (loop.index is even or loop.index == loop.length) %}
+        </div>
+    {% endif %}
+{% endfor %}
+

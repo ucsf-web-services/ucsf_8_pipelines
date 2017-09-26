@@ -1,0 +1,39 @@
+{% extends directory ~ '/templates/page/type/page--type--stories.html.twig' %}
+
+{% block content %}
+    <div class="contents--wrapper">
+        <div class="content-area">
+            <div class="column-wrapper">
+                <div class=" column-large-8 column-medium-8 column-small-12 column-xsmall-12">
+                    {% include "@molecules/02-blocks/03-block-header-landing-no-photo.twig" with {
+                    "title" : 'UCSF Giving Search'
+                } %}
+                </div>
+            </div>
+        </div>
+        <div class="content-area search--body">
+            <div class="column-wrapper">
+                <div class=" column-large-8 column-medium-8 column-small-12 column-xsmall-12">
+                    <div class="search-page-form">
+                        <form name="search-form" action="" method="">
+                            <div class="search-form-group">
+                                <label class="visually-hidden" for="searchPageInput"><span>Search</span></label>
+                                <input type="text" name="keys" id="searchPageInput" value="{{ _search.parameters.keys }}">
+                            </div>
+                            <button class="btn btn--secondary" type="submit">Search</button>
+                        </form>
+                    </div>
+                    {{ page.content }}
+                </div>
+                <div class="column-large-3 column-large-offset-1 column-medium-4 column-small-12 column-xsmall-12">
+                    {% if page.right %}
+                        {{ page.right }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

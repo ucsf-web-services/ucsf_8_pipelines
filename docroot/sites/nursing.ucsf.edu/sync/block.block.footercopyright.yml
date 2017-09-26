@@ -1,0 +1,29 @@
+uuid: e0aed9ce-1a65-4a75-9795-35e6c7cf4f3b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0035048a-fc5a-49f4-a91e-d9e7d2b26e54'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - nursing
+third_party_settings:
+  block_class:
+    classes: ''
+id: footercopyright
+theme: nursing
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:0035048a-fc5a-49f4-a91e-d9e7d2b26e54'
+settings:
+  id: 'block_content:0035048a-fc5a-49f4-a91e-d9e7d2b26e54'
+  label: 'Footer - Copyright'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

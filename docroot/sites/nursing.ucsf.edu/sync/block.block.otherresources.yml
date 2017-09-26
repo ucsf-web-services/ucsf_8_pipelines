@@ -1,0 +1,31 @@
+uuid: c7c6a504-5940-4ff0-971b-ba5c52931b7f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:884125ce-8292-4315-9c27-8d0f22f58b6f'
+  module:
+    - block_content
+    - system
+  theme:
+    - nursing
+id: otherresources
+theme: nursing
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:884125ce-8292-4315-9c27-8d0f22f58b6f'
+settings:
+  id: 'block_content:884125ce-8292-4315-9c27-8d0f22f58b6f'
+  label: 'Other Resources'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/126
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,17 @@
+uuid: 06f2e326-378c-4483-a4b5-a3a77f91faad
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ucsf_nursing_migrate_news
+_core:
+  default_config_hash: 8xOU-fKXsDxNndXEhYWgWj4ZDotBXiErdQsk5IFfFEg
+id: spotlight
+label: 'D7 imports spotlight'
+description: 'Migrations importing from the legacy D7 Nursing site'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: upgrade

@@ -1,0 +1,14 @@
+uuid: 97a2b91f-a284-4137-a199-9bccd4e8691a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spotlight_reviewer
+  module:
+    - user
+id: user_remove_role_action.spotlight_reviewer
+label: 'Remove the Spotlight reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: spotlight_reviewer

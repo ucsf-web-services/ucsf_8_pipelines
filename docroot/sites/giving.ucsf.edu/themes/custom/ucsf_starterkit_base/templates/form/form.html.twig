@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+{% 
+    set classes = [ element['#attributes']['data-drupal-selector'] == 'contact-message-main-contact-form-form' ? 'contact-form',
+                    element['#attributes']['data-drupal-selector'] == 'search-form' ? 'hidden', ] 
+%}
+
+<form{{ attributes.addClass(classes) }}>
+    <fieldset>
+        {{ children }}
+    </fieldset>
+</form>

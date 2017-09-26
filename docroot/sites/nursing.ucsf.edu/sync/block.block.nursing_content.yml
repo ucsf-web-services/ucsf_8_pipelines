@@ -1,0 +1,22 @@
+uuid: a1761b6b-56c8-46f2-86c5-d22a25bc6875
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nursing
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: nursing_content
+theme: nursing
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

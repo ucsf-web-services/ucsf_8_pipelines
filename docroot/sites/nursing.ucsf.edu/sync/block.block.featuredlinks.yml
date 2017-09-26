@@ -1,0 +1,35 @@
+uuid: f417aac7-53c9-4084-be71-498523907422
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2185abad-5b1b-4db7-be0c-81402a1b2f95'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - nursing
+third_party_settings:
+  block_class:
+    classes: homepage-link
+id: featuredlinks
+theme: nursing
+region: content_top
+weight: 0
+provider: null
+plugin: 'block_content:2185abad-5b1b-4db7-be0c-81402a1b2f95'
+settings:
+  id: 'block_content:2185abad-5b1b-4db7-be0c-81402a1b2f95'
+  label: 'FEATURED LINKS'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,113 @@
+{% extends "@organisms/01-content-blocks/15-giving-societies-pillar.twig" %}
+
+{% set emails = [] %}
+{% set contact_numbers = [] %}
+{% set addresses = [] %}
+
+{% for email in content.field_contact_email['#items'] %}
+    {% set email_item = {'email': email.value} %}
+    {% set emails = emails|merge([email_item]) %}
+{% endfor %}
+
+{% for contact_number in content.field_contact_number['#items'] %}
+    {% set contact_number_item = {'number': contact_number.value, 'label': contact_number.value} %}
+    {% set contact_numbers = contact_numbers|merge([contact_number_item]) %}
+{% endfor %}
+
+{% for address in content.field_address['#items'] %}
+    {% set address_item = {'address': address.value} %}
+    {% set addresses = addresses|merge([address_item]) %}
+{% endfor %}
+
+{% set contact_detail = {
+    "contact_body" : content.field_contact_text['#items'].value,
+    "contact_phone_number": contact_numbers,
+    "contact_email" : emails,
+    "address" : addresses
+} %}
+
+{% if content.field_link['#items'].value is not empty %}
+    {% if content.field_link[0]['#url'].external %}
+        {% set detail_url = content.field_link['#items'].uri %}
+    {% else %}
+        {% set detail_url = path('entity.node.canonical', {'node': content.field_link[0]['#url'].routeParameters.node }) %}
+    {% endif %}
+{% else %}
+    {% set detail_url = '' %}
+{% endif %}
+
+{% set detail_link = {
+    'label' : content.field_link_text['#items'].value, 
+    'href': detail_url
+    } 
+%}
+
+{% set hero_image = file_url(content.field_background_image['#items'].entity.uri.value) %}
+{% set story_title = content.field_teaser_title['#items'].value %}
+{% set related_story = content.field_related_story[0]['#node'] %}
+{% set copy_text = content.field_teaser_body_text['#items'].value %}
+
+{% if content.field_custom_s['#items'].value == "1" %}
+    {% if content.field_story_link['#items'].value is not empty %}
+        {% if content.field_story_link[0]['#url'].external %}
+            {% set story_url = content.field_story_link['#items'].uri %}
+        {% else %}
+            {% set story_url = path('entity.node.canonical', {'node': content.field_story_link[0]['#url'].routeParameters.node }) %}
+        {% endif %}
+    {% else %}
+        {% set story_url = '' %}
+    {% endif %}
+
+    {% set story = { 
+        "title" : (content.field_s['#items'].value is not empty) ? content.field_s['#items'].value : '',
+        "sub_title" : (content.field_story_teaser_text['#items'].value is not empty) ? content.field_story_teaser_text['#items'].value  : '',
+        "hero_image" : (content.field_story_image['#items'].entity.uri.value is not empty) ? file_url(content.field_story_image['#items'].entity.uri.value) : '',
+        "link" :  {
+            'label' : (content.field_story_link_text['#items'].value) ? content.field_story_link_text['#items'].value : '',
+            'href'  : story_url
+        }
+    } %}
+{% elseif related_story is not empty %}
+    {% set story = { 
+        "title" : related_story.title.value,
+        "sub_title" : related_story.field_sub_title.value,
+        "hero_image" : file_url(related_story.field_thumbnail.entity.uri.value),
+        "link" :{
+            'label' : 'Read Story',
+            'href'  : path('entity.node.canonical', {'node': related_story.nid.value }) 
+        }  
+    } %}
+{% endif %}
+
+{% block impact_of_giving_image %}
+    {% include "@molecules/02-blocks/04-impact-story-with-image.twig" with {
+        "image" : hero_image,
+        "text"  : story_title
+    } %}
+{% endblock %}
+
+{% block funding_section %}
+    {% include "@molecules/02-blocks/03-funding-priorities-full.twig" with {
+        "body_text" : copy_text,
+        "link_label": detail_link.label,
+        "link_href" : detail_link.href,
+        "contact_details" : contact_detail
+    } %}
+{% endblock %}
+
+{% block related_story %}
+    {% if story is not empty %}
+        <a href="{{ story.link.href }}" class="block--item block--impact-stories-panel">
+            <div class="block--item-colored-panel background--{{ color ? color : 'green' }}">
+                <h4>{{ story.title }}</h4>
+                {{ story.sub_title |raw}}
+                {% include '@molecules/01-text/07-text-with-icon.twig' with {
+                    "link_text" : story.link.label,
+                } %}
+            </div>
+            <div class="block--item-image-panel">
+                <div class="image-display" style="background-image: url({{ story.hero_image }});"></div>
+            </div>
+        </a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+<div class="column-wrapper slider " id="fundingPrioritiesItems">
+    {% for item in items %}
+        {% set data = { 
+            'classes' : "column-large-3 column-medium-4 column-small-6 column-xsmall-12",
+            'image' : file_url(item.content['#node'].field_thumbnail.entity.uri.value),
+            'link_text' : item.content['#node'].field_text_link.value,
+            'link_href' : (item.content['#node'].field_no_detail_page.value) ? item.content['#node'].field_giving_form_url.uri : path('entity.node.canonical', {'node': item.content['#node'].nid.value}),
+            'content_text' : item.content['#node'].field_teaser.value
+        } %}
+        {% include "@molecules/02-blocks/00-funding-priorities-item.twig" with data %}
+    {% endfor %}
+</div>

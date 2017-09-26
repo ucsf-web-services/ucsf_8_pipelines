@@ -1,0 +1,8 @@
+uuid: 14f0de8b-0312-4bf6-9686-b9f48c6d64e8
+langcode: en
+status: true
+dependencies: {  }
+id: image_banner
+label: 'Image Banner'
+revision: 1
+description: ''

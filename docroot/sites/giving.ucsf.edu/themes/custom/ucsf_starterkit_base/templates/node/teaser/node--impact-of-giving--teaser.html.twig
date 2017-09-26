@@ -1,0 +1,52 @@
+{% extends "@organisms/01-content-blocks/05-impact-stories-pillar.twig" %}
+
+{% set stats = [] %}
+
+{% set colors = ['teal', 'green', 'light-blue', 'dark-blue'] %}
+
+{% set category = content.field_related_stories['0']['#node'].field_category.entity.name.value %}
+{% if(category == 'Research') %}
+    {% set color = colors[0] %}
+{% elseif(category == 'Education') %}
+    {% set color = colors[1] %}
+{% elseif(category == 'Patient Care') %}
+    {% set color = colors[2] %}
+{% elseif(category == 'News') %}
+    {% set color = colors[3] %}
+{% endif %}
+
+{% for i in content.field_stats %}
+    {% if i["#theme"] == "field_collection_item" %}
+        {% set stat_item = {'value' : i['#field_collection_item'].field_stat_value.value, 'text': i['#field_collection_item'].field_stat_text.value } %}
+        {% set stats = stats|merge([stat_item])%}
+    {% endif %}
+{% endfor %}
+
+{% block impact_of_giving_image %}
+    {% include "@molecules/02-blocks/04-impact-story-with-image.twig" with {
+        "color" : color,
+        "image" : file_url(content.field_hero_image['#items'].entity.uri.value),
+        "text"  : node.title.value
+    } %}
+{% endblock %}
+
+{% block funding_section %}
+    {% include "@molecules/02-blocks/03-funding-priorities-full.twig" with {
+        "color" : color,
+        "body_text" : content.body,
+        "link_label": content.field_link['#items'].title,
+        "link_href" : content.field_link['#items'].uri,
+        "stats" : stats
+    } %}
+{% endblock %}
+
+{% block related_story %}
+    {% include "@molecules/02-blocks/02-impact-stories-block.twig" with {
+        "color" : color,
+        "link" : path('entity.node.canonical', {'node': content.field_related_stories['0']['#node'].nid.value}),
+        "title" : content.field_related_stories['0']['#node'].title.value,
+        "image_url" : file_url(content.field_related_stories['0']['#node'].field_thumbnail.entity.uri.value),
+        "copy_text" : content.field_related_stories['0']['#node'].field_sub_title.value
+    } %}
+{% endblock %}
+

@@ -1,0 +1,14 @@
+uuid: 3a41dd17-537b-445a-8274-d0df1adc7503
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.news_reviewer
+  module:
+    - user
+id: user_remove_role_action.news_reviewer
+label: 'Remove the News reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: news_reviewer

@@ -1,0 +1,7 @@
+{% for item in items %}
+    <div class="ways-to-give-option" role="button" {{ item.attributes }}>
+        <input type="radio" name="give-value" id="give_value_{{ item.content }}" value="{{ item.content }}">
+        <label for="give_value_{{ item.content }}">{{ item.content }}</label>
+    </div>
+{% endfor %}
+ 

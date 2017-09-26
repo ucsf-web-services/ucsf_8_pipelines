@@ -1,0 +1,90 @@
+{% extends directory ~ '/templates/page/type/page--type--stories.html.twig' %}
+
+{% block top_section %}
+    <div class="content-area">
+        <div class="column-wrapper">
+            <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                {% if page.breadcrumb %}
+                    <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                        {{ page.breadcrumb }}
+                    </div>
+                {% endif %}
+            </div>
+            {% if node.title.value %}
+                <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                        {% include "@molecules/01-text/04-story-heading.twig"  with {
+                            'story_title' : node.title.value
+                        } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if node.field_hero_image is not empty %}
+        {% include "@molecules/02-blocks/08-article-hero-no-text.twig" with {
+            image: file_url(node.field_hero_image.entity.uri.value)
+        }%}
+    {% endif%}
+    {% if node.field_hero_image_caption.value %}
+        <div class="oxford-blue-bg photo--caption-full large--hidden medium--hidden">
+            <div class="content-area">
+                <div class="column-wrapper">
+                    {% block hero_image_caption %}
+                        {% include "@molecules/01-text/02-photo-caption.twig" with {
+                            'caption' : node.field_hero_image_caption.value
+                        }%}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block right_section %}
+    {% if node.field_hero_image_caption.value %}
+        <div class="column-large-12 column-medium-12 small--hidden xsmall--hidden photo--caption-side">
+            {% include "@molecules/01-text/02-photo-caption.twig" with {
+                'caption' : node.field_hero_image_caption.value
+            }%}
+        </div>
+    {% endif %}
+    <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+        <div class="column-wrapper">
+            {% block microform %}
+                {% if node.field_giving_form_url.uri %}
+                    <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+                        {% set giving_amounts = [] %}
+                        {% set prefix = node.field_gift_choice_amount.itemDefinition.settings.prefix %}
+
+                        {% if node.field_gift_choice_amount is not empty %}
+                            {% for i in node.field_gift_choice_amount %}
+                                {% set label = prefix ~ i.value %}
+                                {% set selected = node.field_giving_form_default_value.value == loop.index ? true : false %}
+                                {% set giving_amount = { 'value' : i.value, 'label': label, 'is_checked' : selected } %}
+                                {% set giving_amounts = giving_amounts|merge([giving_amount]) %}
+                            {% endfor %}
+                        {% else %}
+                            {% set giving_amounts = [
+                                {"label" : "$50", "value":50,  "is_checked":false },
+                                {"label" : "$100",  "value":100, "is_checked":true },
+                                {"label" : "$250", "value":250, "is_checked":false },
+                                {"label" : "$500", "value":500, "is_checked":false }
+                            ] %}
+                        {% endif %}
+
+                        {% include "@organisms/01-content-blocks/04-ways-to-give-small.twig" with {
+                            "class_controller" : "visible_always funds_side",
+                            "label": node.field_microform_text.value,
+                            "post_url" : node.field_giving_form_url.uri,
+                            "choice_name": "GiftChoice",
+                            "amount" : "Amount",
+                            "giving_amounts" : giving_amounts
+                        } %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+        {% if page.sidebar_right %}
+            {{ page.sidebar_right }}
+        {% endif %}
+    </div>
+{% endblock %}

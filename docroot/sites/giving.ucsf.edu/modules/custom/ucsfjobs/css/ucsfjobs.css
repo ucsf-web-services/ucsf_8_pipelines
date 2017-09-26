@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+p>a {
+  color: #00A0DF;
+}
+p>a:hover {
+  color: #00A0DF;
+}
+section {
+  position: relative;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.job {
+  display: block;
+  margin: 30px 0;
+  padding: 25px;
+  background: #f1f1f1;
+/*  border: 1px solid #ebebeb;*/
+  text-decoration: none;
+ /* border-bottom: 3px solid #ebebeb;*/
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow .5s;
+}
+.job:hover {
+  box-shadow: 7px 7px 18px rgba(0, 0, 0, 0.4);
+  background: white;
+}
+.job p, .job span {
+
+}
+.job p:hover, .job span:hover {
+
+}
+.job-title {
+  font-size: 29px;
+  text-decoration: none;
+  color: #454545;
+  margin: 0 0;
+}
+.tags span {
+  display: inline-block;
+  color:#fff;
+  font-size: 12px;
+  background-color: #091634;
+  margin: 0 2px;
+  padding: 3px 4px;
+}
+/*
+.tags span:after {
+content: ', ';
+}
+
+.tags span:last-of-type:after {
+	content: '';
+}
+*/
+
+.job .description {
+  color: #999;
+}
+.job .btn {
+  display: inline-block;
+  padding: 7px 15px;
+  text-decoration: none;
+  font-weight: normal;
+  color: #999;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.job .btn:hover {
+    background: #ebebeb;
+    color: #555;
+}

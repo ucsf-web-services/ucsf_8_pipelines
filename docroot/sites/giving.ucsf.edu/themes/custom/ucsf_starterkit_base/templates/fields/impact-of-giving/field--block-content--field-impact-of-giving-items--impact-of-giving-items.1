@@ -1,0 +1,43 @@
+{% for item in items %}
+    {# include "@organisms/01-content-blocks/05-impact-stories-pillar.twig" with {
+        'hero_image' : file_url(item.content['#options'].entity.field_hero_image.entity.uri.value),
+        'story_title' : item.content['#options'].entity.title.value,
+        'color' : 'teal',
+        'copy_text' : item.content['#options'].entity.body.value,
+        'link' : {
+            'label' : item.content['#options'].entity.field_link.title,
+            'href' : item.content['#options'].entity.field_link.uri,
+        },
+        'story' : {
+            "title" : item.content['#options'].entity.field_related_stories.entity.title.value,
+            "sub_title" : item.content['#options'].entity.field_related_stories.entity.field_sub_title.value,
+            "hero_image" : file_url(item.content['#options'].entity.field_related_stories.entity.field_hero_image.entity.uri.value),
+            "link" : "#"
+        }
+    } #}
+
+    {# include "@organisms/01-content-blocks/05-impact-stories-pillar.twig" with {
+        'hero_image' : file_url(item.content['#node'].field_hero_image.entity.uri.value),
+        'story_title' : item.content['#node'].title.value,
+        'color' : 'teal',
+        'copy_text' : item.content['#node'].body.value,
+        'link' : {
+            'label' : item.content['#node'].field_link.title,
+            'href' : item.content['#node'].field_link.uri,
+        },
+        'story' : {
+            "title" : item.content['#options'].entity.field_related_stories.entity.title.value,
+            "sub_title" : item.content['#options'].entity.field_related_stories.entity.field_sub_title.value,
+            "hero_image" : file_url(item.content['#options'].entity.field_related_stories.entity.field_hero_image.entity.uri.value),
+            "link" : "#"
+        }
+    } #}
+    
+    {{ item.content }}
+    {# kint(item.content['#node'].field_stats) #}
+    {# kint(item.content['#options'].entity.field_stats[0].getValue()) #}
+    {# kint() #}
+    {# for i in item.content['#options'].entity.field_stats #}
+        {# kint(i.value) #}
+    {# endfor #}
+{% endfor %}

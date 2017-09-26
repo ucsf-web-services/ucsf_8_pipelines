@@ -1,0 +1,60 @@
+
+%full-width {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin gallery($numPerRow, $margin, $marginbottom: $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $marginbottom;
+    margin-right: $margin;
+    float: left;
+    clear: none;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+  }
+  &:nth-child(#{$numPerRow}n+1) {
+    clear: both;
+  }
+}
+
+@mixin fix-white-font() {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+@mixin border-radius($radius: 5px, $moz: true, $webkit: true, $ms: true) {
+  @if $moz    { -moz-border-radius:    $radius; }
+  @if $webkit { -webkit-border-radius: $radius; }
+  @if $ms     { -ms-border-radius:     $radius; }
+  border-radius: $radius;
+}
+
+@mixin vhalign($left: 50%, $top: 50%) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  -webkit-transform: translate(-$left, -$top);
+  -ms-transform: translate(-$left, -$top);
+  transform: translate(-$left, -$top);
+}

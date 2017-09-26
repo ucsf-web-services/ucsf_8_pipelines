@@ -1,0 +1,21 @@
+uuid: f51f3d07-13cb-44ae-a69f-8ddd09558b30
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+id: news
+label: News
+menu_name: main
+parent: 'menu_link_content:8c3b6831-0a7b-43c8-ab57-d03d04502a95'
+menu_link: 'menu_position_link:news'
+enabled: true
+weight: -5
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

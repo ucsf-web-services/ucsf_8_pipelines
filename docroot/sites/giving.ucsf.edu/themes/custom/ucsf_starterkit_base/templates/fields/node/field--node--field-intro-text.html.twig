@@ -1,0 +1,7 @@
+{% extends "@molecules/01-text/03-fund-intro.twig" %}
+
+{% block intro_text %}
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
+{% endblock %}

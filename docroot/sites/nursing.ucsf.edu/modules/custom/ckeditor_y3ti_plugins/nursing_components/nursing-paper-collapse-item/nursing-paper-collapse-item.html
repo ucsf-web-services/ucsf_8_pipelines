@@ -1,0 +1,137 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+
+<!--
+A Material Design [item with header and collapsible content](https://www.google.com/design/spec/components/lists.html)
+
+### Example
+
+```html
+<paper-collapse-item icon="icons:favorite" header="Item 1" opened>
+  Lots of very interesting content.
+</paper-collapse-item>
+<paper-collapse-item icon="icons:info" header="Item 2">
+  Lots of very interesting content.
+</paper-collapse-item>
+<paper-collapse-item icon="icons:help" header="Item 3">
+  Lots of very interesting content.
+</paper-collapse-item>
+```
+
+### Styling
+
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+--paper-collapse-item-header|Mixin applied to header of collapsible item|{}
+--paper-collapse-item-content|Mixin applied to collapsible content|{}
+--paper-collapse-item-icon|Mixin applied to icon|{}
+
+
+@demo demo/index.html
+-->
+<dom-module id="nursing-paper-collapse-item">
+
+	<template>
+
+		<style>
+			.header {
+				min-height: 48px;
+				color: var(--primary-text-color);
+				@apply --layout-center-center;
+				@apply --layout-horizontal;
+				@apply --paper-font-subhead;
+				@apply --paper-collapse-item-header;
+			}
+
+			.icon {
+				margin-right: 24px;
+				--iron-icon-height: 32px;
+				--iron-icon-width: 32px;
+				@apply --paper-collapse-item-icon;
+			}
+
+			.icon, .toogle {
+				color: var(--disabled-text-color);
+			}
+
+			.header-text {
+				@apply --layout-flex;
+			}
+
+			.content {
+				color: var(--primary-text-color);
+				@apply --paper-font-body1;
+				@apply --paper-collapse-item-content;
+			}
+			:host(.cke_widget_element) .toogle {
+			  display: none;
+			}
+			:host(.cke_widget_element) paper-item {
+			  padding: 0;
+			}
+		</style>
+
+		<paper-item>
+			<paper-item-body>
+				<div class="header" on-tap="_toggleOpened">
+					<div class="header-text">
+						<slot name="header-text"></slot>
+					</div>
+					<paper-icon-button class="toogle" icon="[[_toggleIcon]]"></paper-icon-button>
+				</div>
+				<iron-collapse class="content" opened="{{opened}}">
+					<slot name="content-text"></slot>
+				</iron-collapse>
+			</paper-item-body>
+		</paper-item>
+
+	</template>
+</dom-module>
+
+<script>
+
+(function() {
+
+	Polymer({
+		is: 'nursing-paper-collapse-item',
+		properties: {
+			/**
+			 * True if the content section is opened
+			 */
+			opened: {
+				type: Boolean,
+				reflectToAttribute: true,
+				notify: true
+			},
+
+			_toggleIcon: {
+				type: String,
+				computed: '_computeToggleIcon(opened)'
+			}
+		},
+
+		// Private methods
+		/**
+		 * Fired whenever the status is changed (opened/closed)
+		 *
+		 * @event toggle
+		 */
+		_toggleOpened: function(e) {
+			this.opened = !this.opened;
+			this.fire('toggle', this);
+		},
+		_computeToggleIcon: function(opened) {
+			return opened ? 'icons:expand-less' : 'icons:expand-more';
+		}
+	});
+
+})();
+
+</script>

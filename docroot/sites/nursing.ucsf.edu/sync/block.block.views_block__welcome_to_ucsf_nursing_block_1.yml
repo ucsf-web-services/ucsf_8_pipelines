@@ -1,0 +1,34 @@
+uuid: 73d796a5-0e81-4a55-96db-488d356ab6c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.welcome_to_ucsf_nursing
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - nursing
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__welcome_to_ucsf_nursing_block_1
+theme: nursing
+region: header_bottom
+weight: 0
+provider: null
+plugin: 'views_block:welcome_to_ucsf_nursing-block_1'
+settings:
+  id: 'views_block:welcome_to_ucsf_nursing-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

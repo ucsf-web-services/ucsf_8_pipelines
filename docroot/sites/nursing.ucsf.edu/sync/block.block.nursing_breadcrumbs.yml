@@ -1,0 +1,22 @@
+uuid: 7d5d8d14-6ef2-4fea-b9ae-463708861432
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nursing
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: nursing_breadcrumbs
+theme: nursing
+region: content
+weight: -8
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

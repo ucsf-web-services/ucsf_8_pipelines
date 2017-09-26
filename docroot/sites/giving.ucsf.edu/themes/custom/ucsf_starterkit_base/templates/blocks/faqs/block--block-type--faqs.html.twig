@@ -1,0 +1,14 @@
+{% extends directory ~ '/templates/blocks/block.html.twig' %}
+
+{% block content %}
+    {% embed "@organisms/01-content-blocks/10-accordion-list.twig" %}
+        {% block label %}
+            <h3 class="list-title">{{ label }}</h3>
+        {% endblock %}
+        {% block items %}
+            <div class="accordion-list" role="list">
+                {{ content }}
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

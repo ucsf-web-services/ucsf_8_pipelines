@@ -1,0 +1,29 @@
+<div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+    <div class="column-wrapper">
+        {% if content.field_intro_text  %}
+            <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12">
+                {% include "@molecules/01-text/01-section-intro.twig" with {
+                    "intro_text" : content.field_intro_text['#items'].value
+                } %}
+            </div>
+        {% endif %}
+        {% if content.body %}
+            <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12">
+                {{ content.body }}
+            </div>
+        {% endif %}
+
+        {% if content.field_gallery_image %}
+            <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12">
+                <div class="carousel-with-header">
+                    {% if node.field_gallery_header_text.value %}
+                        {% include '@molecules/01-text/09-carousel-header.twig' with {
+                            "header_text" : node.field_gallery_header_text.value
+                        } %}
+                    {% endif %}
+                    {{ content.field_gallery_image }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

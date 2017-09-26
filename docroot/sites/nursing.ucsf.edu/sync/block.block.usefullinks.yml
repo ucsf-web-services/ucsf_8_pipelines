@@ -1,0 +1,35 @@
+uuid: 9aa057cb-4a5c-4df1-a0ce-411ef03203da
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6e08aa0c-d545-46b5-94a3-64deae753c08'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - nursing
+third_party_settings:
+  block_class:
+    classes: block--links
+id: usefullinks
+theme: nursing
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:6e08aa0c-d545-46b5-94a3-64deae753c08'
+settings:
+  id: 'block_content:6e08aa0c-d545-46b5-94a3-64deae753c08'
+  label: 'Useful Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/59\r\n/node/60\r\n/node/62\r\n/node/63"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,14 @@
+uuid: 42ef8559-9eb0-4869-8944-4a386cfd3351
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spotlight_creator
+  module:
+    - user
+id: user_add_role_action.spotlight_creator
+label: 'Add the Spotlight creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: spotlight_creator

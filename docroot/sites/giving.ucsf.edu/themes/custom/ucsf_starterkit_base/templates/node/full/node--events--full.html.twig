@@ -1,0 +1,35 @@
+<div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">
+    <div class="column-wrapper">
+        <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12 events">
+            {% include "@molecules/02-blocks/09-block-share-icons.twig" %}
+        </div>
+        <div class="column-large-10 column-medium-12 column-small-12 column-xsmall-12">
+        {% if content.body %}
+            <div class="block block--next-events">
+                {{ content.body }}
+            </div>
+        {% endif %}
+
+        {% if content.field_gallery_image %}
+           {{ content.field_gallery_image }}
+        {% endif %}
+
+        {% if node.field_lower_body.value %}
+            <div class="block block--past-events">
+                {{ node.field_lower_body.value | raw }}
+            </div>
+        {% endif %}
+
+        {% if content.field_past_events %}
+            <div class="event-images">
+                {% for item in node.field_past_events %}
+                    {% include '@molecules/02-blocks/24-image-and-caption-single.twig' with {
+                        "image" : file_url(item.entity.field_thumbnail.entity.uri.value),
+                        "caption" : item.entity.field_hero_image_caption.value
+                    } %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        </div>
+    </div>
+ </div>

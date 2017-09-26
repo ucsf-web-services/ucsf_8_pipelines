@@ -1,0 +1,14 @@
+uuid: 82f4199c-9d10-4fb1-ac4a-6f56c4e41e5e
+name: 'UCSF School of Nursing'
+mail: elodie@y3ti.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/141
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

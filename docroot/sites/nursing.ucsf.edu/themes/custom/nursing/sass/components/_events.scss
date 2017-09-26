@@ -1,0 +1,120 @@
+body.sidebar {
+  .region-sidebar .xml-events-wrapper {
+    background: $color--navy--tint3;
+    padding: 10px;
+    .event {
+      overflow: hidden;
+      border-top: 1px solid $color--grey2;
+      padding-top: 20px;
+      margin-top: 20px;
+      &:first-child {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+      }
+      & >.event-image {
+        display: inline-block;
+        vertical-align: middle;
+        width: 85px;
+        margin-right: 5px;
+        margin-bottom: 3%;
+        float: left;
+        & > img {
+          border-radius: 50%;
+          max-width: 85px;
+          max-height: 85px;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & > h3 {
+        display: block;
+        vertical-align: middle;
+        overflow: hidden;
+        margin-left: 90px;
+        margin-top: 0;
+        border: none;
+        margin-bottom: 3%;
+        & > a {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      }
+      .fa {
+        font-size: 18px;
+        line-height: 18px;
+        margin-right: 10px;
+      }
+      .date {
+        margin: 5px 0;
+        clear: left;
+      }
+    }
+  }
+}
+
+body.path-frontpage {
+  .home-events {
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 36px;
+      padding-top: 50px;
+      text-transform: uppercase;
+    }
+    .xml-events-wrapper {
+      max-width: 1320px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 10px;
+      overflow: auto;
+      .event {
+        @include gallery(1, 2%, 2%);
+        @include media('>=small_desktop') {
+          @include gallery(4, 2%, 2%);
+          min-height: 390px;
+        }
+        @include media('>=tablet') {
+          @include gallery(3, 2%, 2%);
+          min-height: 390px;
+        }
+        @include media('>=phone') {
+
+        }
+        background: $color--navy--tint3;
+        padding: 20px;
+
+        & >.event-image {
+  ;
+          & > img {
+            border-radius: 50%;
+            max-width: 200px;
+            max-height: 200px;
+            height: 200px;
+            object-fit: cover;
+          }
+        }
+        & > h3 {
+          overflow: hidden;
+          border: none;
+          margin: 15px 0;
+          & > a {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+        }
+        .fa {
+          font-size: 18px;
+          line-height: 18px;
+          margin-right: 10px;
+        }
+        .date {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+}

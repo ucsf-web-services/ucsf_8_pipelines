@@ -1,0 +1,6 @@
+{% for item in items %}
+    {% include '@molecules/02-blocks/14-accordion-item.twig' with {
+        "accordion_item_header" : item.content['#field_collection_item'].field_question.value,
+        "accordion_item_body" : item.content['#field_collection_item'].field_answer.value
+    } %}
+{% endfor %}

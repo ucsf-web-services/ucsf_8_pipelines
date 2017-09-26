@@ -1,0 +1,14 @@
+uuid: e85492e5-d0c9-4098-a63b-80738cb8ebfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spotlight_creator
+  module:
+    - user
+id: user_remove_role_action.spotlight_creator
+label: 'Remove the Spotlight creator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: spotlight_creator

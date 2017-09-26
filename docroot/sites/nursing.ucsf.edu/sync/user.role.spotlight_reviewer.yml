@@ -1,0 +1,13 @@
+uuid: 55db7acf-2498-441d-99ca-9d707cf3ccc4
+langcode: en
+status: true
+dependencies: {  }
+id: spotlight_reviewer
+label: 'Spotlight reviewer'
+weight: 16
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any spotlight content'
+  - 'edit any spotlight content'
+  - 'view moderation states'

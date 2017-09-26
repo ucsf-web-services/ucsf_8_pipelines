@@ -1,0 +1,20 @@
+nursing-paper-tab {
+  height: 48px;
+  display: inline-block;
+}
+nursing-paper-tab div {
+  padding: 0 20px;
+  height: 48px;
+}
+nursing-paper-tab.iron-selected {
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+  background: #ccc;
+}
+nursing-iron-pages div {
+  display: none;
+}
+nursing-iron-pages .iron-select,
+nursing-iron-pages .iron-selected {
+  display: block !important;
+}

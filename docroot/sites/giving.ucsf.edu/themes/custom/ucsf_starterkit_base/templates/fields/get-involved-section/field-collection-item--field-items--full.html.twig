@@ -1,0 +1,14 @@
+{% if content.field_link[0]['#options'].external %}
+    {% set link = content.field_link['#items'].uri %} 
+{% else %}
+    {% set link = path('entity.node.canonical', {'node': content.field_link[0]['#url'].routeParameters.node }) %}
+{% endif %}
+
+{% set image = file_url(content.field_thumbnail['#items'].entity.uri.value) %}
+
+{% include '@molecules/02-blocks/17-ways-to-get-involved-item.twig' with {
+    "item_image" : image,
+    "item_body"  : content.field_title['#items'].value,
+    "link_text"  : content.field_link_text['#items'].value,
+    "link_href"  : link
+} %}

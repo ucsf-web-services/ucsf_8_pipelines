@@ -1,0 +1,84 @@
+{#
+/**
+ * @file
+ * Theme override for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+  {{ attachment_before }}
+
+  <div class="content-area">
+    <div class="column-wrapper">
+      <div id="related_articles_all" class="active-tab">
+      {{ exposed }}
+        <div class="block block--related-articles">
+          <div class="masonry-wrapper">
+            <ul class="masonry-results">
+              {{ rows }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ empty }}
+
+  <div class="content-area">
+      <div class="column-wrapper">
+          <div class="column-large-8 column-medium-8 column-small-12 column-xsmall-12">
+              {{ pager }}
+          </div>
+      </div>
+  </div>
+  
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+  {{ attachment_after }}
+  {{ more }}
+  {{ feed_icons }}
+</div>
+

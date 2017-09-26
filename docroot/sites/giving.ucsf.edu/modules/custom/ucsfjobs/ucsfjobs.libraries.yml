@@ -1,0 +1,11 @@
+ucsfjobs:
+  version: 1.x
+  css:
+    theme:
+      css/ucsfjobs.css: {}
+  js:
+    js/ucsfjobs.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupal.ajax

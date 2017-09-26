@@ -1,0 +1,16 @@
+{% set url = content.field_back_link[0]['#url'].external == "true" ? content.field_back_link[0]['#url'].uri  : path('entity.node.canonical', {'node': content.field_back_link[0]['#url'].routeParameters.node}) %}
+
+{% 
+    set links = {
+        "breadcrumb_links" :  {
+            "links": [
+                {
+                    "label" : content.field_back_link[0]['#title'],
+                    "link" : url
+                }
+            ]
+        }
+    }
+%}
+
+{% include "@molecules/05-navigation/06-back-to-page.twig" with links %}

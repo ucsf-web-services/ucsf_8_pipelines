@@ -1,0 +1,5 @@
+name: Nursing XML Events
+type: module
+description: Import Events in Block
+core: 8.x
+package: Custom

@@ -1,0 +1,61 @@
+{% extends "@pages/_article-base-template.twig" %}
+
+{% set hero_items = [] %}
+
+{% for i in node.field_hero_image %}
+  {% set hero_item = { 'background_image' :  file_url(i.entity.uri.value) } %}
+  {% set hero_items = hero_items|merge([hero_item]) %}
+{% endfor %}
+
+{% block header %}
+    {% include directory ~ '/templates/includes/header.html.twig' with {
+        'logo' : '/' ~ directory ~ '/images/UCSF_logo_white_RGB.svg',
+        'logo_box' :  '/' ~ directory ~ '/images/UCSF_logobox_navy_RGB.svg',
+        'site_slogan' : site.slogan,
+        'site_name': site.name,
+        'header_give_button' : header_give_button,
+        'global_nav_header_link' : 'http://www.ucsf.edu/',
+        'footer':{
+          'copyright' : copyright_text
+        }
+    } %}
+{% endblock %}
+
+{% block content %}
+  <div class="contents--wrapper">
+    {% block top_section %}
+      {% include "@molecules/02-blocks/01-block-hero.twig" with {
+        "backgrounds" : hero_items,
+        "heading" : node.field_page_name.value,
+        "alignment" : "right",
+        "body" : node.field_copy_text.value,
+        "link_text" : 'SEE YOUR IMPACT',
+        "link_href" : path('entity.node.canonical', {'node': node.field_link_to.entity.nid.value})
+      } %}
+      {% if alert_bar_is_visible %}
+        {% include "@molecules/08-messaging/00-alert.twig" with {
+          'alert' : {
+            'text' : alert_bar,
+            'href' : alert_bar_link
+          }
+        } %}
+      {% endif %}
+    {% endblock %}
+    {% block middle_section %}
+        {% if page.content %}
+          {{ page.content }}
+        {% endif %}
+    {% endblock %}
+    {% block bottom_section %}
+      {% if page.footer %}
+        {{ page.footer }}
+      {% endif %}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block footer %}
+    {% include directory ~ '/templates/includes/footer.html.twig' with {
+      'logo' : '/' ~ directory ~ '/images/UCSF_logobox_white.png'
+    } %}
+{% endblock %}

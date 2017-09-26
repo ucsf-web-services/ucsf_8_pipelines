@@ -1,0 +1,92 @@
+uuid: 4ef7c953-6be4-46cd-a291-08048b647542
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.field.block_content.video_banner.field_link_play_video
+    - field.field.block_content.video_banner.field_text_video_banner_title
+    - field.field.block_content.video_banner.field_text_video_description
+    - field.field.block_content.video_banner.field_video
+    - field.field.block_content.video_banner.field_video_banner_on_click
+  module:
+    - field_group
+    - link
+    - text
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_video_banner_content:
+      children:
+        - field_text_video_banner_title
+        - field_text_video_description
+        - field_link_play_video
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Video Banner content'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: video-banner-content
+      label: 'Video Banner content'
+id: block_content.video_banner.default
+targetEntityType: block_content
+bundle: video_banner
+mode: default
+content:
+  field_link_play_video:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text_video_banner_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_video_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_video:
+    weight: 0
+    label: hidden
+    settings:
+      autoplay: true
+      width: 854
+      height: 480
+      responsive: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_video_banner_on_click:
+    weight: 5
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+hidden: {  }

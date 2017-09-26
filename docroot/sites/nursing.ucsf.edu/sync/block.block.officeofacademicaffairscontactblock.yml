@@ -1,0 +1,31 @@
+uuid: dac85709-2fa7-4ec1-b82d-c38dd800f08d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a3d92c69-8796-4fb4-9744-232e1ba8b158'
+  module:
+    - block_content
+    - system
+  theme:
+    - nursing
+id: officeofacademicaffairscontactblock
+theme: nursing
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:a3d92c69-8796-4fb4-9744-232e1ba8b158'
+settings:
+  id: 'block_content:a3d92c69-8796-4fb4-9744-232e1ba8b158'
+  label: Contact
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/126
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,12 @@
+{% set link = fields.field_no_detail_page.content == "1" ? fields.field_giving_form_url.content : fields.path.content %}
+
+{% set data = { 
+    "redirect": fields.field_no_detail_page.content,
+    "path": fields.path.content,
+    "giving_form": fields.field_giving_form_url.content,
+    "wh_item_link" : link,
+    "wh_item_heading" : fields.title.content,
+    "wh_item_body" : fields.field_teaser.content
+} %}
+
+{% include '@molecules/02-blocks/15-whats-hot-item.twig' with data %}
