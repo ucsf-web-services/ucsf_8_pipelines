@@ -27,9 +27,8 @@
 		"drupal/better_normalizers": "^1.0-dev",
 		"drupal/block_style_plugins": "1.*",
 		"drupal/ckwordcount": "1.*",
-        "drupal/ckeditor_fontawesome": "^1.2",
-        "drupal/ckeditor_templates": "^1.2",
-        "drupal/ckeditor_liststyle": "1.*",
+        "drupal/ckeditor_templates": "^1.0",
+        "drupal/ckeditor_liststyle": "^1.1",
 		"drupal/crop": "1.*",
 		"drupal/default_content": "1.*",
 		"drupal/editor_file": "1.*",
@@ -109,8 +108,8 @@
     },
     "repositories": [
         {
-          "type": "composer",
-          "url": "https://packages.drupal.org/8"
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
         },
         {
             "type": "composer",
