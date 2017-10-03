@@ -69,7 +69,7 @@
         "drupal/linkit": "^4.3",
         "drupal/image_url_formatter": "^1.0-beta1",
         "drupal/contact_poup": "^1.1",
-        "drupal/page_manager": "^4.0-beta2",
+        "drupal/page_manager": "^4.0-beta2"
     },
     "require-dev": {
 		"composer/composer": "^1.4",
