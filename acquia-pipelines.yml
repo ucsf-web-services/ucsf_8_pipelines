@@ -1,0 +1,28 @@
+version: 1.1.0
+variables:
+  global:
+    SLACK_HOSTNAME: "uctech.slack.com"
+    SLACK_USERNAME: ericg-ucsf
+    SLACK_TOKEN:
+      secure: xoxp-11736434384-13327773589-217827125606-ccf786cfe7e9be80cac5fa1f2fa662cb
+    SLACK_CHANNEL: "#ucsf-webservices"
+services:
+    - php: 
+        version: 7.1
+    - mysql: 
+        version: 5.6
+events:
+  build:
+    steps:
+      - build:
+          type: script
+          script:
+            - echo "Building my code"
+            - composer install --no-progress
+          database: 
+            - mysql -u root -proot -e "CREATE DATABASE drupal" 
+      - unit_tests:
+      - notify:
+          type: script
+          script:
+            - curl -X POST --data 'payload={"channel": "${SLACK_CHANNEL}", "username": "${SLACK_USERNAME}", "text": "success"}' https://${SLACK_HOSTNAME}/services/hooks/incoming-webhook?token=${SLACK_TOKEN}
