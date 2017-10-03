@@ -61,7 +61,7 @@
 		"drupal/node_class": "1.*",
 		"drupal/video_embed_html5": "1.*",
         "drupal/conditional_fields": "1.*",
-        "drupal/components": "1.*",
+        "drupal/components": "1.*"
     },
     "require-dev": {
 		"composer/composer": "^1.4",
