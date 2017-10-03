@@ -100,16 +100,16 @@
             "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
         }
     },
-    "repositories": {
-		 "drupal" : {
-		  "type": "composer",
-		  "url": "https://packages.drupal.org/8"
+    "repositories": [
+        {
+          "type": "composer",
+          "url": "https://packages.drupal.org/8"
         },
         {
-        "type": "composer",
-        "url": "https://asset-packagist.org"
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-    },
+    ],
     "extra": {
       "installer-paths": {
             "docroot/core": ["type:drupal-core"],
