@@ -20,7 +20,3 @@ events:
             - echo "Building my code"
             - composer install --no-progress
             - mysql -u root -proot -e "CREATE DATABASE drupal"
-      - notify:
-          type: script
-          script:
-            - curl -X POST --data "payload={"channel": "${SLACK_CHANNEL}", "username": "${SLACK_USERNAME}", "text": "success"}" https://${SLACK_HOSTNAME}/services/hooks/incoming-webhook?token=${SLACK_TOKEN}
