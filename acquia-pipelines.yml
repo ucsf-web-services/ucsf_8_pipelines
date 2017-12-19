@@ -8,7 +8,7 @@ variables:
     SLACK_CHANNEL: "#ucsf-webservices"
 services:
     - php: 
-        version: 7.1
+        version: 5.6
     - mysql: 
         version: 5.6
 events:
@@ -19,25 +19,18 @@ events:
             - echo "Building my code"
             - composer install --no-progress
             - mysql -u root -proot -e "CREATE DATABASE drupal"
-            
             # Generate the behat config.
             #- cd ../
             #- ./bin/drupal behat:init http://127.0.0.1:8080 --merge=../docroot/profiles/contrib/lightning/tests/behat.yml
             #- ./bin/drupal behat:include ../docroot/profiles/contrib/lightning/tests/features --with-subcontexts=../docroot/profiles/contrib/lightning/tests/features/bootstrap --with-subcontexts=../docroot/profiles/contrib/lightning/src/LightningExtension/Context
-      - test:
-              #type: script
-              #script:
-              #  - set -x
-              #  - cd docroot
-                # Turn on PHP server, PhantomJS driver, and wait for them to turn on in the container
-              #  - ../bin/drush runserver --default-server=builtin 8080 &>/dev/null &
-              #  - ../bin/phantomjs --webdriver=4444 > /dev/null &
-              #  - sleep 10
-              #  # Run a JavaScript test in the Lightning project.
-              #  - ../bin/behat --stop-on-failure --config ./sites/default/files/behat.yml --tags=260b6d63
+            #type: script
+            #script:
+            #  - set -x
+            #  - cd docroot
+            # Turn on PHP server, PhantomJS driver, and wait for them to turn on in the container
+            #  - ../bin/drush runserver --default-server=builtin 8080 &>/dev/null &
+            #  - ../bin/phantomjs --webdriver=4444 > /dev/null &
+            #  - sleep 10
+            #  # Run a JavaScript test in the Lightning project.
+            #  - ../bin/behat --stop-on-failure --config ./sites/default/files/behat.yml --tags=260b6d63
 fail-on-build:
-    steps:
-      - fail:
-          script:  
-          
-   
