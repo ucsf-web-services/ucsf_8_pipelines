@@ -9,8 +9,8 @@
 /docroot/sites/*/files
 /docroot/sites/*/private-files
 /docroot/profiles/contrib/*
-/docroot/profiles/libraries/*
-
+/docroot/libraries/*
+/docroot/libraries/
 
 # Ignore default text files
 /docroot/CHANGELOG.txt
@@ -29,7 +29,7 @@ Ignore the bin directory
 /docroot/bin/
 
 # Ignore the node modules folder
-node_modules
+/node_modules
 /**/node_modules
 
 # Ignore Sass map files since they only work locally anyway
@@ -42,7 +42,7 @@ node_modules
 /docroot/tests/coverage/
 
 # Ignore contrib modules, themes, and libraries
-/docroot/libraries/contrib/
+
 /docroot/modules/contrib/
 /docroot/themes/contrib/
 /docroot/themes/**/bower_components/
