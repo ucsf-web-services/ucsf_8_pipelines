@@ -4,145 +4,210 @@
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
-   {
-    "name": "University of California, San Francisco",
-    "email": "copyright@ucsf.edu",
-    "role": "Copyright Owner"
-   },
-   {
-    "name": "Eric Guerin",
-    "email": "eric.guerin@ucsf.edu",
-    "role": "Developer"
-   }
-   ],
-   "extra": {
-      "installer-paths": {
-            "docroot/core": ["type:drupal-core"],
-            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "docroot/profiles/{$name}": ["type:drupal-profile"],
-            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
-            "docroot/libraries/{$name}": ["type:drupal-library"],
-            "docroot/drush/contrib/{$name}": ["type:drupal-drush"],
-            "docroot/sites/eight.ucsf.edu/modules/contrib/{$name}" : ["drupal/fieldblock"]
+        {
+            "name": "University of California, San Francisco",
+            "email": "copyright@ucsf.edu",
+            "role": "Copyright Owner"
         },
+        {
+            "name": "Eric Guerin",
+            "email": "eric.guerin@ucsf.edu",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.5",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "wikimedia/composer-merge-plugin": "^1.4.1",
+        "cweagans/composer-patches": "^1.6.4",
+        "drupal/core" : "^8.5",
+        "acquia/lightning": "~3.0.1",
+        "ucdavis/sitefarm_seed": "dev-crop-dependency-update",
+        "drupal/layout_plugin": "^1.0",
+        "drupal/linkit": "^4.3",
+        "drupal/twig_tweak": "^1.8",
+        "drupal/search_api_solr": "^1.0",
+        "drupal/address": "^1.2",
+        "drupal/block_scheduler": "^1.0",
+        "drupal/fieldblock": "~2.0",
+        "drupal/google_tag": "~1.0",
+        "drupal/sitemap": "^1.3",
+        "drupal/admin_toolbar": "^1.22",
+        "drupal/page_manager": "^4.0",
+        "drupal/editor_advanced_link": "^1.4",
+        "drupal/field_group": "^1.0",
+        "drupal/anchor_link": "^1.0",
+        "drupal/block_style_plugins": "^1.0",
+        "drupal/ckwordcount": "^1.0",
+        "drupal/default_content": "^1.0",
+        "drupal/editor_file": "^1.2",
+        "drupal/focal_point": "^1.0",
+        "drupal/google_analytics": "^2.2",
+        "drupal/honeypot": "^1.2",
+        "drupal/masquerade": "^2.0",
+        "drupal/menu_block": "^1.4",
+        "drupal/menu_breadcrumb": "^1.5",
+        "drupal/notification": "^1.0",
+        "drupal/photoswipe": "^1.0",
+        "drupal/redirect": "^1.0",
+        "drupal/roleassign": "^1.0",
+        "drupal/search_api": "^1.5",
+        "drupal/simple_sitemap": "^2.1",
+        "drupal/social_media_links": "^2.6",
+        "drupal/url_embed": "^1.0",
+        "drupal/webform": "^5.0",
+        "drupal/webform_views": "^5.0",
+        "drupal/media_entity_instagram": "^2.0.0",
+        "drupal/media_entity_twitter": "^2.0.0",
+        "drupal/media_entity_document": "^1.0",
+        "drupal/media_entity_image": "^1.0",
+        "drupal/jsonapi" : "^1.7.0",
+        "drupal/block_class" : "1.0-alpha1",
+        "drupal/ckeditor_liststyle" : "^1.2",
+        "drupal/entity" : "^1.0",
+        "drupal/entity_block" : "^1.0",
+        "drupal/imce" : "1.6",
+        "drupal/link_attributes" : "^1.2",
+        "drupal/metatag" : "^1.4",
+        "drupal/module_filter" : "^3.1",
+        "drupal/token" : "^1.1",
+        "drupal/views_infinite_scroll" : "^1.5",
+        "drupal/ckeditor_widgets": "1.x-dev",
+        "drupal/entity_browser_enhanced": "^1.0",
+        "drupal/conditional_fields": "^1.0",
+        "drupal/paragraphs": "^1.2",
+        "drupal/subpathauto": "^1.0",
+        "drupal/entity_reference_revisions": "^1.4",
+        "drupal/better_exposed_filters": "^3.0",
+        "drupal/externalauth": "^1.0",
+        "drupal/ldap": "^3.0",
+        "drupal/migrate_plus": "^4.0",
+        "drupal/migrate_tools": "^4.0",
+        "drupal/node_class": "^1.0",
+        "drupal/video_embed_html5": "^1.0",
+        "drupal/views_ajax_history": "1.x-dev",
+        "drupal/ldap_servers": "^3.0",
+        "drupal/ldap_user": "^3.0",
+        "drupal/menu_position": "1.x-dev",
+        "drupal/widget": "^1.0",
+        "drupal/migrate_source_csv": "^2.0",
+        "drupal/field_collection": "^1.0",
+        "drupal/components": "^1.0",
+        "drupal/image_url_formatter": "^1.0",
+        "drupal/ctools": "^3.0",
+        "drupal/wbm2cm": "^2.0",
+        "drupal/stage_file_proxy": "^1.0",
+        "drupal/menu_item_extras": "~2.0",
+        "drupal/we_megamenu": "~1.0",
+        "drupal/menus_attribute": "~1.1",
+        "drupal/smart_trim": "^1.1"
+    },
+    "require-dev": {
+        "drupal/search_kint": "^1.0",
+        "drush/drush" : "8.1.16 as 9.0"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "config": {
+        "preferred-install": "dist",
+        "autoloader-suffix": "Drupal8",
+        "vendor-dir": "docroot/vendor"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "cp -a docroot/profiles/contrib/sitefarm_seed/libraries/. docroot/libraries/"
+        ],
+        "post-update-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "cp -a docroot/profiles/contrib/sitefarm_seed/libraries/. docroot/libraries/"
+        ]
+    },
+    "extra": {
         "_readme": [
             "By default Drupal loads the autoloader from ./vendor/autoload.php.",
             "To change the autoloader you can edit ./autoload.php."
         ],
         "merge-plugin": {
             "include": [
-                "docroot/core/composer.json",
-                "docroot/profiles/lightning/composer.json",
-                "docroot/profiles/sitefarm_seed/composer.json"
+                "docroot/profiles/contrib/lightning/composer.json",
+                "docroot/profiles/contrib/sitefarm_seed/composer.json",
+                "docroot/profiles/custom/dom_profile/composer.json"
             ],
-            "recurse": false,
             "replace": false,
-            "merge-extra": false
+            "merge-extra": true,
+            "merge-extra-deep": false,
+            "merge-scripts": true
         },
-       "enable-patching": true
-    },
-    "require": {
-		"composer/installers": "^1.0",
-        "oomphinc/composer-installers-extender" : "^1.0",
-		"acquia/lightning": "^2.1.0",
-		"ucdavis/sitefarm_seed": "dev-8.x-1.x",
-		"wikimedia/composer-merge-plugin": "~1.3",
-		"drupal/admin_toolbar": "^1.20",
-		"cweagans/composer-patches": "^1.5",
-		"drupal/address": "1.*",
-		"drupal/anchor_link": "1.*",
-		"drupal/better_normalizers": "^1.0-dev",
-		"drupal/block_style_plugins": "1.*",
-		"drupal/ckwordcount": "1.*",
-        "drupal/ckeditor_templates": "^1.0",
-        "drupal/ckeditor_liststyle": "^1.1",
-		"drupal/crop": "1.*",
-		"drupal/default_content": "1.*",
-		"drupal/editor_file": "1.*",
-		"drupal/focal_point": "1.*",
-		"drupal/google_analytics": "2.*",
-		"drupal/honeypot": "1.*",
-		"drupal/masquerade": "2.*",
-		"drupal/menu_block": "1.*",
-		"drupal/menu_breadcrumb": "^1.2",
-		"drupal/notification": "1.*",
-		"drupal/photoswipe": "1.*",
-		"drupal/redirect": "1.*",
-		"drupal/roleassign": "1.*",
-		"drupal/sharemessage": "1.*",
-		"drupal/simple_sitemap": "2.*",
-		"drupal/sitemap": "1.*",
-		"drupal/social_media_links": "2.*",
-		"drupal/token": "1.*",
-		"drupal/url_embed": "1.*",
-		"drupal/webform": "5.*",
-		"drupal/webform_views": "5.*",
-		"drupal/editor_advanced_link": "1.*",
-		"drupal/field_collection": "1.*",
-		"drupal/field_group": "1.*",
-		"drupal/wysiwyg_linebreaks": "^1.7",
-		"drupal/paragraphs": "1.*",
-		"drupal/block_class": "^1.0-dev",
-		"drupal/entity_reference_revisions": "^1.3",
-		"drupal/imce": "^1.5",
-		"drupal/link_attributes": "1.*",  
-		"drupal/menu_position": "1.*",
-		"drupal/node_class": "1.*",
-		"drupal/video_embed_html5": "1.*",
-        "drupal/conditional_fields": "1.*",
-        "drupal/components": "1.*",
-        "drupal/twig_tweak": "^1.9",
-        "drupal/linkit": "^4.3",
-        "drupal/image_url_formatter": "^1.0-beta1",
-        "drupal/contact_poup": "^1.1",
-        "drupal/page_manager": "^4.0-beta2",
-        "drupal/devel": "^1.2",
-        "drupal/fieldblock": "^2.0@alpha"
-    },
-    "require-dev": {
-		"composer/composer": "^1.4",
-		"drupal/drupal-extension": "^3.2",
-		"drupal/console": "^1.0",
-		"drupal/coder": "~8.2.0",
-		"behat/behat": "^3.0",
-		"behat/mink": "^1.6",
-		"behat/mink-goutte-driver": "*",
-		"behat/mink-extension": "*",
-		"behat/mink-selenium2-driver": "*",
-		"jcalderonzumba/gastonjs": "~1.0.2",
-		"jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-		"mikey179/vfsStream": "~1.2",
-		"phpunit/phpunit": "~4.8",
-		"symfony/css-selector": "~2.8",
-		"phing/phing": "^2.14",
-		"squizlabs/php_codesniffer": "2.*",
-		"se/selenium-server-standalone": "^2.53",
-		"jakoch/phantomjs-installer": "1.9.8",
-		"grasmash/yaml-cli": "^1.0",
-		"drupal/stage_file_proxy": "^1.0"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-      "vendor-dir" : "docroot/vendor/",
-      "bin-dir" : "docroot/vendor/bin/",
-        "autoloader-suffix": "Drupal"
-    },
-    "autoload": {
-        "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
+        "installer-types": [
+            "drupal-custom-module",
+            "drupal-custom-theme",
+            "drupal-library",
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "docroot/drush/contrib/{$name}": ["type:drupal-drush"],
+            "docroot/libraries/{$name}": [
+                "type:bower-asset",
+                "type:npm-asset",
+                "type:drupal-library"
+            ]
+        },
+        "enable-patching": true,
+        "patches" : {
+            "drupal/core" : {
+                "1356276-419 - Allow profiles to provide a base/parent profile" :
+                "https://www.drupal.org/files/issues/1356276-419--8.4.4.patch",
+                "1356276-433 - Allow profiles to provide a base/parent profile" : 
+                "https://www.drupal.org/files/issues/2018-03-19/1356276-433.patch"
+            },
+            "drupal/workbench_moderation" : {
+                "2627012 - Delete moderation_state fields when uninstalling workbench_moderation" :
+                "https://www.drupal.org/files/issues/workbench_moderation-fix_uninstall-2627012-34.patch"
+            },
+            "drupal/page_manager" : {
+                "2867565 - Update page manager to support Drupal 8.3 and Layout Discovery" :
+                "https://www.drupal.org/files/issues/page_manager-panels-update-2867565-11.patch"
+            },
+            "drupal/fieldblock": {
+              "2810783 - PHP exception when placing block":
+              "https://www.drupal.org/files/issues/php_exception_when-2810783-30.patch"
+            }
         }
     },
-    "repositories": [
-        {
+    "repositories": {
+          "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        {
+        "1": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "ucdavis": {
+            "type": "vcs",
+            "url": "https://github.com/stopfstedt/sitefarm_seed"
+        },
+        "dev": {
+            "type": "vcs",
+            "url": "https://github.com/acquia/lightning-dev"
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
         }
-    ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Core\\Composer\\": "docroot/core/lib/Drupal/Core/Composer"
+        }
+    }
 }

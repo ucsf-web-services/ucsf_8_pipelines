@@ -8,6 +8,9 @@
 /docroot/files/
 /docroot/sites/*/files
 /docroot/sites/*/private-files
+/docroot/profiles/contrib/*
+/docroot/profiles/libraries/*
+
 
 # Ignore default text files
 /docroot/CHANGELOG.txt
