@@ -164,6 +164,8 @@
         "enable-patching": true,
         "patches" : {
             "drupal/core" : {
+                "1356276-417 - Allow profiles to provide a base/parent profile" :
+                "https://www.drupal.org/files/issues/drupal-n1356276-417-d8.5.x.patch",
                 "1356276-419 - Allow profiles to provide a base/parent profile" :
                 "https://www.drupal.org/files/issues/1356276-419--8.4.4.patch",
                 "1356276-433 - Allow profiles to provide a base/parent profile" : 
