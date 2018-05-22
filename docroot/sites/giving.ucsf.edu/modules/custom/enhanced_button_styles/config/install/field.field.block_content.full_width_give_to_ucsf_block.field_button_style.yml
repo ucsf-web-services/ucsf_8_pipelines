@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_give_to_ucsf_block
+    - field.storage.block_content.field_button_style
+id: block_content.full_width_give_to_ucsf_block.field_button_style
+field_name: field_button_style
+entity_type: block_content
+bundle: full_width_give_to_ucsf_block
+label: 'Orange with Icon (retired)'
+description: 'This is a retired setting.  Use new Button Style field.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Orange Button with Icon'
+  off_label: 'Simple Blue Button'
+field_type: boolean

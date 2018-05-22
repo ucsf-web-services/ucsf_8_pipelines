@@ -1,0 +1,8 @@
+name: CKEditor Fontawesome
+type: module
+description: "Add Fontawesome button for CKEditor."
+package: CKEditor
+core: 8.x
+version: VERSION
+dependencies:
+  - ckeditor

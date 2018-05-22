@@ -1,0 +1,14 @@
+name: 'Landing Page'
+description: 'Provides Landing Page content type and related configuration. A special page with its own one-off layout and content.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - image
+  - image_url_formatter
+  - link
+  - node
+  - pathauto
+  - text
+  - user
+  - views

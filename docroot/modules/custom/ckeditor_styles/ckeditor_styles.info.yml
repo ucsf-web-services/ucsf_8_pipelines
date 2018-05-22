@@ -1,0 +1,8 @@
+name: CKEditor Styles
+type: module
+description: "Add custom styles set to CKEditor Styles combo."
+package: CKEditor
+core: 8.x
+version: VERSION
+dependencies:
+  - ckeditor

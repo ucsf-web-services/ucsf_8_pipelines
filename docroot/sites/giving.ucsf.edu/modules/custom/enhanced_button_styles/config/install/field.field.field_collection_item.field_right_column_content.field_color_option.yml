@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_color_option
+    - field_collection.field_collection.field_right_column_content
+  module:
+    - options
+id: field_collection_item.field_right_column_content.field_color_option
+field_name: field_color_option
+entity_type: field_collection_item
+bundle: field_right_column_content
+label: 'Color Option'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

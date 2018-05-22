@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: two_columns_basic_block
+label: 'Two Columns - Basic Block'
+revision: 1
+description: ''

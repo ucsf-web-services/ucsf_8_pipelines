@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_display
+    - node.type.landing_page
+id: node.landing_page.field_page_display
+field_name: field_page_display
+entity_type: node
+bundle: landing_page
+label: 'This Page will display'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Blocks
+  off_label: 'Body Text'
+field_type: boolean

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.two_columns_basic_block
+    - field.field.block_content.two_columns_basic_block.field_left_column_content
+    - field.field.block_content.two_columns_basic_block.field_right_column_content
+  module:
+    - field_collection
+id: block_content.two_columns_basic_block.default
+targetEntityType: block_content
+bundle: two_columns_basic_block
+mode: default
+content:
+  field_left_column_content:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+    region: content
+  field_right_column_content:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+    region: content
+hidden: {  }

@@ -1,0 +1,13 @@
+name: 'Enhanced Button Styles'
+description: "Enhances the button styles and colors for the custom block types, Full Width Give to UCSF Block, Two Columns - Basic Block,\r\nAdds Font Awesome icon choices and color options per ticket GIV-24"
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - field_collection
+  - link
+  - options
+  - text
+version: 8.x-1.0
+package: UCSF

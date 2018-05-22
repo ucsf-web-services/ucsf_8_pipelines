@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_give_to_ucsf_block
+label: 'Full Width Give to UCSF Block'
+revision: 1
+description: ''

@@ -1,0 +1,54 @@
+<?php
+
+function ckeditor_styles_editor_js_settings_alter(array &$settings) {
+  global $base_url;
+
+  /**
+   * [$stylesSetBlock description]
+   * @var array
+   * Use this for block elements like
+   * <p> and <div>
+   */
+  $stylesSetBlock = array(
+        array('name'=> 'Body Text Regular 18', 'element'=>'p', 'attributes'=>array('class'=>'body-text-regular-18')),
+    array('name'=> 'Body Text Regular 20', 'element'=>'p', 'attributes'=>array('class'=>'body-text-regular-20')),
+    array('name'=> 'Body Text Light 18', 'element'=>'p', 'attributes'=>array('class'=>'body-text-light-18')),
+    array('name'=> 'Body Text Light 20', 'element'=>'p', 'attributes'=>array('class'=>'body-text-light-20')),
+    array('name'=> 'Body Text Medium 18', 'element'=>'p', 'attributes'=>array('class'=>'body-text-medium-18')),
+    array('name'=> 'Body Text Medium 20', 'element'=>'p', 'attributes'=>array('class'=>'body-text-medium-20')),
+    array('name'=> 'Address/Account Detail Styles', 'element'=>'p', 'attributes'=>array('class'=>'address_account_detail content-padded body-text-light-18')),
+    array('name'=>'Padded Paragraph Group Wrapper', 'element'=>'div', 'attributes'=>array('class'=>'padded-paragraph-group-wrapper'))
+  );
+
+
+  /**
+   * [$stylesSetObject description]
+   * @var array
+   * Use this for object elements like
+   * <ul> and <a>
+   */
+  $stylesSetObject = array(
+  	array('name'=>'Padded List (Text Regular 18)', 'element'=>'ul', 'attributes'=>array('class'=>'custom-padded-list body-text-regular-18')),
+    array('name'=>'Padded List (Text Medium 18)', 'element'=>'ul', 'attributes'=>array('class'=>'custom-padded-list body-text-medium-18')),
+    array('name'=>'Dashed List (Text Regular 18)', 'element'=>'ul', 'attributes'=>array('class'=>'dashed body-text-regular-18')),
+    array('name'=>'Dashed List (Text Light 18)', 'element'=>'ul', 'attributes'=>array('class'=>'dashed body-text-light-18')),
+    array('name'=>'Dashed List (Text Medium 18)', 'element'=>'ul', 'attributes'=>array('class'=>'dashed body-text-medium-18')),
+     array('name'=>'Dashed Padded List (Text Regular 18)', 'element'=>'ul', 'attributes'=>array('class'=>'dashed custom-padded-list body-text-regular-18')),
+    array('name'=>'Dashed Padded List (Text Light 18)', 'element'=>'ul', 'attributes'=>array('class'=>'dashed custom-padded-list body-text-light-18')),
+     array('name'=>'Dashed Padded List (Text Medium 18)', 'element'=>'ul', 'attributes'=>array('class'=>'dashed custom-padded-list body-text-medium-18'))
+  );
+
+  /**
+   * [$stylesSetInline description]
+   * @var array
+   * Use this for inline elements like
+   * <span>, <b>, and <i>
+   */
+  $stylesSetInline = array();
+
+  $stylesSetConfig = array_merge_recursive($stylesSetBlock, $stylesSetObject, $stylesSetInline);
+
+  foreach ($settings['editor']['formats'] as $name => $value) {
+    $settings['editor']['formats'][$name]['editorSettings']['stylesSet'] = $stylesSetConfig;
+  }
+}

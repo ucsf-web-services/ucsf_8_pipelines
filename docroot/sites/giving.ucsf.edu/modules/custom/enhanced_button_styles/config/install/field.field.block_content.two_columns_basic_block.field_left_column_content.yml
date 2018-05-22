@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.two_columns_basic_block
+    - field.storage.block_content.field_left_column_content
+  module:
+    - field_collection
+id: block_content.two_columns_basic_block.field_left_column_content
+field_name: field_left_column_content
+entity_type: block_content
+bundle: two_columns_basic_block
+label: 'Left Column Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

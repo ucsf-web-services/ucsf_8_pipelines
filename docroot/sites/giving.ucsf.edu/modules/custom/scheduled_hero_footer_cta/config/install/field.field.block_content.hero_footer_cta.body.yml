@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_footer_cta
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.hero_footer_cta.body
+field_name: body
+entity_type: block_content
+bundle: hero_footer_cta
+label: Body
+description: 'Please only use the HTML editor for basic styling, Bold, Italic, Underline.  Do not use more then one line or paragraph.'
+required: true
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p><span>Replace and <strong>format</strong> this text. Don't use paragraph tags, keep content to one line.</span></p>\r\n"
+    format: rich_text
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

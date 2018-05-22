@@ -1,0 +1,9 @@
+name: CKEditor Templates
+type: module
+description: "Add Templates addon plugin to CKEditor."
+package: CKEditor
+core: 8.x
+
+dependencies:
+  - ckeditor
+  - dialog

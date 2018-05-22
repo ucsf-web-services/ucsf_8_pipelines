@@ -1,0 +1,1221 @@
+<nodes>
+	<node>
+		<Fname>
+index.html ./hospital/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/index.html</Path>
+		<FileBody>
+			
+			
+			&lt;div id=&quot;slideshow&quot;&gt;
+					&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/homepage/building_front.jpg&quot; class=&quot;active&quot; /&gt;	
+					&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/homepage/doc_talk.jpg&quot; /&gt;
+			    &lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/homepage/group_home.jpg&quot; /&gt;	
+			    &lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/group_docs.jpg&quot; /&gt;
+			    &lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/homepage/bouquet.jpg&quot; /&gt;
+			&lt;/div&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;div id=&quot;hometagVic&quot; style=&quot;height:50px; width:130px;&quot;&gt;&lt;/div&gt;
+			&lt;div id=&quot;hometagtextVic&quot;&gt;High quality hospital care for everyone.&lt;/div&gt;
+			
+			&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+			&lt;script type=&quot;text/javascript&quot;&gt;
+			
+			function slideSwitch() {
+			    var $active = $('#slideshow IMG.active');
+			
+			    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+			    
+			    if ( ! $active.next().length ) {
+			        clearInterval( mySlideshow );
+			        return;
+			    }
+			    
+			    var $next = $active.next();
+			
+			    $active.addClass('last&#45;active');
+			
+			    $next.css({opacity: 0.0})
+			        .addClass('active')
+			        .animate({opacity: 1.0}, 1000, function() {
+			            $active.removeClass('active last&#45;active');
+			        });
+			}
+			
+			$(function() {
+			    var mySlideshow = setInterval( &quot;slideSwitch()&quot;, 5000 );
+			});
+			
+			&lt;/script&gt;
+			
+			
+			
+			&lt;!&#45;&#45; 
+			
+			&lt;p&gt; &#45;&#45;&gt;
+			 
+			 
+			&lt;div class=&quot;news mod&quot;&gt; 
+				&lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt;
+				&lt;h4&gt;News &amp;amp; Highlights&lt;/h4&gt;
+							&lt;div id=&quot;allNews&quot;&gt;
+					&lt;span class=&quot;allNews&quot;&gt;&lt;a href=&quot;/about/archives.html&quot;&gt;View all »&lt;/a&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			
+			
+			&lt;div class=&quot;pod highlights unitLeft fellows&quot; style=&quot;width:100%;&quot;&gt;
+				&lt;h4&gt;Recruiting Spotlight&lt;/h4&gt;
+				&lt;p&gt;The ZSFG Division of Hospital Medicine is now recruiting academic hospitalists. To learn more about available faculty positions and submit an application, please &lt;a href=&quot;https://aprecruit.ucsf.edu/apply/JPF01003&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt;.&lt;/p&gt;
+			
+			&lt;/div&gt;
+			
+			
+			
+			&lt;p align=&quot;left&quot;&gt;&amp;nbsp;&lt;/p&gt;
+			&lt;p align=&quot;left&quot;&gt;&amp;nbsp;&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+News Archives ./hospital/about/archives.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/archives.html</Path>
+		<FileBody>
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Jane Austen Festival ./hospital/about/austen.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/austen.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Patient Care Coordinator Alex McConnell&#45;Hill recently participated in the &lt;a href=&quot;http://www.janeaustenfestivalbath.co.uk/&quot; target=&quot;_blank&quot;&gt;Jane Austen Festival&lt;/a&gt; held in Bath, England. &lt;/p&gt;
+			
+			&lt;p&gt;Alex shared several photos from her trip, providing us with images of Regency Era England through the eyes of Jane Austen.&lt;/p&gt;
+				
+				
+				&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/austin3.jpg&quot; class=&quot;imgLeft&quot;&gt;
+				&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/austin2.jpg&quot; class=&quot;imgRight&quot;&gt;
+				&lt;br clear=all&gt;&lt;br clear=all&gt;
+				
+				
+				&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/austin1.jpg&quot; class=&quot;imgLeft&quot;&gt;
+				&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/austin4.jpg&quot; class=&quot;imgRight&quot;&gt;
+				
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+calendar.html ./hospital/about/calendar.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/calendar.html</Path>
+		<FileBody>
+		</FileBody>
+	</node>
+	<node>
+		<Fname>
+Giving ./hospital/about/giving.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/giving.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Content goes here.&lt;/p&gt;
+			
+			&lt;blockquote&gt;&lt;b&gt;Olivia Herbert&lt;/b&gt;&lt;br /&gt;
+			Senior Director of Development, UCSF&lt;br /&gt;
+			220 Montgomery Street, 5th Floor&lt;br /&gt;
+			San Francisco, CA 94104&lt;br /&gt;&lt;br /&gt;
+			Office Tel: (415) 476&#45;9878&lt;br /&gt;
+			Mobile Tel: (415) 676&#45;8942&lt;br /&gt;
+			Email: &lt;a href=&quot;mailto:oherbert@support.ucsf.edu&quot;&gt;oherbert@support.ucsf.edu&lt;/a&gt;&lt;/blockquote&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+History ./hospital/about/history.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/history.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Page currently under construction.&lt;/p&gt;
+			&lt;h3&gt;SFGH Past&lt;/h3&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sfgh_past.png&quot; width=&quot;210&quot;/&gt;
+			&lt;h3&gt;SFGH Present&lt;/h3&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sfgh_present.png&quot; width=&quot;210&quot;/&gt;
+			&lt;h3&gt;SFGH Future&lt;/h3&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sfgh_future.png&quot; width=&quot;210&quot;/&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+About ./hospital/about/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/index.html</Path>
+		<FileBody>
+			
+						
+			&lt;h3&gt;Mission&lt;/h3&gt;
+			
+			&lt;p&gt;High quality hospital care for everyone.&lt;/p&gt;
+			
+			&lt;h3&gt;Vision&lt;/h3&gt;
+							&lt;p&gt;A welcoming hospital environment that provides a web of support for healing &lt;/p&gt;
+							&lt;ul&gt;
+								&lt;li&gt;For patients &#45; support a continuum of care aligned with individual circumstances to foster understanding, confidence and empowerment&lt;/li&gt;
+								&lt;li&gt;For providers &#45; offer opportunities to grow, learn, serve, and share &lt;/li&gt;
+							&lt;/ul&gt;
+							&lt;h3&gt;Values&lt;/h3&gt;
+							&lt;ul&gt;
+								&lt;li&gt;Creativity &#45; taking a generative, expansive approach to teaching and learning&lt;/li&gt;
+								&lt;li&gt;Collaboration &#45; working closely with hospital providers and patients’ communities&lt;/li&gt;
+								&lt;li&gt;Service &#45; committed  to delivering quality care for all  San Franciscans &lt;/li&gt;
+								&lt;li&gt;Excellence &#45; a commitment to improving care &lt;/li&gt;
+								&lt;li&gt;Education &#45; consistent, high quality teaching is essential&lt;/li&gt;
+								&lt;li&gt;Advocacy &#45; empowering patients while respecting their own resourcefulness and resiliency&lt;/li&gt;
+							&lt;/ul&gt;
+			
+			
+			&lt;p class=&quot;introduction&quot;&gt;Meet some of our team members!&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/about_team.png&quot;/&gt;
+			&lt;div class=&quot;rightnav&quot; style=&quot;padding&#45;left:10px;&quot;&gt;
+			
+			&lt;/div&gt;
+			&lt;h3&gt;SFGH Division of Hospital Medicine&lt;/h3&gt;
+			&lt;p class=&quot;caption1&quot;&gt;Pictured from top left to bottom right: William Huen, Jeff Critchfield, Gabriel Ortiz, Michelle Schneidermann, Cecily Gallup, Lisa Winston, Melissa Capule, Jing&#45;Yu Pan, Heather Harris&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/dhm_team_spring.png&quot;/&gt;
+			
+			&lt;h3 class=&quot;spring_header&quot;&gt;DHM Team Photo, Spring 2012&lt;/h3&gt;
+			&lt;p class=&quot;caption2&quot;&gt;Pictured from left top to bottom right: Marc Solomon, Michelle Schneidermann, Edgar Pierluissi, Seth Goldman, Richard Brooks, Anne Kinderman, Raquel Rodriguez, Danielle Moulia, Alexandra McConnell&#45;Hill, Larissa Thomas, Heather Harris, Lawrence Haber, Dalisay Tayo&#45;Samoni, Margarita Sotelo&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+San Francisco General Hospital Information ./hospital/about/info.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/info.html</Path>
+		<FileBody>
+			
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;http://www.sfghf.net/&quot; target=&quot;_blank&quot;&gt;San Francisco General Hospital Foundation&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;/about/2011&#45;2012_annual_report.pdf&quot; target=&quot;_blank&quot;&gt;San Francisco General Hospital &amp;amp; Trauma Center Annual Report 2011&#45;2012&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+News Archives ./hospital/about/news.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/news.html</Path>
+		<FileBody>
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Staff ./hospital/about/staff.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/about/staff.html</Path>
+		<FileBody>
+			
+			&lt;table&gt;
+				&lt;th width=150px&gt;Name&lt;/th&gt;
+				&lt;th&gt;Title&lt;/th&gt;
+				&lt;th width=100px&gt;Phone&lt;/th&gt;
+				&lt;th &gt;Email Address&lt;/th&gt;
+				&lt;tr&gt;
+				&lt;!&#45;&#45; removed upon request 
+				&lt;td  class=&quot;sub&quot; colspan=4&gt;
+				Parnassus/Mount Zion
+				&lt;/td&gt;
+				&#45;&#45;&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Jena Desai&lt;/td&gt;
+					&lt;td&gt;Division Administrator&lt;/td&gt;
+					&lt;td&gt;415&#45;206&#45;4980&lt;/td&gt;
+					&lt;td&gt;&lt;a href=&quot;mailto:jena.desai@ucsf.edu&quot;&gt;jena.desai@ucsf.edu&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				
+				&lt;tr&gt;
+					&lt;td class=&quot;other&quot;&gt;Jim Nix&lt;/td&gt;
+					&lt;td class=&quot;other&quot;&gt;Division Analyst&lt;/td&gt;
+					&lt;td class=&quot;other&quot;&gt;415&#45;206&#45;4869&lt;/td&gt;
+					&lt;td class=&quot;other&quot;&gt;&lt;a href=&quot;mailto:dsamoni@medsfgh.ucsf.edu&quot;&gt;james.nix@ucsf.edu&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			
+			
+			
+				&lt;tr&gt;
+					&lt;td &gt;Eliza Newbold&lt;/td&gt;
+					&lt;td &gt;Nurse Practitioner&lt;/td&gt;
+					&lt;td &gt;415&#45;206&#45;3775&lt;/td&gt;
+					&lt;td &gt;&lt;a href=&quot;mailto:dsamoni@medsfgh.ucsf.edu&quot;&gt;eliza.newbold@ucsf.edu&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			
+				&lt;tr&gt;
+					&lt;td class=&quot;other&quot;&gt;Dalisay Tayo&#45;Samoni&lt;/td&gt;
+					&lt;td class=&quot;other&quot;&gt;Nurse Practitioner&lt;/td&gt;
+					&lt;td class=&quot;other&quot;&gt;415&#45;353&#45;1376&lt;/td&gt;
+					&lt;td class=&quot;other&quot;&gt;&lt;a href=&quot;mailto:dsamoni@medsfgh.ucsf.edu&quot;&gt;dsamoni@medsfgh.ucsf.edu&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				
+				&lt;tr&gt;
+					&lt;td&gt;Alex McConnell&#45;Hill &lt;/td&gt;
+					&lt;td &gt;Patient Care Coordinator&lt;/td&gt;
+					&lt;td &gt;415&#45;206&#45;6521&lt;/td&gt;
+					&lt;td &gt;&lt;a href=&quot;mailto:McConnell@medsfgh.ucsf.edu&quot;&gt;McConnell@medsfgh.ucsf.edu&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				
+			
+				&lt;/table&gt;
+				
+				
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Faculty Profiles ./hospital/faculty/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/faculty/index.html</Path>
+		<FileBody>
+			
+		</FileBody>
+	</node>
+	<node>
+		<Fname>
+Intranet ./hospital/intranet/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/intranet/index.html</Path>
+		<FileBody>
+			
+			&lt;h2&gt;Hospital Medicine Curriculum&lt;/h2&gt;
+			
+			&lt;h4&gt;Hospital Medicine Noon Lecture Series&lt;/h4&gt;
+			&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/information_management.pptx.pptx&quot;&gt;Information Management: The How and Why behind Medical Informatics (Power Point)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/inpatient_hyperglycemia_management.pptx&quot;&gt;Inpatient Hyperglycemia Management (Power Point)&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/prevention_healthcare_infections.pptx&quot;&gt;Prevention of Hospital Associated Infections (Power Point)&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/low_anion_gap.pptx&quot;&gt;Low Anion Gap (Power Point)&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/lep.pptx&quot;&gt;Limited English Proficiency and Health Disparities (Power Point)&lt;/a&gt;
+				&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/sepsis.pptx&quot;&gt;Sepsis: More than just Early Goal Directed Therapy (Power Point)&lt;/a&gt;
+				&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/hypertension.pptm&quot;&gt;Management of Hypertension in the Hospital (Power Point)&lt;/a&gt;
+				&lt;/li&gt;&lt;/ul&gt;
+			
+			&lt;h4&gt;Faculty Development Seminars&lt;/h4&gt;
+			
+			&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/inpatient_diabetes_management.pptx&quot;&gt;Inpatient Diabetes Management Update for Hospitalists (Power Point)&lt;/a&gt;
+			&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/2012&#45;8_fis_inpt_pres.pptx&quot;&gt;Understanding Inpatient Clinical Nutrition @ SFGH (Power Point)&lt;/a&gt;
+			&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/med_reduced.ppt&quot;&gt;Hip Fractures: Multidisciplinary Approach to Treatment (Power Point)&lt;/a&gt;
+			&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/rapid_goals_care_cost.pptx&quot;&gt;Accelerated Goals of Care and Code Status Discussions: Practical Advice (Power Point)&lt;/a&gt;
+			&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/accelerated_goals_care_cost.docx&quot;&gt;Accelerated Goals of Care and Code Status Discussions: Handout (Word Document)&lt;/a&gt;
+			&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/acos.pptx&quot;&gt;Accountable Care Organizations (Power Point)&lt;/a&gt;
+			&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/docs/anticoag.ppt&quot;&gt;New Anticoagulants on the Block: An overview for use in atrial fibrillation (Power Point)&lt;/a&gt;
+			
+			&lt;/li&gt;&lt;/ul&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+$custom[entity] Search ./hospital/news/search.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/news/search.html</Path>
+		<FileBody>
+			/* &lt;![CDATA[ */
+			
+			#ucsfheadercontainer {
+			  width: 100%;
+			  background&#45;color: #000000;
+			}
+			td{
+			    border:hidden;
+			padding:1px;
+			}
+			
+			
+			/* ]]&gt; */
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+A Day in the Life of FIS ./hospital/recruit/day_life.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/recruit/day_life.html</Path>
+		<FileBody>
+			&lt;h2&gt;Illness As a Teacher&lt;/h2&gt;
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sima_new.jpeg&quot; style=&quot;border: 1px solid #ccc;
+			padding: 5px;
+			margin&#45;bottom:10px;
+			margin&#45;right:10px;
+			&quot;/&gt;
+			&lt;h3&gt;By Sima Pendharkar, MD, ACP Associate Member&lt;/h3&gt;
+			
+			&lt;p&gt;Fresh out of residency on my first night shift as a hospitalist, I was wide awake and bright&#45;eyed—running on a healthy dose of adrenaline, ready to take on anything. Having tackled admissions, cross&#45;cover and everything in between, I sat perched over my computer by 3 a.m., eager to complete all the night’s documentation. In my Zen&#45;like zone, I began typing but was soon jarred by the buzzing of my pager. It was a fretful nurse requesting my immediate presence at a patient’s bedside.&lt;/p&gt;
+			
+			&lt;p&gt;Standing outside the patient's room, I quickly glanced at the cross&#45;cover notes. He was a 47&#45;year&#45;old homeless man with AIDS who was admitted for pneumocystis pneumonia, now on hospital day 12.  Before I entered, the nurse told me the patient was extremely angry, was demanding to have his oxygen removed, and wanted to leave the hospital against medical advice.&lt;/p&gt;
+			
+			&lt;p&gt;With that information in hand, I eagerly entered the room. I felt quite confident I could use my compassion, medical knowledge and general wit to bring some comfort and calm at this odd hour.&lt;/p&gt;
+			
+			&lt;p&gt;When I started to introduce myself, I was interrupted by Mr. P’s harsh, sharp voice and cutting eyes, which dissected my every motion as I made my way towards him. I immediately recognized the weathering effect the physical elements had placed upon him—long beard, scattered tattoos, missing teeth—and I was struck by his fighting spirit. I pulled up a chair to listen to his concerns, though I was not a welcome visitor that night.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sima_pendharkar.png&quot; width=&quot;300&quot;/&gt;
+			&lt;p&gt;In the following days, Mr. P's condition began to rapidly deteriorate. He became increasingly hypoxemic, continued to lose weight and—most concerning—the feisty sparkle in his eyes began to dissipate. He initially attempted to protest his body’s deteriorating state by refusing to eat and by sprinkling snide remarks into every conversation. Reasoning with him was next to impossible.&lt;/p&gt;
+			
+			&lt;p&gt;One afternoon, as I explained to him the current therapeutic dilemmas and the very real prospect of his mortality, tears rolled down his hollow cheeks. Despite the tough external facade, Mr. P’s emotional walls were crumbling and he was starting to open up. There was now room for dialogue and emotional honesty where before that wasn’t the case. As I reached towards him to comfort him, he looked me in the eye and said, “I’m scared.”&lt;/p&gt;
+			
+			&lt;p&gt;Over the weeks of his hospital stay, I had the opportunity to know Mr. P not only as a patient but as a friend, a dreamer, a fighter and a witty, compassionate individual. As the illness experience enveloped him, I witnessed his beautiful metamorphosis to a state of higher insight and peacefulness about his own health.&lt;/p&gt;
+			
+			&lt;p&gt;He made a miraculous recovery. His physical body regained strength, but more surprising was that he seemed overcome with a general sense of peace, contentment and lightness. While he looked forward to getting back to his tent under one of the highway bridges, he was also contemplating taking some classes and considering how he could use this life&#45;altering experience to help others.  &lt;/p&gt;
+			
+			&lt;p&gt;Sometimes when I’m driving under various bridges around the city and spot pockets of homeless people, I find myself wondering about Mr. P. I hope the new vista that his mind and body have offered up will give him the strength and courage to embark on many more of life’s adventures.&lt;/p&gt;
+			
+			&lt;h3&gt;Facts on homelessness&lt;/h3&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;On a single night, 643,067 individuals in the U.S. were homeless, according to the 2009 Annual Homeless Assessment Report by the U.S. Department of Housing and Urban Development.&lt;/li&gt;
+				&lt;li&gt;63% of homeless individuals were sheltered and 37% were unsheltered, according to the U.S. Interagency Council on Homelessness.&lt;/li&gt;
+				&lt;li&gt;In 2003, children younger than 18 comprised 39% of the homeless population. Of those, 42% were under the age of five, according to the National Coalition for the Homeless (NCH).&lt;/li&gt;
+				&lt;li&gt;Among surveyed sheltered homeless persons, roughly 26% have severe mental illness according to the NCH. In addition, 38% reported alcohol problems and 26% reported addictions to other drugs.&lt;/li&gt;
+				&lt;li&gt;In 22 cities surveyed, 15% of homeless persons reported they were victims of domestic violence, according to the U.S. Conference of Mayors' Status Report on Hunger and Homelessness in America's Cities: 2008.&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;Manuscript found in the October 2012 issue of ACP Hospitalist &lt;a href=&quot;http://www.acphospitalist.org/&quot;&gt;http://www.acphospitalist.org/&lt;/a&gt;. &lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Recruiting Spotlight ./hospital/recruit/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/recruit/index.html</Path>
+		<FileBody>
+			
+			&lt;!&#45;&#45; &lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt; &#45;&#45;&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/larry_jay_hall2.jpg&quot; width=&quot;200&quot; class=&quot;imgRight&quot;/&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/recruit/job_description.html&quot;&gt;Faculty Inpatient Service Job Description&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/recruit/day_life.html&quot;&gt;A Day in the Life of FIS&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Faculty Inpatient Service Job Description ./hospital/recruit/job_description.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/recruit/job_description.html</Path>
+		<FileBody>
+			
+			
+			&lt;p class=&quot;introduction&quot;&gt;
+			San Francisco General Hospital is seeking exceptional candidates to join its Hospital Medicine Group. This group of physicians includes general medicine internists, family physicians, and faculty sub&#45;specialty trained in geriatrics, palliative care, rheumatology and infectious disease. 
+			&lt;/p&gt;
+			
+			&lt;p&gt;Successful candidates will have strong academic clinical training in Internal Medicine or Family Medicine and demonstrate outstanding collaborative and instructional skills. All faculty will hold appointments at the University of California, San Francisco (UCSF) at the Assistant or Associate Clinical Professor level in the Department of Medicine or Family and Community Medicine.&lt;/p&gt;
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/phone_fun.png&quot; class=&quot;imgRight&quot;/&gt;
+			&lt;p&gt;SFGH is the only trauma center and the only public hospital in San Francisco, serving as the referral center for the Department of Public Health network of 13 clinics. Serving a city that is an international hub, SFGH cares for patients that travel and immigrate from countries from all over the globe. Each day, SFGH has in&#45;house interpreters who support care in over 30 languages. SFGH is an acknowledged leader in innovative programs for HIV care, tuberculosis control, chemical dependency, cultural contributors to mental health, and health literacy and language access in medical care.&lt;/p&gt;
+			
+			&lt;p&gt;Beloved by the city for its abiding commitment to provide care to all of San Francisco, SFGH has been called the &quot;Heart of the City.&quot; The depth of the city's support for SFGH is exemplified by the 84% voter approval for the bond to fund the construction of a new hospital set to open in 2015.&lt;/p&gt;
+			
+			&lt;p&gt;SFGH is staffed by the UCSF School of Medicine, along with the UCSF Schools of Nursing, Dentistry, and Pharmacy. UCSF has been the City's partner for providing patient care since 1873. Today, some 1,600 UCSF physicians, specialty nurses, health care professionals and other professionals work side&#45;by&#45;side with City employees at SFGH. On any given day, about one&#45;third of all UCSF medical students, residents and fellows are working and training at SFGH.&lt;/p&gt;
+			
+			&lt;h4&gt;Position Responsibilites&lt;/h4&gt;
+			
+			&lt;p&gt;New faculty members will join an environment designed to support excellence in patient&#45;centered, cost&#45;effective, outstanding clinical care; advancing leadership in innovative training programs; and establishing prominent roles designing and leading systems change for the hospital.&lt;/p&gt;
+			
+			&lt;p&gt;The position will entail inpatient clinical work involving a combination of the following: &lt;/p&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;Attending on a faculty service independent of house staff involvement.&lt;/li&gt;
+				&lt;li&gt;Attending on the house staff&#45;covered adult medical ward teams.&lt;/li&gt;
+				&lt;li&gt;Attending on a faculty service that provides co&#45;management services to patients with primarily orthopedic surgical problems.&lt;/li&gt;
+				&lt;li&gt;Medicine consultation service.&lt;/li&gt;
+				&lt;li&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;We intend to have in&#45;house attending supervision of house staff teams, so anticipate an equitable distribution of day and night shifts among faculty. We are open to hiring faculty who are interested in predominantly night time clinical work. &lt;/p&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/fis_lecture.png&quot; style=&quot;border: 1px solid #ccc;
+			padding: 5px;
+			margin&#45;bottom:10px;
+			margin&#45;right:10px;&quot;/&gt;
+			
+			&lt;h4&gt;Other non&#45;clinical opportunities to improve care for patients:&lt;/h4&gt;
+			
+			&lt;p&gt;With 35% of UCSF's trainees on campus on any given day, there are numerous opportunities to teach and develop education innovations.&lt;/p&gt;
+			
+			&lt;p&gt;The specific amount and nature of the clinical and non&#45;clinical responsibilities will be influenced by the interests of the candidate and the identified needs of the medical center. &lt;/p&gt;
+			
+			&lt;p&gt;We encourage candidates with diverse backgrounds and training and interests to apply. UCSF is an equal opportunity employer committed to excellence through diversity. &lt;/p&gt;
+			
+			&lt;p&gt;Interested candidates should email a cover letter, resume/CV and contact information for 3&#45;4 references to &lt;a href=&quot;mailto:DHMrecruitment@medsfgh.ucsf.edu&quot;&gt;DHMrecruitment@medsfgh.ucsf.edu.&lt;/a&gt;&lt;/p&gt;
+			
+			&lt;p&gt;SFGH is in a period of remarkable growth and change. We welcome candidates who are enthusiastic about contributing to re&#45;shaping care at SFGH as we look forward to carrying a culture of compassion and excellence into our new hospital in 2015.&lt;/p&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Community Care Transitions Project ./hospital/research/cctp_trans.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/research/cctp_trans.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt;
+			
+			&lt;h2&gt;Background&lt;/h2&gt;
+			
+			&lt;p&gt;
+			Care transitions occur when a patient moves from one health care provider or setting to another. Nearly one in five Medicare patients discharged from a hospital—approximately 2.6 million seniors—is readmitted within 30 days, at a cost of over $26 billion every year. Hospitals have traditionally served as the focal point of efforts to reduce readmissions by focusing on those components that they are directly responsible for, including the quality of care during the hospitalization and the discharge planning process. However, it is clear that there are multiple factors along the care continuum that impact readmissions, and identifying the key drivers of readmissions for a hospital and its downstream providers is the first step towards implementing the appropriate interventions necessary for reducing readmissions. The Community Care Transitions Project (CCTP) seeks to correct these deficiencies by encouraging a community to come together and work together to improve quality, reduce cost, and improve patient experience. The CCTP is part of the &lt;a href=&quot;http://www.innovations.cms.gov/initiatives/Partnership&#45;for&#45;Patients/index.html&quot;&gt;Partnership for Patients&lt;/a&gt;, a nationwide public&#45;private partnership that aims to reduce preventative errors in hospitals by 40 percent and reduce hospital readmissions by 20 percent.
+			&lt;/p&gt;
+			
+			&lt;p&gt;
+			Excerpt taken from: &lt;a href=&quot;http://www.innovations.cms.gov/initiatives/Partnership&#45;for&#45;Patients/CCTP/index.html?itemID=CMS1239313&quot;&gt;Center for Medicare &amp;amp; Medicaid Innovation.&lt;/a&gt;
+			&lt;/p&gt;
+			
+			&lt;h2&gt;San Francisco Experience&lt;/h2&gt;
+			
+			&lt;p&gt;
+			As of October 2012, 47 organizations have been selected to participate. San Francisco was selected in Round 3, announced this past August. The San Francisco Transitional Care Program, led by the Department of Aging and Adult Services, will utilize health care coaches and care managers working for local Community Based Organizations (CBO’s) to effectively manage Medicare patients' transitions and improve their quality of care. The CBO’s will be paid an all&#45;inclusive rate per eligible discharge by CMS, based on the cost of care transition services provided at the patient level and of implementing systemic changes at the hospital level. CBOs will only be paid once per eligible discharge in a 180&#45;day period of time for any given beneficiary.  San Francisco General Hospital has played a large role in the planning and implementation process. Michelle Schneidermann sits on the governing board and Sharon Kwong, Director of Social Services at SFGH, sits on the steering committee.
+			&lt;/p&gt;
+			
+			&lt;p&gt;For further information, please contact &lt;a href=&quot;/faculty/?key=0e744b3d7bf47c47a24caafc5061da81&amp;name=SCHNEIDERMANN%2CMICHELLE+E&quot;&gt;Dr. Michelle Schneidermann.&lt;/a&gt;
+			&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Homerun Project ./hospital/research/homerun.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/research/homerun.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;UCSF, Baystate Medical Center, and the University of Pennsylvania are leading the development of a new quality and safety focused network &#45; the Hospital Medicine Reengineering Network (HOMERUN) &#45; that aims to improve outcomes of patients on general medical wards. HOMERUN will draw on the experience of the Vermont&#45;Oxford Neonatal Network and National Surgical Quality Improvement Projects (among others), and leverage the growth of hospitalists to help speed improvement in care across participating sites&lt;/p&gt;
+			
+			
+			&lt;h3&gt;What is HOMERUN?&lt;/h3&gt;
+			
+			&lt;p&gt;HOMERUN is a collaborative quality improvement and implementation research network focused on three key missions:&lt;/p&gt;
+			
+				&lt;ul&gt;
+					&lt;li&gt;To use measures that matter to hospitalizes and their patients to improve quality and efficiency of care in the hospital and afterwards.&lt;/li&gt;
+					&lt;li&gt;To link improvement efforts to robust and timely evaluation, so that the pace of meaningful improvement is accelerated.&lt;/li&gt;
+					&lt;li&gt;To study how to ensure the uptake of effective improvements through implementation science.&lt;/li&gt;
+				&lt;/ul&gt;
+			
+			&lt;p&gt;These missions are possible because HOMERUN includes sites which represent national leaders in hospital medicine, care improvement methods and implementation science, as well as expertise in specific topic areas relevant to hospital medicine (e.g. thromboembolism prevention, readmission reduction, medication reconciliation, infection reduction).&lt;/p&gt;
+			
+			&lt;h3&gt;Rationale for HOMERUN&lt;/h3&gt;
+			
+			&lt;p&gt;Medical patients are the largest patient group in US hospitals, and more than half of these patients are cared for by hospitalists.  As a result, hospitalists are the most important potential stakeholders in innovations which seek to improve the care of general medical patients.   However, despite the importance of this group of doctors and patients, remarkably little attention has been given to them. In particular:&lt;/p&gt;
+			
+			&lt;ol&gt;
+				&lt;li&gt;Existing benchmarking approaches often focus on methodologies that are based on the lowest common denominator of available data (e.g., ICD codes).  Benchmarking using only these data do not engage front line providers, and compel change slowly. In addition, benchmarking using these data do not explicitly collect data of importance to patients (such as functional status, or understanding of a care plan).&lt;/li&gt;
+				
+				&lt;li&gt;Many publicly reported measures (e.g., Joint Commission quality measures for pneumonia) are actually geared toward emergency department care or the ICU. A hospital seeking to implement evidence&#45;based practices on their medical wards currently has a very limited ability to support improvement in care transitions, reduction in venous thromboembolism, or reduction in hospital&#45;acquired infections.&lt;/li&gt;
+			&lt;/ol&gt;
+			
+			&lt;!&#45;&#45; Added php statement to change every year to decrease future management. RB. &#45;&#45;&gt;
+			
+						include('/data/templates/new/bottom&#45;2008.php');
+		</FileBody>
+	</node>
+	<node>
+		<Fname>
+Current Research &amp; Projects ./hospital/research/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/research/index.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/research/shhe.html&quot;&gt;SHHE Project&lt;/a&gt;&lt;/li&gt;
+				&lt;br/&gt;
+				&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/research/homerun.html&quot;&gt;Homerun Project&lt;/a&gt;&lt;/li&gt;
+				&lt;br/&gt;
+				&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/research/cctp_trans.html&quot;&gt;Community Care Transitions Project&lt;/a&gt;&lt;/li&gt;
+				&lt;br/&gt;
+				&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/research/quality.html&quot;&gt;Quality Improvement Initiatives&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Quality Improvement Initiatives ./hospital/research/quality.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/research/quality.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;In alignment with the SFGH Mission and Strategic Plan, the Division of Hospital Medicine at SFGH is dedicated to providing quality health care services with compassion and respect.  As the hospital and the SFDPH work to improve the patient experience, population health outcomes and cost containment, the Division of Hospital Medicine faculty provide leadership and clinical engagement on a number of hospital&#45;wide and division initiatives. Selected QI projects being led by SFGH hospitalists include:&lt;/p&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;Service Excellence and Improving Patient Experience&lt;/li&gt;
+				&lt;li&gt;Clinical Quality &amp;amp; Health Equity
+					&lt;ul&gt;
+						&lt;li&gt;Early identification and management of sepsis&lt;/li&gt;
+						&lt;li&gt;Prevention of line&#45;associated blood stream infections&lt;/li&gt;
+						&lt;li&gt;Prevention and treatment of venothromboembolism&lt;/li&gt;
+						&lt;li&gt;Enhancing care transitions and reducing avoidable readmissions&lt;/li&gt;
+						&lt;li&gt;Preventing hospital&#45;acquired pressure ulcers and falls with injury&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;Safety and Accountability, or enhancing a culture of shared responsibility for systems and individual behaviors&lt;/li&gt;
+				&lt;li&gt;Lean Management, an operational efficiency framework that promotes performance improvement, staff satisfaction and patient value&lt;/li&gt;
+				&lt;li&gt;Development and Expansion of Information Technology, such as computerized provider order entry&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;For more information, please contact the Medical Director of Quality Management, &lt;a href=&quot;/faculty/?key=a891de17074cc9af7bc0d373ef8cca4a&amp;name=HUEN%2CWILLIAM+S&quot;&gt;Dr. William Huen&lt;/a&gt;.&lt;/p&gt;
+			
+			&lt;p&gt;For a list of QI Project Opportunities for Trainees at SFGH and other UCSF campuses, please visit: &lt;a href=&quot;http://medicine.ucsf.edu/safety/resources/index.html#sfgh&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+SHHE Project ./hospital/research/shhe.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/research/shhe.html</Path>
+		<FileBody>
+			
+						
+			&lt;img class=&quot;shhe_logo&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/shhe_logo.png&quot; width=&quot;100&quot;/&gt;
+			&lt;p class=&quot;introduction&quot;&gt;Support from Hospital to Home for Elders (SHHE) Project: A 700 person randomized controlled study led by co&#45;investigators Jeff Critchfield, MD and Sue Currin, RN, MS.&lt;/p&gt;
+			
+			&lt;p&gt;
+			The Support from Hospital to Home for Elders (SHHE) Study is a clinical trial that is assessing the impact of discharge interventions in SFGH’s ethnically and culturally diverse safety net setting.  The Study, generously funded by the Gordon and Betty Moore Foundation, is a hybrid of principles from Project RED, the Care Transitions Intervention, and patient&#45;centered methodologies.  It is the first transitions intervention randomized control trial to target English, Spanish, and Chinese&#45;speaking patients over the age of 55 with language and culturally concordant one&#45;on&#45;one nursing interventions. Patients admitted to SFGH are assigned to work with one of a diverse team of nurses that reflect the cultural and language diversity of the target population. This “transitionalist” nurse then shepherds the patient and their family members through the process of preparing for the transition home and into the care of their primary care provider/medical home.  
+			&lt;/p&gt;
+			
+			&lt;p&gt;
+			In the role of transitionalist, the nurses have three primary functions. The first is as patient and care&#45;giver coach, engaging and activating patients and care&#45;givers through motivational interviewing techniques and goal setting to help ready them for the self&#45;care and care navigation challenges after discharge.  The second function is as educator, using a combination of teach&#45;back and traditional bedside teaching techniques to help patients understand their diagnoses, medications, and post&#45;discharge care plan.  The third function is to promote coordination through medication reconciliation and assistance with post&#45;discharge follow&#45;up plans.  Nurses communicate with the patients’ outpatient providers to help facilitate the hand&#45;off from hospital to medical home.  After discharge, the nurses call the patient and caregivers at home to check in about medications, symptoms, function, and follow&#45;up and utilize coaching techniques to assist the patient and caregiver to make healthy choices.  If urgent interventions around medications or service needs are identified during the phone call, the nurses consult with inpatient and ambulatory providers to come up with a safe and appropriate plan of care.
+			&lt;/p&gt;
+			
+			&lt;p&gt;
+			The SHHE team has enrolled 700 patients.   The results will be analyzed and published sometime in the next year comparing outcomes between the intervention and usual care groups.  In the meantime, the intervention has been widely accepted by hospital leadership and front&#45;line staff and is being embedded into the routine transitional care. As CMS begins to fund more options for transitional care such as the Community Care Transitions Project, the hope is that the SHHE Project will become part of a menu of culturally and language appropriate interventions available to SFGH patients.   
+			&lt;/p&gt;
+			
+			&lt;p&gt;For more information, please contact the Project Coordinator, Eric Kessell, at &lt;a href=&quot;mailto:EKessell@medsfgh.ucsf.edu&quot;&gt;EKessell@medsfgh.ucsf.edu&lt;/a&gt;.&lt;/p&gt;
+			
+			&lt;h2&gt;Meet the SHHE Team!&lt;/h2&gt;
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/shhe_team.jpg&quot; class=&quot;middle&quot; width=&quot;400&quot; style=&quot;border: 1px solid #ccc;
+			padding: 5px;
+			margin&#45;bottom:10px;
+			margin&#45;right:10px;
+			&quot;/&gt;
+			&lt;p&gt;&lt;a href=&quot;/faculty/?key=645e0c4985be79ca95c8b0f7145c6886&amp;name=CRITCHFIELD%2CJEFFREY+M&quot;&gt;Jeff Critchfield, MD&lt;/a&gt;&lt;/p&gt;
+			&lt;p&gt;&lt;a href=&quot;http://futurehealth.ucsf.edu/Public/Leadership&#45;Programs/MiniProfile.aspx?asuid=6089&quot;&gt;Sue Currin, RN, MS&lt;/a&gt;&lt;/p&gt;
+			
+			&lt;p&gt;&lt;a href=&quot;/faculty/?key=0e744b3d7bf47c47a24caafc5061da81&amp;name=SCHNEIDERMANN%2CMICHELLE+E&quot;&gt;Michelle Schneidermann&lt;/a&gt;&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/eric_kessell.jpg&quot; width=&quot;104&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Eric Kessell&lt;/b&gt; is the Project Coordinator for Support to Hospital to Home for Elders.  He holds a Ph.D. in epidemiology from the University of California&#45;Berkeley and completed postdoctoral training in the Community Academic Research Training Alliance (CARTA) in the UCSF Department of Psychiatry.  His research interests include the relationship between neighborhoods and mental health, health services research in underserved populations, and health care payment reform.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/barbara_walter.png&quot; width=&quot;180&quot; style=&quot;margin&#45;top:14px;&quot;/&gt;
+			&lt;p style=&quot;padding&#45;top:14px;&quot;&gt;&lt;b&gt;Barbara Walter RN, MSN, PHN&lt;/b&gt;; Supports the role of Sue Currin on this project and serves as RN Clinical Coordinator for Support from Hospital to Home for Elders. Ms. Walter received her MSN  in Health Policy from UCSF School of Nursing with an emphasis on “Access, Affordability and Reduction in Disparities in Outcomes”.  Her career includes clinical and administrative positions in ambulatory and acute care environments.  &lt;/p&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/richard_santana.jpg&quot; width=&quot;120&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Richard Santana&lt;/b&gt; is a registered nurse with the City and County of San Francisco, with experience in Acute In&#45;Patient Psychiatry and Med/Surg in Trauma.  He is the Latino Focused Transitional Care nurse, trained in Motivational Interviewing.  Richard’s passion is to advocate for the most vulnerable of the community with an emphasis in implementing patient&#45;centered preventive education.  Richard presently co&#45;chairs the Ambassadors of Nursing Excellence and is a member of the Professional Development Practice Council of SFGH Nursing Shared Governance. &lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/catheryn_williams.png&quot; width=&quot;168&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Catheryn Williams&lt;/b&gt; is a registered nurse and has been with the City and County of San Francisco for over 17 years.   Ms. Williams has a deep connection to the community as she was born in San Francisco General Hospital.  As well as the many years of experience and knowledge of our patient population, she offers an authentic perspective and an innate ability to foster a therapeutic alliance with the patients of SFGH.  In addition to her dedication to the community, Ms. Williams’ passion also includes fostering and mentoring through her teaching experience as an Assistant Clinical Instructor for the City College Registered Nursing program as well as a Preceptor for the Med/Surg units at SFGH.  Ms. Williams is also a member of the Cultural Understanding Task Force.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/tip_tam.jpg&quot; width=&quot;108&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Tip Tam&lt;/b&gt; is a registered nurse with the City and County of San Francisco.  Ms. Tam is the Asian focused nurse.  She began her nursing career in the Adult Day Care Services.  Understanding the need for bilingual nurses, Ms. Tam was inspired to continue her path in nursing to represent patients in which Cantonese and Mandarin is their first language.  Ms. Tam continues to advocate for the most vulnerable by implementing education in which the patient is empowered to succeed in managing their illness.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/alexandra_velasquez.jpg&quot; width=&quot;140&quot; style=&quot;margin&#45;top:40px&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Alexandra Velasquez&lt;/b&gt; is one of the bilingual (Spanish/English) research assistants for the Support to Hospital to Home for Elders (SHHE) Study. Alexandra graduated with a BS in Psychology with a Biology emphasis and a minor in Social and Ethnic Relations from UC Davis.  She previously worked in a study looking at diabetes and acculturation. At UC Davis she was the project manager for a research study titled &quot;Health, Service Use, and Aging in Older Latinos&quot;.  At Stanford she co&#45;translated the Geriatric Depression Scale (GDS) to Spanish, Salvadoran version.  Alexandra has done volunteer work in India, Nicaragua, and community clinics here in the US. Her research interests include health care disparities, language barriers, and educating and empowering underserved populations.  Alexandra will continue to foster these interests as she moves forward in her education either in public or global health.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/wayne_liu.jpg&quot; width=&quot;110&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Wayne Liu&lt;/b&gt; is a Staff Research Associate for the Support from Hospital to Home for Elders research project. He holds a BA in Psychology and a BS in Human Development from the University of California, Davis.  He also teaches 4th grade Chinese school at a Chinese Bible church and speaks three different Chinese dialects (Cantonese, Mandarin, and Toisanese.) Wayne joined the project with an interest in helping underserved populations understand how to prevent hospital readmission. &lt;/p&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Description ./hospital/residency/description.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/residency/description.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Content goes here.&lt;/p&gt;
+			
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Residency Program ./hospital/residency/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/residency/index.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;SFGH is staffed by faculty from the UCSF School of Medicine, along with the UCSF Schools of Nursing, Dentistry, and Pharmacy. UCSF has been the City's partner for providing patient care since 1873. Today, some 1,600 UCSF physicians, specialty nurses, health care professionals and other professionals work side&#45;by&#45;side with City employees at SFGH. On any given day, about one&#45;third of all UCSF medical students, residents and fellows are working and training at SFGH.&lt;/p&gt;
+			&lt;img style=&quot;border: 1px solid #CCC;
+			padding: 5px;
+			margin&#45;right: 12px;&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/residents_group.jpg&quot; width=&quot;400&quot; /&gt;
+			
+			
+			&lt;p&gt;Meet our current &lt;a href=&quot;http://medicine.ucsf.edu/education/residency/leadership/chiefs_2012&#45;2013.html&quot;&gt;chief residents!&lt;/a&gt; &lt;/p&gt;
+			
+			
+			&lt;p&gt;Please visit &lt;a href=&quot;http://medicine.ucsf.edu/education/residency/index.html&quot;&gt;Department of Medicine Residency&lt;/a&gt; for more information.&lt;/p&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Meet the Chief Residents ./hospital/residency/residents.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/residency/residents.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Content goes here.&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Acute Care for Elders (ACE) ./hospital/services/ace.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/ace.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;The Acute Care for Elders (ACE) at the San Francisco General Hospital and Trauma Center (SFGH) is an interdisciplinary model of care for hospitalized older adults with a focus on maintaining and improving physical function and returning patients to a community setting.&lt;/p&gt;
+			
+			&lt;p&gt;The essential elements of ACE are:&lt;/p&gt;
+			
+			&lt;ol&gt;
+				&lt;li&gt;Patient centered care, with early identification of the patient’s goals of care.&lt;/li&gt;
+				&lt;li&gt;Prepared environment to promote independent function. This includes dedicated staff to promote early ambulation and physical activity and a community dining room.&lt;/li&gt;
+				&lt;li&gt;Interdisciplinary team approach to care. The ACE teams consist of bedside nurses, ACE nursing assistants, a rehabilitation specialist, a dietitian, a pharmacist, a CNS/NP, a social worker, and Geriatricians. This team is focused on ensuring safe, appropriate, effective, timely care that is consistent with each patient’s individual goals.&lt;/li&gt;
+				&lt;li&gt;Early discharge planning.&lt;/li&gt;
+				&lt;li&gt;Medication review, with an emphasis on non&#45;pharmacologic approaches to symptom management and avoiding polypharmacy.&lt;/li&gt;
+			&lt;/ol&gt;
+			
+			&lt;p&gt;The ACE teams rounds daily and provide care recommendations to the primary admitting services. In addition, all staff have attended a 3&#45;day Geriatrics Resource Nurse training session emphasizing skills needed to promote functional independence and avoid hazards commonly associated with hospitalization in older adults. The ACE units were started in February, 2007 and are located on 5C and 5D. The 22 ACE Unit beds are open to all medical and surgical services.&lt;/p&gt;
+			
+			&lt;h3&gt;Team members:&lt;/h3&gt;
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/edgar.png&quot; width=&quot;220&quot; style=&quot;margin&#45;top:70px;&quot;/&gt;
+			&lt;p&gt;&lt;a href=&quot;/faculty/?key=44c2ef87a2495f6ce7ab4d57cf6709ed&amp;name=PIERLUISSI%2CEDGAR&quot;&gt;Edgar Pierluissi, MD&lt;/a&gt;&lt;/p&gt;
+			&lt;p&gt;&lt;a href=&quot;/faculty/?key=02725b9167b58895b92ac488a9bff477&amp;name=SOTELO%2CMARGARITA+M&quot;&gt;Margarita Sotelo, MD&lt;/a&gt;&lt;/p&gt;
+			&lt;p&gt;Annelie Nilsson, RN, MSN&lt;/p&gt;
+			&lt;p&gt;Allyson Villanueva, RN, MSN&lt;/p&gt;
+			&lt;p&gt;Nam Do, DrPh&lt;/p&gt;
+			&lt;p&gt;David Smith, DrPh&lt;/p&gt;
+			&lt;p&gt;Tiffany Luu, RD&lt;/p&gt;
+			&lt;p&gt;Jenee Bryant, MSW&lt;/p&gt;
+			&lt;p&gt;Nicole Kumle OT&lt;/p&gt;
+			&lt;p&gt;Nicole Kunibe OT&lt;/p&gt;
+			&lt;p&gt;Suzanne Bikakis, OT&lt;/p&gt;
+			&lt;p&gt;Bruce Staudt, OT&lt;/p&gt;
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+The Bridge Clinic ./hospital/services/bridge.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/bridge.html</Path>
+		<FileBody>
+			
+						
+			&lt;p class=&quot;introduction&quot;&gt;Bridge Clinic is the medical discharge clinic located at the General Medical Clinic, 1M at San Francisco General Hospital. The Bridge Clinic sees patients discharged from the medicine service who need acute follow up after their discharge from hospital. It is run and staffed by Eliza Newbold, Nurse Practitioner. &lt;/p&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/bridge_talking.png&quot; width=&quot;300&quot; class=&quot;imgRight&quot;/&gt;
+			
+			&lt;div class=&quot;contact&quot;&gt;
+				&lt;h3&gt;Contact&lt;/h3&gt;
+				&lt;p&gt;Email: &lt;a href=&quot;mailto:Bridgeclinic@ucsf.edu&quot;&gt;Bridgeclinic@ucsf.edu&lt;/a&gt;&lt;/p&gt; 
+				&lt;p&gt;Phone: 415&#45;206&#45;3775.&lt;/p&gt;
+			&lt;/div&gt;
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Medicine Consultation Service ./hospital/services/consultation.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/consultation.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;The Medical Consultation Service at San Francisco General Hospital evaluates and treats patients with medical problems who are hospitalized on non&#45;medical services.  The Service is staffed by an attending physician who also supervises a third&#45;year internal medicine resident.  Our attending physicians come from both the Division of General Internal Medicine (DGIM) and from the Division of Hospital Medicine (DHM) and have extensive experience with the medical issues that commonly arise in hospitalized patients.  We are available 24&#45;hours a day, 7&#45;days a week for assistance.  Additionally, we make recommendations regarding perioperative risk reduction for patients requiring surgery or other invasive procedures.&lt;/p&gt;
+			
+			&lt;p&gt;At SFGH, the Medical Consultation Service focuses on a number of important objectives, including but not limited to:&lt;/p&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;Providing outstanding, evidence&#45;based care for patients.&lt;/li&gt;
+				&lt;li&gt;Improving transitions of care for patients from the inpatient to the outpatient setting.&lt;/li&gt;
+				&lt;li&gt;Improving communication with patients’ primary care providers.&lt;/li&gt;
+				&lt;li&gt;Improving communication and interaction among medical and non&#45;medical services.&lt;/li&gt;
+				&lt;li&gt;Providing residents with a top&#45;tier education in medical consultation and perioperative medicine.&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;Please contact us at 443&#45;7246 to request a consult, or contact the Director of the service, &lt;a href=&quot;/faculty/?key=f5f4dc1e698fdc25f885d4be85f31bfe&amp;name=BROOKS%2CRICHARD+BENJAMIN&quot;&gt;Dr. Richard Brooks &lt;/a&gt;with any questions or concerns.&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+A Day in the Life of FIS ./hospital/services/day_life.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/day_life.html</Path>
+		<FileBody>
+			&lt;h2&gt;Illness As a Teacher&lt;/h2&gt;
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sima_new.jpeg&quot; style=&quot;border: 1px solid #ccc;
+			padding: 5px;
+			margin&#45;bottom:10px;
+			margin&#45;right:10px;
+			&quot;/&gt;
+			&lt;hr&gt;
+			&lt;h3&gt;By Sima Pendharkar, MD, ACP Associate Member&lt;/h3&gt;
+			
+			&lt;p&gt;Fresh out of residency on my first night shift as a hospitalist, I was wide awake and bright&#45;eyed—running on a healthy dose of adrenaline, ready to take on anything. Having tackled admissions, cross&#45;cover and everything in between, I sat perched over my computer by 3 a.m., eager to complete all the night’s documentation. In my Zen&#45;like zone, I began typing but was soon jarred by the buzzing of my pager. It was a fretful nurse requesting my immediate presence at a patient’s bedside.&lt;/p&gt;
+			
+			&lt;p&gt;Standing outside the patient's room, I quickly glanced at the cross&#45;cover notes. He was a 47&#45;year&#45;old homeless man with AIDS who was admitted for pneumocystis pneumonia, now on hospital day 12.  Before I entered, the nurse told me the patient was extremely angry, was demanding to have his oxygen removed, and wanted to leave the hospital against medical advice.&lt;/p&gt;
+			
+			&lt;p&gt;With that information in hand, I eagerly entered the room. I felt quite confident I could use my compassion, medical knowledge and general wit to bring some comfort and calm at this odd hour.&lt;/p&gt;
+			
+			&lt;p&gt;When I started to introduce myself, I was interrupted by Mr. P’s harsh, sharp voice and cutting eyes, which dissected my every motion as I made my way towards him. I immediately recognized the weathering effect the physical elements had placed upon him—long beard, scattered tattoos, missing teeth—and I was struck by his fighting spirit. I pulled up a chair to listen to his concerns, though I was not a welcome visitor that night.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sima_pendharkar.png&quot; width=&quot;300&quot;/&gt;
+			&lt;p&gt;In the following days, Mr. P's condition began to rapidly deteriorate. He became increasingly hypoxemic, continued to lose weight and—most concerning—the feisty sparkle in his eyes began to dissipate. He initially attempted to protest his body’s deteriorating state by refusing to eat and by sprinkling snide remarks into every conversation. Reasoning with him was next to impossible.&lt;/p&gt;
+			
+			&lt;p&gt;One afternoon, as I explained to him the current therapeutic dilemmas and the very real prospect of his mortality, tears rolled down his hollow cheeks. Despite the tough external facade, Mr. P’s emotional walls were crumbling and he was starting to open up. There was now room for dialogue and emotional honesty where before that wasn’t the case. As I reached towards him to comfort him, he looked me in the eye and said, “I’m scared.”&lt;/p&gt;
+			
+			&lt;p&gt;Over the weeks of his hospital stay, I had the opportunity to know Mr. P not only as a patient but as a friend, a dreamer, a fighter and a witty, compassionate individual. As the illness experience enveloped him, I witnessed his beautiful metamorphosis to a state of higher insight and peacefulness about his own health.&lt;/p&gt;
+			
+			&lt;p&gt;He made a miraculous recovery. His physical body regained strength, but more surprising was that he seemed overcome with a general sense of peace, contentment and lightness. While he looked forward to getting back to his tent under one of the highway bridges, he was also contemplating taking some classes and considering how he could use this life&#45;altering experience to help others.  &lt;/p&gt;
+			
+			&lt;p&gt;Sometimes when I’m driving under various bridges around the city and spot pockets of homeless people, I find myself wondering about Mr. P. I hope the new vista that his mind and body have offered up will give him the strength and courage to embark on many more of life’s adventures.&lt;/p&gt;
+			
+			&lt;h3&gt;Facts on homelessness&lt;/h3&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;On a single night, 643,067 individuals in the U.S. were homeless, according to the 2009 Annual Homeless Assessment Report by the U.S. Department of Housing and Urban Development.&lt;/li&gt;
+				&lt;li&gt;63% of homeless individuals were sheltered and 37% were unsheltered, according to the U.S. Interagency Council on Homelessness.&lt;/li&gt;
+				&lt;li&gt;In 2003, children younger than 18 comprised 39% of the homeless population. Of those, 42% were under the age of five, according to the National Coalition for the Homeless (NCH).&lt;/li&gt;
+				&lt;li&gt;Among surveyed sheltered homeless persons, roughly 26% have severe mental illness according to the NCH. In addition, 38% reported alcohol problems and 26% reported addictions to other drugs.&lt;/li&gt;
+				&lt;li&gt;In 22 cities surveyed, 15% of homeless persons reported they were victims of domestic violence, according to the U.S. Conference of Mayors' Status Report on Hunger and Homelessness in America's Cities: 2008.&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;Manuscript found in the October 2012 issue of ACP Hospitalist &lt;a href=&quot;http://www.acphospitalist.org/&quot;&gt;http://www.acphospitalist.org/&lt;/a&gt;. &lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Faculty Inpatient Services ./hospital/services/faculty.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/faculty.html</Path>
+		<FileBody>
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/inpatient_doctalk.png&quot; width=&quot;250&quot;/&gt;
+			&lt;p class=&quot;introduction&quot;&gt;The Faculty Inpatient Service (FIS) at San Francisco General Hospital (SFGH) is comprised of nine full&#45;time hospitalists, several part&#45;time hospitalists, and one nurse practitioner.  Together these providers, who operate the service 24&#45;hours per day, seven days per week, care for approximately one&#45;third of the patients on the Medicine Service at SFGH and act as the primary inpatient providers for a group of patients with Orthopedic surgical problems who also have complex medical needs. In addition to caring for these patients, the FIS plays an important role in staffing the Medicine Consultation service at various times throughout the week, and they offer invaluable supervision and teaching for our Internal Medicine residents overnight.  While the primary role of the FIS is to provide clinical care of patients, they are also essential members of several interdisciplinary teams working to improve the quality and safety of patient care at SFGH.&lt;/p&gt;
+			
+			&lt;div style=&quot;width:400px&quot;;&gt;
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/lhh_petting_zoo.jpg&quot; class=&quot;image&quot;/&gt;
+			&lt;p class=&quot;caption&quot;&gt;FIS faculty and staff take a day trip to visit the new Laguna Honda Hospital. Featured is the Laguna Honda farm, which is home to LHH’s pioneering animal&#45;assisted therapy program&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;br&gt;
+			&lt;hr&gt;
+			&lt;h2&gt;Illness As a Teacher&lt;/h2&gt;
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sima_new.jpeg&quot; style=&quot;border: 1px solid #ccc;
+			padding: 5px;
+			margin&#45;bottom:10px;
+			margin&#45;right:10px;
+			&quot;/&gt;
+			&lt;h3&gt;By Sima Pendharkar, MD, ACP Associate Member&lt;/h3&gt;
+			
+			&lt;p&gt;Fresh out of residency on my first night shift as a hospitalist, I was wide awake and bright&#45;eyed—running on a healthy dose of adrenaline, ready to take on anything. Having tackled admissions, cross&#45;cover and everything in between, I sat perched over my computer by 3 a.m., eager to complete all the night’s documentation. In my Zen&#45;like zone, I began typing but was soon jarred by the buzzing of my pager. It was a fretful nurse requesting my immediate presence at a patient’s bedside.&lt;/p&gt;
+			
+			&lt;p&gt;Standing outside the patient's room, I quickly glanced at the cross&#45;cover notes. He was a 47&#45;year&#45;old homeless man with AIDS who was admitted for pneumocystis pneumonia, now on hospital day 12.  Before I entered, the nurse told me the patient was extremely angry, was demanding to have his oxygen removed, and wanted to leave the hospital against medical advice.&lt;/p&gt;
+			
+			&lt;p&gt;With that information in hand, I eagerly entered the room. I felt quite confident I could use my compassion, medical knowledge and general wit to bring some comfort and calm at this odd hour.&lt;/p&gt;
+			
+			&lt;p&gt;When I started to introduce myself, I was interrupted by Mr. P’s harsh, sharp voice and cutting eyes, which dissected my every motion as I made my way towards him. I immediately recognized the weathering effect the physical elements had placed upon him—long beard, scattered tattoos, missing teeth—and I was struck by his fighting spirit. I pulled up a chair to listen to his concerns, though I was not a welcome visitor that night.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sima_pendharkar.png&quot; width=&quot;300&quot;/&gt;
+			&lt;p&gt;In the following days, Mr. P's condition began to rapidly deteriorate. He became increasingly hypoxemic, continued to lose weight and—most concerning—the feisty sparkle in his eyes began to dissipate. He initially attempted to protest his body’s deteriorating state by refusing to eat and by sprinkling snide remarks into every conversation. Reasoning with him was next to impossible.&lt;/p&gt;
+			
+			&lt;p&gt;One afternoon, as I explained to him the current therapeutic dilemmas and the very real prospect of his mortality, tears rolled down his hollow cheeks. Despite the tough external facade, Mr. P’s emotional walls were crumbling and he was starting to open up. There was now room for dialogue and emotional honesty where before that wasn’t the case. As I reached towards him to comfort him, he looked me in the eye and said, “I’m scared.”&lt;/p&gt;
+			
+			&lt;p&gt;Over the weeks of his hospital stay, I had the opportunity to know Mr. P not only as a patient but as a friend, a dreamer, a fighter and a witty, compassionate individual. As the illness experience enveloped him, I witnessed his beautiful metamorphosis to a state of higher insight and peacefulness about his own health.&lt;/p&gt;
+			
+			&lt;p&gt;He made a miraculous recovery. His physical body regained strength, but more surprising was that he seemed overcome with a general sense of peace, contentment and lightness. While he looked forward to getting back to his tent under one of the highway bridges, he was also contemplating taking some classes and considering how he could use this life&#45;altering experience to help others.  &lt;/p&gt;
+			
+			&lt;p&gt;Sometimes when I’m driving under various bridges around the city and spot pockets of homeless people, I find myself wondering about Mr. P. I hope the new vista that his mind and body have offered up will give him the strength and courage to embark on many more of life’s adventures.&lt;/p&gt;
+			
+			&lt;h3&gt;Facts on homelessness&lt;/h3&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;On a single night, 643,067 individuals in the U.S. were homeless, according to the 2009 Annual Homeless Assessment Report by the U.S. Department of Housing and Urban Development.&lt;/li&gt;
+				&lt;li&gt;63% of homeless individuals were sheltered and 37% were unsheltered, according to the U.S. Interagency Council on Homelessness.&lt;/li&gt;
+				&lt;li&gt;In 2003, children younger than 18 comprised 39% of the homeless population. Of those, 42% were under the age of five, according to the National Coalition for the Homeless (NCH).&lt;/li&gt;
+				&lt;li&gt;Among surveyed sheltered homeless persons, roughly 26% have severe mental illness according to the NCH. In addition, 38% reported alcohol problems and 26% reported addictions to other drugs.&lt;/li&gt;
+				&lt;li&gt;In 22 cities surveyed, 15% of homeless persons reported they were victims of domestic violence, according to the U.S. Conference of Mayors' Status Report on Hunger and Homelessness in America's Cities: 2008.&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;Manuscript found in the October 2012 issue of ACP Hospitalist &lt;a href=&quot;http://www.acphospitalist.org/&quot;&gt;http://www.acphospitalist.org/&lt;/a&gt;. &lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Services ./hospital/services/index.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/index.html</Path>
+		<FileBody>
+			
+			
+			&lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt;
+			
+			&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/services/ace.html&quot;&gt;Acute Care for Elders (ACE)&lt;/a&gt;&lt;/li&gt;
+			&lt;br/&gt;																					 
+			&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/services/inpatient.html&quot;&gt;Inpatient Medical Services&lt;/a&gt;&lt;/li&gt;
+			&lt;br/&gt;																					 
+			&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/services/consultation.html&quot;&gt;Medicine Consultation Service&lt;/a&gt;&lt;/li&gt;
+			&lt;br/&gt;																					 
+			&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/services/orthopedic.html&quot;&gt;Orthopedic/Co&#45;Management Services&lt;/a&gt;&lt;/li&gt;
+			&lt;br/&gt;																					 
+			&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/services/outreach.html&quot;&gt;Outreach Services&lt;/a&gt;&lt;/li&gt;	 
+			&lt;br/&gt;																					 
+			&lt;li&gt;&lt;a href=&quot;http://hospital&#45;sfgh.medicine.ucsf.edu/services/palliative.html&quot;&gt;Supportive &amp; Palliative Care Services&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Inpatient Medical Services ./hospital/services/inpatient.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/inpatient.html</Path>
+		<FileBody>
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/larry_jay_hall.jpg&quot; class=&quot;imgLeft&quot;/&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;/services/faculty.html&quot;&gt;Faculty Inpatient Services&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;/services/resident.html&quot;&gt;Resident Inpatient Services&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;
+			For more information on our inpatient medical services, please contact &lt;a href=&quot;http://profiles.ucsf.edu/larissa.thomas&quot; target=&quot;new&quot;&gt;Dr. Larissa Thomas&lt;/a&gt;, Medical Director of the Faculty Inpatient Service, and Site Director for the UCSF Internal Medicine Residency Program at SFGH.
+			&lt;/p&gt;
+			
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Orthopedic/Co-Management Services ./hospital/services/orthopedic.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/orthopedic.html</Path>
+		<FileBody>
+			
+						&lt;div class=&quot;orth_main&quot;&gt;
+			&lt;p class=&quot;introduction&quot;&gt;To continue to deliver on SFGH’s mission to provide quality health care and trauma services with compassion and respect for patients of all cultures and backgrounds, we have instituted a co&#45;management service between Medicine and Orthopedics departments. The team is called the “Faculty Inpatient Service&#45;Green Team”. This “Green Team” is designed to care for those hospitalized patients who need urgent/emergent orthopedic services but who also have very complicated past medical histories or acute medical problems via a dedicated team of internal medicine hospitalist working closely in conjunction with orthopedic subspecialist, physical therapists, and nurse practitioners.&lt;/p&gt;
+			
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/ortho_group.png&quot; class=&quot;imgLeft&quot; width=&quot;350&quot;&gt;
+			&lt;p class=&quot;list_header&quot;&gt;The goal of the co&#45;management team is to:&lt;/p&gt;
+			
+			&lt;ul class=&quot;about_team&quot;&gt;
+				&lt;li&gt;Improve quality and safety of patient care&lt;/li&gt;
+				&lt;li&gt;Improve communication between health care teams&lt;/li&gt;
+				&lt;li&gt;Deliver the highest standard of care to our patients&lt;/li&gt;
+				&lt;li&gt;Enhance the educational environment&lt;/li&gt;
+				&lt;li&gt;Develop efficient and expertly managed care delivery to provide our patients optimal chances for healing and wellness recovery after their injury&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p class=&quot;caption&quot;&gt;Pictured from left to right: &lt;br/&gt;Michelle Barry &#45; Nurse Practitioner / Orthopedic Surgery &lt;br/&gt;Dorothy Christian &#45; Nurse Practitioner / Orthopedic Surgery&lt;br/&gt; Sima Pendharkar &#45; Assistant Clinical Professor / Division of Hospital Medicine&lt;br/&gt;Alekos Theologis &#45; Resident / Orthopedic Surgery.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;p class=&quot;ending_statement&quot;&gt;We look forward to providing you and your loved ones these services should you ever need them, and thank you for choosing SFGH for your medical care. 
+			For questions regarding this multidisciplinary service, please contact &lt;a href=&quot;/faculty/?key=d5465c25817c7af6e57862b1b38005fb&amp;name=ORTIZ%2CGABRIEL+M&quot;&gt;Dr. Gabriel Ortiz.&lt;/a&gt;
+			&lt;/p&gt;
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Outreach Services ./hospital/services/outreach.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/outreach.html</Path>
+		<FileBody>
+			
+			&lt;ul&gt;&lt;li&gt;
+			&lt;a href=&quot;/services/respite.html&quot;&gt;Respite Care&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+			&lt;a href=&quot;/services/bridge.html&quot;&gt;The Bridge Clinic&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Supportive &amp; Palliative Care Services ./hospital/services/palliative.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/palliative.html</Path>
+		<FileBody>
+			
+						&lt;p class=&quot;introduction&quot;&gt;Hundreds of patients are admitted to San Francisco General Hospital &amp; Trauma Center every month with life&#45;threatening conditions, either due to an acute injury or progression of an advanced, chronic illness.  These patients, as well as their families and caregivers, often face difficult decisions regarding their care, and sometimes struggle with distressing symptoms like pain, shortness of breath, or anxiety regarding what lies ahead.&lt;/p&gt;
+			
+			&lt;p&gt;San Francisco General Hospital’s &lt;b&gt;Supportive &amp; Palliative Care Service&lt;/b&gt; is an interdisciplinary team of providers that helps support patients with advanced or life&#45;limiting illnesses, as well as their families and caregivers.  Whether patients are alone or surrounded by family and friends, this Service seeks to ease physical symptoms, but also to provide comprehensive care that addresses the emotional and spiritual distress that sometimes accompanies a life&#45;threatening illness.&lt;/p&gt;
+			
+			&lt;p&gt;Care is provided through a unique team of providers, which includes physicians, nurses, social workers, and chaplains.  &lt;a href=&quot;/services/palliative/team.html&quot;&gt;Meet the team&lt;/a&gt;. We also work closely with hospital staff to improve patients’ quality of life, by requesting consultation from pharmacists, nutritionists, respiratory therapists, and occupational and physical therapists. When it is time for patients to leave the hospital, we work closely with community partners and home care agencies to provide a smooth transition either to the patient's home or to an extended care facility.&lt;/p&gt;
+			
+			&lt;div class=&quot;bedside_care&quot;&gt;
+				&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/bedside_care.png&quot; width=&quot;400&quot; class=&quot;imgLeft&quot;/&gt;
+				&lt;p class=&quot;caption&quot;&gt;&lt;i&gt;Anne Kinderman, MD, Director, SFGH Supportive and Palliative Care Service, shares a smile with a patient.&lt;/i&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			
+			
+			&lt;p&gt;The Supportive &amp; Palliative Care Service provides care in all areas of the hospital, from the emergency room to the medical/surgical units and intensive care units.  For patients who may die in the hospital, the Service provides intensive symptom management, opportunities for reflection and meaningful connections with friends and family, and visits from spiritual leaders, if desired.  This specialized care is often provided in two converted patient rooms known as “&lt;a href=&quot;/services/palliative/comfort.html&quot;&gt;Comfort Care Suites&lt;/a&gt; ,” which create a more peaceful, home&#45;like environment, accommodating visitors who wish to stay with their loved ones in the final hours of life.&lt;/p&gt;
+			
+			&lt;p&gt;These services are made possible through the City &amp; County of San Francisco, grant funding from the &lt;a href=&quot;http://www.chcf.org/&quot;&gt;California HealthCare Foundation&lt;/a&gt; and the &lt;a href=&quot;http://sfghf.net/index.html&quot;&gt;San Francisco General Hospital Foundation &lt;/a&gt;, as well as generous philanthropic support from individual donors.  Find out how to support our work by volunteering time or services, &lt;a href=&quot;/services/palliative/volunteer.html&quot;&gt;Volunteering&lt;/a&gt; or through &lt;a href=&quot;/services/palliative/giving.html&quot;&gt;financial support.&lt;/a&gt;&lt;/p&gt;
+			
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Quality Improvement Initiatives ./hospital/services/quality.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/quality.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;In alignment with the SFGH Mission and Strategic Plan, the Division of Hospital Medicine at SFGH is dedicated to providing quality health care services with compassion and respect.  As the hospital and the SFDPH work to improve the patient experience, population health outcomes and cost containment, the Division of Hospital Medicine faculty provide leadership and clinical engagement on a number of hospital&#45;wide and division initiatives. Selected QI projects being led by SFGH hospitalists include:&lt;/p&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;Service Excellence and Improving Patient Experience&lt;/li&gt;
+				&lt;li&gt;Clinical Quality &amp;amp; Health Equity
+					&lt;ul&gt;
+						&lt;li&gt;Early identification and management of sepsis&lt;/li&gt;
+						&lt;li&gt;Prevention of line&#45;associated blood stream infections&lt;/li&gt;
+						&lt;li&gt;Prevention and treatment of venothromboembolism&lt;/li&gt;
+						&lt;li&gt;Enhancing care transitions and reducing avoidable readmissions&lt;/li&gt;
+						&lt;li&gt;Preventing hospital&#45;acquired pressure ulcers and falls with injury&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;Safety and Accountability, or enhancing a culture of shared responsibility for systems and individual behaviors&lt;/li&gt;
+				&lt;li&gt;Lean Management, an operational efficiency framework that promotes performance improvement, staff satisfaction and patient value&lt;/li&gt;
+				&lt;li&gt;Development and Expansion of Information Technology, such as computerized provider order entry&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;p&gt;For more information, please contact the Medical Director of Quality Management, &lt;a href=&quot;http://beta1&#45;sandbox.ucsf.edu/faculty/?key=a891de17074cc9af7bc0d373ef8cca4a&amp;name=HUEN%2CWILLIAM+S&quot;&gt;Dr. William Huen&lt;/a&gt;.&lt;/p&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Resident Inpatient Services ./hospital/services/resident.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/resident.html</Path>
+		<FileBody>
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/residents_group.jpg&quot; width=&quot;300&quot; /&gt;
+			&lt;p class=&quot;introduction&quot;&gt;The Resident Inpatient Service (RIS) at San Francisco General Hospital (SFGH) cares for a broad range of patients who require Medicine inpatient care at the ward or step&#45;down level.  The service consists of five Medicine teams, each with an attending, a senior resident, two interns, and typically, one fourth&#45;year medical student and one or two third&#45;year medical students.&lt;/p&gt;
+			&lt;br /&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/resident_doctalk.png&quot; width=&quot;300&quot; /&gt;
+			&lt;p&gt;Members of the Division of Hospital Medicine provide just over one&#45;third of the attending support for the RIS, which cares for about two&#45;thirds of the patients admitted to Medicine (excluding Medical ICU and Cardiology).  The primary responsibility of the Medicine attending is to provide active oversight of patient care.  However, the attending also plays a critical role in the clinical education of Medicine house staff and medical students, both through rounds and bedside teaching and via scheduled time for didactics.&lt;/p&gt;
+			
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Respite Care ./hospital/services/respite.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/respite.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt;
+			
+			&lt;img class=&quot;imgRight&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/respite_plants.png&quot;/&gt;
+			&lt;p&gt;Reducing preventable hospital readmission—especially among frequent users—is important for health care systems. New health care reform legislation further places attention on readmissions, and provides incen tives for systems of care that examine and demonstrate innovative and effective practices that reduce hospitalization among frequent users. Homeless populations suffer disproportionately high rates of chronic and infectious disease, mental illness, and substance use&#45;related health problems. Homelessness is consistently associated with longer and repeated hospital stays and homeless individuals are disproportionately represented among frequent users of hospital care. Among people who are homeless, competing priorities, barriers to routine medical care, and challenges with medication adherence all represent risk factors for hospital use. In addition, post&#45;discharge patients often return to environments that are sub&#45;optimal for healing, and may face difficulty with medication management, routine follow&#45;up, and adherence to after&#45;care plans that increase likelihood of re&#45;hospitalization. Medical Respite programs provide an alternative to street discharge for homeless patients. The Medical Respite model addresses specific needs of homeless patients by providing temporary housing and post&#45;acute medical care for those who are too ill or frail to recover from a physical illness or injury on the streets, but are not ill enough to be in a hospital. To date, over 57 Medical Respite programs have been established in U.S. cities. While the capacity and level of service provision varies among these programs, they uniformly provide a safe and clean environment appropriate for healing and access to nursing and medical staff to assist patients with routine aftercare, wound care and medication support.&lt;/p&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/outside_respite.png&quot;/&gt;
+			&lt;p&gt;Effective strategies to reduce re&#45;hospitalization include consistent patient education and seamless transition to community medical care. At Medical Respite these strategies are tailored to serve homeless patients who may not have a history of successful engagement with community based services. A recent review of Respite models across the U.S. noted that Medical Respite presents a critical window to engage homeless patients and make connections to community based medical care, social services and housing that can help patients continue successful transition. Among homeless populations, routine primary care, substance abuse treatment, and entrance into supported housing programs have all been shown to have independent, positive effects on likelihood of hospitalization.&lt;/p&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/group_respite.png&quot; class=&quot;imgRight&quot; width=&quot;250px&quot;/&gt;
+			&lt;p&gt;The San Francisco Medical Respite is a 45&#45;bed residential facility in downtown San Francisco, established in 2007 by the San Francisco Department of Public Health Housing and Urban Health Department (SFDPH). San Francisco Medical Respite accepts patient referrals from the city’s public hospital, San Francisco General Hospital (SFGH), the Veteran’s Administration Hospital, University of California and San Francisco (UCSF) Medical Center, and seven private community hospitals. As in other cities, homeless patients in San Francisco are disproportionately represented among high users of medical services, and SFGH staff estimate that up to 20% of inpatients are homeless on any given night. Due to the high number of homeless inpatients, Respite referrals are often triaged by both referring providers and Medical Respite staff. As a result, Respite serves patients who are among the most medically complicated, who are typically triply diagnosed (medical, psychiatric, and substance use) and who have multiple chronic medical conditions.&lt;/p&gt;
+			
+			
+			&lt;p&gt;Onsite Respite medical staff (seven days a week and 24 hours on call) include registered and advance practice nurses, physicians and physician assistants, and medical assistants who, as a team, provide urgent and intermediate care, health education services, and referrals to primary and specialty care in the community. Community health workers provide support services as well as case management, under the supervision of social workers. Social workers individually assess all patients, and assist patients obtaining government issued identification, income benefits (such as Social Security Disability Insurance) and medical coverage (Medi&#45;Cal or Medicaid). Where appropriate, social workers also assist patients in applying for supported housing (SFDPH also administers a supported housing program: Direct Access to Housing). Respite staff continue to follow up with patients throughout their medical treatment and discharge planning to make appropriate referrals and assist with patient appointments as needed. Discharge plans are reviewed by multi&#45;disciplinary teams with an eye toward ensuring both that patients are medically ready for discharge and that referrals and follow up services are sufficiently in place to promote success in the community.&lt;/p&gt;
+			
+			&lt;p style=&quot;font&#45;size:12px;&quot;&gt;&lt;i&gt;Taken from: Bauer, J., Wong, A.,Viloria, J., Schneidermann, M. “Leaving Before Discharge from a Homeless Medical Respite Program: Predisposing Factors and Selected Outcomes.”  Journal of Health Care for the Poor and Underserved, 2012 Aug; 23: 1092–1105&lt;/i&gt;&lt;/p&gt;
+			
+			&lt;p&gt;Contributions to San Francisco Medical Respite can be made through &lt;a href=&quot;http://www.catsinc.org/Donate_Now.html&quot;&gt;http://www.catsinc.org/Donate_Now.html&lt;/a&gt;. In order for your gift to be directed toward the Respite Care program, please include the designation &quot;Medical Respite”.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/hm_group.png&quot; width=&quot;300&quot; style=&quot;margin&#45;left:160px;&quot;/&gt;
+			&lt;p style=&quot;width:300px;margin&#45;left:166px;font&#45;style:italic;font&#45;size:10px;&quot;&gt;A few of the San Francisco Medical Respite Staff, pictured from left to right: Alice Moughamian, Cindy Lee, Rose Quinones, Michelle Schneidermann, Linda San&#45;Miguel&lt;/p&gt;
+			
+			&lt;p&gt;For more information regarding the San Francisco Medical Respite, please contact &lt;a href=&quot;/faculty/?key=0e744b3d7bf47c47a24caafc5061da81&amp;name=SCHNEIDERMANN%2CMICHELLE+E&quot;&gt;Dr. Michelle Schneidermann&lt;/a&gt;, UCSF/SFGH Medical Director of the SFDPH Medical Respite &amp; Sobering Center. &lt;/p&gt;
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Comfort Care Suites ./hospital/services/palliative/comfort.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/palliative/comfort.html</Path>
+		<FileBody>
+						
+			
+			&lt;p class=&quot;introduction&quot;&gt;The final hours and days of life can be a time of physical, emotional, and spiritual stress for both patients and families.  While some choose or hope to spend this time in their homes, others remain at San Francisco General during their last days.  In December 2010, San Francisco General Hospital opened a 2&#45;bed Palliative Care Unit, known as the &quot;Comfort Care Suites,&quot; located on the Oncology/HIV Unit.  Patients receive expert symptom management and families are supported by an interdisciplinary team of providers, providing sensitive care in a more home&#45;like environment than is usually found in a hospital room.&lt;/p&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/funded_unit.png&quot; class=&quot;imgLeft&quot;/&gt;
+			
+			&lt;p class=&quot;unit_notation&quot;&gt;This specialized unit was made possible through a combination of donations and funding from the City and County of San Francisco, the &lt;a href=&quot;http://www.sfghf.net&quot;&gt;San Francisco General Hospital Foundation&lt;/a&gt;, and a local non&#45;profit organization, &lt;a href=&quot;http://healingenvironments.org/&quot;&gt;Healing Environments&lt;/a&gt;.  Through these collaborations and important donations, ordinary hospital rooms were transformed into more comfortable, home&#45;like spaces in which family members can hold vigil with their loved ones.&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Financial Donations ./hospital/services/palliative/giving.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/palliative/giving.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Your donations will help to provide support for patients and families in some of the most difficult hours of life.  By providing simple comforts, such as food, personal care items and linens to facilitate overnight stays; music; literature related to coping with advanced illness; bereavement resources; and more.&lt;/p&gt;
+			
+			&lt;p&gt;Contributions to the program are facilitated by the &lt;a href=&quot;http://sfghf.net/donate.html&quot;&gt;San Francisco General Hospital Foundation&lt;/a&gt;. In order for your gift to be directed toward the Supportive &amp; Palliative Care Service, please include the designation &quot;Palliative Care Service.&quot;&lt;/p&gt;
+			
+			&lt;h4&gt;&lt;em&gt;THANK YOU&lt;/em&gt; for supporting our work!&lt;/h4&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Meet Our Team ./hospital/services/palliative/team.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/palliative/team.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;&lt;/p&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/spcs_team.png&quot;/&gt;
+			
+			&lt;p class=&quot;caption&quot; style=&quot;width:400px;&quot;&gt;Pictured from left to right: Rev. Elizabeth Welch, Dr. Anne Kinderman, Dr. Heather Harris, Jennifer McGaugh, RN, Fr. Bruce J. Lery, Shuwen (Sylvia) Huang, BA, MSW&lt;/p&gt;
+			&lt;br /&gt;
+			&lt;br /&gt;
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/anne_kinderman.png&quot; width=&quot;120&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Dr. Anne Kinderman&lt;/b&gt; is an Assistant Clinical Professor of Medicine at the University of California, San Francisco, and is the Director of the Supportive &amp; Palliative Care Service at San Francisco General Hospital.  She earned her B.A. degree in history from Yale University, and her M.D. from Rush University in Chicago, Illinois.  She completed her Internal Medicine Residency at UCSF, followed by a one&#45;year teaching fellowship at UCSF, and a Hospice &amp; Palliative Medicine Fellowship at Stanford.  She was thrilled to return to San Francisco General in 2009, when she became the Founding Director of the Supportive &amp; Palliative Care Consult Service.  Throughout her career, Dr. Kinderman's scholarly interests and service activities have focused on medical education, providing care to underserved populations, and improving healthcare delivery.  She continues to enjoy volunteer work in urban health clinics, as well as short&#45;term medical relief trips throughout the world.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/heather_harris.png&quot; width=&quot;120&quot;/&gt;
+			&lt;p&gt;&lt;b&gt;Dr. Heather Harris&lt;/b&gt; is an Assistant Clinical Professor of Medicine at the University of California, San Francisco, and is the Associate Director of the Supportive &amp; Palliative Care Service at San Francisco General Hospital. She earned a B.A. degree magna cum laude in anthropology at Harvard University and her M.D. from Stanford University.  After completing residency in Internal Medicine at UCSF, she became the Medical Director of Eden Inpatient Services and helped to establish this hospitalist program. Through her work in the community setting, she developed an interest in palliative medicine and returned to UCSF as a hospitalist and as an attending on the palliative care service at the university campus at Parnassus.  She was delighted when the opportunity arose to help develop the Supportive and Palliative Care Program at the SFGH campus and along with Dr. Kinderman transitioned here in the fall of 2009.  Her scholarly interests focus on the provision of palliative care to underserved and culturally diverse patients as well as optimizing patient safety and education around medical procedures.  Life outside of the hospital revolves primarily around delight of experiencing the world through the eyes of toddlers with her twin sons and family.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/jennifer_mcgaugh.png&quot; width=&quot;120&quot; /&gt;
+			&lt;p&gt;&lt;b&gt;Jennifer McGaugh, RN&lt;/b&gt; is the nurse consultant for the Supportive &amp; Palliative Care Service at San Francisco General Hospital. She earned her BBA in Music Business from Belmont University in Nashville, Tennessee and her RN and MSN in Healthcare Systems Leadership from the University of San Francisco.  Before becoming a nurse, she worked in music publishing in Nashville and cooked at several restaurants including Greens Restaurant in San Francisco.  During her time as a cook, she prepared healthy meals for a neighbor who was dying of AIDS which opened her eyes to the AIDS epidemic and thrust her into the world of HIV activism.  She volunteered for youth&#45;serving agencies in San Francisco, and for the SF Department of Public Health, providing HIV education in public, parochial and private schools. From there, she co&#45;founded an HIV organization called Bay Area Young (BAY) Positives providing psychosocial support to HIV+ youth. This led her to work for the Shanti Project, where she developed programs and provided care coordination to underserved people with HIV/AIDS and breast cancer. It was through this work, interfacing with the healthcare system, that she became inspired to become a nurse and continue her passion for serving the most underserved people in San Francisco. Throughout her nursing career, she has worked on the HIV/AIDS&#45;Oncology unit at SFGH caring for many patients at end&#45;of&#45;life, which galvanized her passion for the field of Palliative Care.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/sylvia.png&quot; width=&quot;120&quot; /&gt;
+			&lt;p&gt;&lt;b&gt;Shuwen (Sylvia) Huang, BA MSW&lt;/b&gt;, is the Medical Social Worker for the Supportive &amp; Palliative Care Service at San Francisco General Hospital.  She is originally from Taiwan, and decided to come to the United States to pursue her dream of working in a helping profession. She earned B.A. degrees in Psychology and Business Administration from the University of Nebraska&#45;Lincoln, as well as a Masters in Social Work from Washington University in St. Louis.  Prior to joining the team, she worked at Stepping Stone Adult Day Health Center and the Emergency Department of San Francisco General Hospital.  She is very passionate about working to enhance the quality of end&#45;of&#45;life care for patients of different cultural backgrounds, as well as empowering patients to experience life to the fullest throughout their end of life journey.&lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/elizabeth_welch.png&quot; width=&quot;120&quot; /&gt;
+			&lt;p&gt;The &lt;b&gt;Rev. Elizabeth Welch&lt;/b&gt;, MDiv, BCC is a priest in the Episcopal Church and a Board Certified Chaplain (BCC) with the Association of Professional Chaplaincy (APC).  She has served as Coordinator of Programs for Sojourn Chaplaincy at San Francisco General Hospital since October 2006.  Prior to coming to SFGH, Elizabeth completed a 4&#45;unit residency in Clinical Pastoral Education at St. Francis Hospital in San Francisco. She has also served in prison and jail settings.  Elizabeth currently serves as a Pastoral Associate at All Saints’ Episcopal Church in San Francisco and is active in the interfaith community. &lt;/p&gt;
+			
+			&lt;img class=&quot;imgLeft&quot; src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/bruce_lery.png&quot; width=&quot;120&quot; /&gt;
+			&lt;p&gt;&lt;b&gt;Fr. Bruce J. Lery&lt;/b&gt;, sm is a perpetually professed member of the Society of Mary, Marists, ordained as a Catholic priest in 1987. Fr. Bruce ministers at SFGH under the auspices of the Catholic Archdiocese of San Francisco.  Before profession Bruce worked for the federal government in Chicago and in San Francisco coordinating environmental planning for municipalities, and for regional associations of governments. Since ordination, Fr. Bruce has served as pastor, or in pastoral roles for communities (including military reservations) in Phoenix, AZ; the San Francisco Bay area; Kauai, HI, and Washington, D.C. In all of these geographical areas Fr. Bruce has been actively engaged in detention ministries, and in Spiritual Direction.  In the early 1990’s Fr. Bruce ministered to persons living with HIV/AIDS; doing so primarily in the Tenderloin of SF (Network Ministries), within the SF Jail system, and at SFGH. At SFGH Bruce participated in the Sojourn training for HIV/AIDS ministers, and remained to volunteer at Sojourn until transferred by his religious community from the Bay Area.  Academically Bruce has received M.A. (Botany), and M.Div. degrees. He has completed most academic course work for a D.Min. degree and has actively studied Spiritual Direction in Pecos, NM, and at the Washington Theological Union.&lt;/p&gt;
+			
+					</FileBody>
+	</node>
+	<node>
+		<Fname>
+Volunteer for SPCS ./hospital/services/palliative/volunteer.html
+		</Fname>
+		<Tax>1736</Tax>
+		<Path>./hospital/services/palliative/volunteer.html</Path>
+		<FileBody>
+			
+			&lt;p class=&quot;introduction&quot;&gt;Many of our patients do not have visitors during the day, either because family members live far away, or are unable to take time away from work or other responsibilities.  As a result, many patients must face difficult, life&#45;threatening conditions by themselves.  Volunteers help to provide important companionship and support for these individuals, bringing dignity and relief through attentive listening and companionship&lt;/p&gt;
+			
+			&lt;img src=&quot;/sites/zsfghospitalmedicine.ucsf.edu/files/images/hands.png&quot; style=&quot;padding:40px;&quot;/&gt;
+			
+			&lt;h3&gt;What roles do volunteers play?&lt;/h3&gt;
+			
+			&lt;p&gt;There are many different ways to support patient care, and the Palliative Care Program Director would be pleased to help you find ways to serve that are meaningful and comfortable for you.  Some of the possible roles include:&lt;/p&gt;
+			
+			&lt;ul&gt;
+				&lt;li&gt;Visiting patients (for example, engaging them in conversation, reading to them, playing music, or just sitting silently with them)&lt;/li&gt;
+				&lt;li&gt;Assisting patients in life review exercises (recording stories, writing letters, making phone calls, creating artwork)&lt;/li&gt;
+				&lt;li&gt;Taking patients for a walk (or brief trips out of their rooms)&lt;/li&gt;
+				&lt;li&gt;Bringing patients food, personal care items, art supplies, etc.&lt;/li&gt;
+				&lt;li&gt;Working on the palliative care program database&lt;/li&gt;
+				&lt;li&gt;Assisting with graphic design projects (such as formatting patient and family educational materials)&lt;/li&gt;
+				&lt;li&gt;Assisting with program website design and maintenance&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;h3&gt;Is there specific training or skills required to volunteer with SPCS?&lt;/h3&gt;
+			
+			&lt;p&gt;Your training requirements will depend on your interests, and what tasks or projects you would like to do.  For volunteers interested in visiting patients, hospital orientation and screening will be required.  For those interested in administrative/program development projects, training in health information &amp; patient privacy will be required.  We do not require personal experience or training in caring for people with advanced illness; however, all volunteers should be courteous, respectful, and sensitive to our particular patient population, many of whom are facing the end of their lives with little social or emotional support.&lt;/p&gt;
+			
+			&lt;h3&gt;What times can I volunteer?&lt;/h3&gt;
+			
+			&lt;p&gt;Volunteers are usually asked to commit to a minimum of 100 hours of service over 1&#45;2 years.  Individuals can participate in 4&#45;hour shifts (morning or evening), Monday through Friday, year&#45;round.&lt;/p&gt;
+			
+			&lt;h3&gt;How can I apply to volunteer?&lt;/h3&gt;
+			
+			&lt;p&gt;Contact the Volunteer Services Department at San Francisco General Hospital by calling 415&#45;206&#45;8193.&lt;/p&gt;
+					</FileBody>
+	</node>
+</nodes>

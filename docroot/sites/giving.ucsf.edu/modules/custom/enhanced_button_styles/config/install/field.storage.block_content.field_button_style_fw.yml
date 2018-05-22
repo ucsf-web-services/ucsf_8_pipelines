@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_button_style_fw
+field_name: field_button_style_fw
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: None
+    -
+      value: '2'
+      label: Heart
+    -
+      value: '3'
+      label: Podcast
+    -
+      value: '4'
+      label: Play
+    -
+      value: '5'
+      label: Download
+    -
+      value: '6'
+      label: Link
+    -
+      value: '7'
+      label: 'Chevron Right'
+    -
+      value: '8'
+      label: 'Paper Plane'
+    -
+      value: '9'
+      label: Phone
+    -
+      value: '11'
+      label: 'Video Camera'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

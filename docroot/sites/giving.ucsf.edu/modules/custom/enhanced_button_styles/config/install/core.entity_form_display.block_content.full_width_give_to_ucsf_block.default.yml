@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_give_to_ucsf_block
+    - field.field.block_content.full_width_give_to_ucsf_block.body
+    - field.field.block_content.full_width_give_to_ucsf_block.field_button_style
+    - field.field.block_content.full_width_give_to_ucsf_block.field_button_style_fw
+    - field.field.block_content.full_width_give_to_ucsf_block.field_color_option
+    - field.field.block_content.full_width_give_to_ucsf_block.field_link_to
+  module:
+    - link
+    - text
+id: block_content.full_width_give_to_ucsf_block.default
+targetEntityType: block_content
+bundle: full_width_give_to_ucsf_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_button_style:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_button_style_fw:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_color_option:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link_to:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

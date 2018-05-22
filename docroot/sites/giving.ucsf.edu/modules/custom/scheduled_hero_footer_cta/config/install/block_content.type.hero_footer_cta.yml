@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: hero_footer_cta
+label: 'Scheduled Hero Footer Call to Action'
+revision: 1
+description: ''

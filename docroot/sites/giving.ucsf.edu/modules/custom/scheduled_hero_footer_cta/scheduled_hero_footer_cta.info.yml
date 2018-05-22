@@ -1,0 +1,12 @@
+name: 'Scheduled Hero Footer Call to Action'
+description: 'Adds the Hero Footer Bar for scheduled announcements.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - filter
+  - link
+  - text
+version: 8.x-1.0
+package: UCSF

@@ -1,0 +1,17 @@
+contact.form.*.third_party.contact_ajax_popup:
+  type: mapping
+  label: 'Contact form Ajax'
+  mapping:
+    enabled:
+      type: boolean
+      label: 'Ajax form'
+    confirmation_type:
+      type: integer
+      label: 'Confirmation type'
+    load_from_uri:
+      type: integer
+      label: 'Node to load'
+    load_from_message:
+      type: text_format
+      label: 'Message to load'
+
