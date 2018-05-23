@@ -1,0 +1,11 @@
+AddType font/ttf .ttf
+AddType font/eot .eot
+AddType font/woff .woff
+AddType font/woff .woff2
+AddType font/otf .svg
+
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>

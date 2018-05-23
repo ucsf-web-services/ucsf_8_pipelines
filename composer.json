@@ -182,7 +182,7 @@
             },
             "drupal/lightning_layout" : {
                 "Update logic to check for the null value in PanelizerWidget" :
-                "https://www.drupal.org/project/lightning_layout/issues/2966924"
+                "https://www.drupal.org/files/issues/2018-04-27/lightning_layout-null-value-check-view_mode-0.patch"
             },
             "drupal/workbench_moderation" : {
                 "2627012 - Delete moderation_state fields when uninstalling workbench_moderation" :

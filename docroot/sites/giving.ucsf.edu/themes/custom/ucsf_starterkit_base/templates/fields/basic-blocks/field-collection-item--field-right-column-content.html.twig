@@ -1,26 +1,34 @@
+{% set icons = ['','fa-heart','fa-podcast','fa-play-circle','fa-download',
+'fa-link','fa-chevron-right','fa-paper-plane','fa-phone','fa-share-square','fa-video-camera']  %}
+{% set icon = icons[content.field_button_style['#items'].value - 1] %}
+{% set color_index = content.field_color_option['#items'].value %}
+{% set colors = ['blue','orange','teal']  %}
+{% if content.field_color_option['#items'].value is null and content.field_button_style['#items'].value == 1 %}
+    {% set color_index = 1 %}
+{% elseif content.field_color_option['#items'].value is null and content.field_button_style['#items'].value == 2 %}
+    {% set color_index = 2 %}
+{% endif %}
+{% set color = colors[color_index-1] %}
+
 {% if content.field_tcb_title['#items'] is not empty %}
     <h4>{{ content.field_tcb_title['#items'].value }}</h4>
 {% endif %}
-
 {% if content.field_tcb_body_text['#items'] is not empty %}
     <p>{{ content.field_tcb_body_text['#items'].value }}</p>
 {% endif %}
-
 {% if content.field_tcb_button_link['#items'] is not empty%}
     {% if content.field_tcb_button_link[0]['#url'].external %}
         {% set url = content.field_tcb_button_link[0]['#url'].uri %}
     {% else %}
          {% set url = path(content.field_tcb_button_link[0]['#url'].routeName, {'node': content.field_tcb_button_link[0]['#url'].routeParameters.node }) %}
     {% endif %}
-
-
-    {% if content.field_button_style['#items'].value == "1" %}
-        <a href="{{ url }}" class="btn btn--secondary anchor">
-            {{ content.field_tcb_button_link['#items'].title }}
+    {% if content.field_button_style['#items'].value < 2 %}
+        <a href="{{ url }}" class="btn btn--secondary anchor {{ color }}">
+            {{ content.field_tcb_button_link['#items'].title }} <i class="fa {{ icon }}" aria-hidden="true"></i>
         </a>
     {% else %}
-        <a href="{{ url }}" class="btn btn--with-icon anchor">
-            {{ content.field_tcb_button_link['#items'].title }} <i class="fa fa-heart"></i>
+        <a href="{{ url }}" class="btn btn--with-icon anchor {{ color }}">
+            {{ content.field_tcb_button_link['#items'].title }} <i class="fa {{ icon }}" aria-hidden="true"></i>
         </a>
     {% endif %}
 {% endif %}

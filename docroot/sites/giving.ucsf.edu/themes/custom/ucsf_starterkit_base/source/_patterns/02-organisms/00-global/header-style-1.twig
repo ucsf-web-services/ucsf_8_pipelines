@@ -16,42 +16,7 @@
 							{% endfor %}
 						{% endif %}
 					{% endblock %}
-					{% block search_panel %}
-						<li>
-							<div class="search-box--wrapper">
-								<form action="#" method="GET" name="form-search" id="form-search">
-									<fieldset>
-										<legend class="visually-hidden">
-											Search
-										</legend>
-										<div class="search-field--wrapper">
-											<span class="placeholder">Search giving.ucsf.edu</span>
-											<input class="input-text" type="text" name="search" id="searchDesktop">
-											<button id="searchDesktopSubmit" type="submit" class="fa fa-search search-icon"></button>
-											<label for="searchDesktop" class="visually-hidden">Search giving.ucsf.edu</label>
-											<a class="hidden anchor" name="search-button" id="search-button">Go</a>
-										</div>
-										<div class="search-advanced-form">
-											<div class="radio-circle">
-												<input type="radio" name="search-type" id="search-type-ucsf" value="all">
-												<div class="radio-ui"><span class="fa fa-check checkmark"></span></div>
-											</div>
-											<label for="search-type-ucsf">All UCSF</label>
-											<div class="radio-circle">
-												<input type="radio" name="search-type" id="search-type-give" value="give">
-												<div class="radio-ui"><span class="fa fa-check checkmark"></span></div>
-											</div>
-											<label for="search-type-give">giving.ucsf.edu</label>
-											<div class="advanced-form-close-button"><img src="{{ nav_close_icon }}" alt="Close Icon"></div>
-										</div>
-									</fieldset>
-								</form>
-							</div>
-							<a class="search-advanced-form-toggle">
-								ADVANCED
-							</a>
-						</li>
-					{% endblock %}
+
 				</ul>
 			</div>
 		</div>
@@ -94,6 +59,8 @@
 								</li>
 							{% endfor %}
 						{% endif %}
+					{% endblock %}
+					{% block search_button %}
 					{% endblock %}
 					{% block give_button %}
 					<li><a class="btn btn--with-icon header-give-btn" href="#">Give <span class="fa fa-heart"></span></a></li>
@@ -150,7 +117,7 @@
 						<li role="menuitem" aria-haspopup="true">
 							<a href="{{ item.link }}">{{ item.label }}</a>
 							{% if item.sublinks %}
-							<span class="display-arrow fa fa-play"></span>
+							<span class="display-arrow fa fa-angle-right"></span>
 							<ul class="dropdown-menu">
 							{% for item in item.sublinks %}
 								<li><a href="{{ item.link }}">{{ item.label }}</a></li>

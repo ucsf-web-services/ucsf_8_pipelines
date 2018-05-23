@@ -21,18 +21,27 @@
 							"link_href" : link_href,
 							"body" : body
 						} %}
+
 					{% endblock %}
 					</div>
 				</div>
+
+				{% block hero_bottom %}
+				{% if page.hero_bottom %}
+					<div class="messages-fixed-bottom">
+						{{ page.hero_bottom }}
+					</div>
+				{% endif %}
+				{% endblock %}
+
 			</div>
-			{% block link_to_small %}
+			{#% block link_to_small %}
 				{% if link_text %}
 					{% include '@molecules/01-text/06-link-with-icon.twig' with {
 							"link_text" : link_text,
 							"link_href" : link_href
 					} %}
 			    {% endif %}
-		    {% endblock %}
+		    {% endblock %#}
 		</div>
 	</div>
-

@@ -18,6 +18,7 @@ regions:
   footer_right: 'Footer Right'
   search: 'Header Search'
   footer_bottom: 'Footer Bottom'
+  hero_bottom: 'Front Page Hero Bottom'
 
 features:
   - comment_user_picture

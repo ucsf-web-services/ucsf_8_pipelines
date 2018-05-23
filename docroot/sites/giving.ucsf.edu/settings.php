@@ -244,7 +244,9 @@
  *   );
  * @endcode
  */
-$config_directories = array();
+$config_directories = array(
+  'sync' => dirname(DRUPAL_ROOT) . '/config/' . basename($site_path)
+);
 
 /**
  * Settings:
@@ -266,7 +268,7 @@ $config_directories = array();
  *
  * @see install_select_profile()
  */
-# $settings['install_profile'] = '';
+$settings['install_profile'] = 'lightning';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
@@ -716,12 +718,23 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
-if (file_exists(__DIR__ . '/settings.local.php')) {
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/ucsf8/giving-settings.inc';
+} elseif (file_exists(__DIR__ . '/settings.local.php')) {
   include __DIR__ . '/settings.local.php';
 }
 
-$settings['install_profile'] = 'lightning';
-
-if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/ucsf8/giving-settings.inc';
+/**
+ * issues with ADMIN pages not working due to memory issues.
+ */
+if (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], '/admin/people/permissions') === 0 ) {
+  ini_set('memory_limit', '512M');
 }
+
+/**
+ * Added config directory above docroot as Configuration Manager VCS location
+ * https://docs.acquia.com/acquia-cloud/develop/config-d8
+ * Using VCS instead of the sync directory, which is defaulting to
+ * sites/sitename.com/files/sync
+ */
+$config_directories['vcs'] = dirname(DRUPAL_ROOT) . '/config/' . basename($site_path);

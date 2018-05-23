@@ -1,14 +1,24 @@
 <div class="hero-text align-{{ alignment }}">
 
-	<h1 class="white-text">{{ heading }}</h1>
+	<h1>{{ heading }}</h1>
 
 	{% if body %}
 		<p>{{ body|raw }}</p>	
 	{% endif %}
-	{% if link_text %}
+
+	{% if cta_link %}
+
+        {% include '@molecules/01-text/06-link-with-icon.twig' with {
+            "link_text" : cta_text,
+            "link_href" : cta_link
+        } %}
+
+	{% else %}
+
 		{% include '@molecules/01-text/06-link-with-icon.twig' with {
 			"link_text" : link_text,
-			"link_href" : link_href
+			"link_href" : (link_href=='/node/1') ? 'https://campaign.ucsf.edu/?utm_source=givingweb&utm_medium=heroCTA' : link_href
 		} %}
+
 	{% endif %}
 </div>

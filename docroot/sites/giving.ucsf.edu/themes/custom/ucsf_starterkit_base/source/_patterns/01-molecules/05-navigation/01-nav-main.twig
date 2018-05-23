@@ -29,6 +29,7 @@
 										{% for item in item.sublinks %}
 											<li><a href="{{ item.link }}">{{ item.label }}</a></li>
 										{% endfor %}
+
 										</ul>
 									{% endif %}
 								</li>
@@ -88,7 +89,7 @@
 						<li role="menuitem" aria-haspopup="true">
 							<a href="{{ item.link }}">{{ item.label }}</a>
 							{% if item.sublinks %}
-							<span class="display-arrow fa fa-play"></span>
+							<span class="display-arrow fa fa-angle-right"></span>
 							<ul class="dropdown-menu">
 							{% for item in item.sublinks %}
 								<li><a href="{{ item.link }}">{{ item.label }}</a></li>

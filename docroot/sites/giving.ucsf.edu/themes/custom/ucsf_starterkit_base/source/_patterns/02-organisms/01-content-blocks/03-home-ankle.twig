@@ -1,3 +1,7 @@
+{% set icons = ['','fa-heart','fa-podcast','fa-play-circle','fa-download',
+'fa-link','fa-chevron-right','fa-paper-plane','fa-phone',
+'fa-share-square','fa-video-camera']  %}
+{% set icon = icons[content.field_button_style['#items'].value-1] %}
 <div class="block block--homepage-prefooter">
     <div class="content-area">
         <div class="column-wrapper">
@@ -18,7 +22,7 @@
                                 <h4>{{ give_to.title }}</h4>
                                 <p>{{ give_to.body_text }}</p>
                                 <a href="{{ give_to.link_url }}" class="btn btn--with-icon anchor">
-                                    {{ give_to.link_label }}<i class="fa fa-heart"></i>
+                                    {{ give_to.link_label }}<i class="fa {{ icon }}"></i>
                                 </a>
                             {% endblock %}
                         </div>

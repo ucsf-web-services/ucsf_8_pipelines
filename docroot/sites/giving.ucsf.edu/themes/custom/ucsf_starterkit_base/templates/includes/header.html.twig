@@ -16,7 +16,8 @@
 
 {% block branding %}
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-        <img class="nav-logo" src="{{ logo_box }}" alt="{{ site_name }}" />
+        <img class="nav-logo black" src="{{ logo_box }}" alt="{{ site_name }}" />
+        <img class="nav-logo white" src="{{ logo_box_white }}" alt="{{ site_name }}" />
         <span class="nav-site-title">{{ site_slogan }}</span>
     </a>
 {% endblock %}
@@ -29,6 +30,18 @@
     {{ page.primary_menu }}
 {% endblock %}
 
+
+{% block search_button %}
+<li><button class="mobile-search-form-toggle"><span class="fa fa-search"></span> <span class="text-indent">Search giving.ucsf.edu</span></button></li>
+{# COMMENTING OUT OLD SEARCH BUTTON    <li>
+        <input class="input-text hidden" type="text" name="search" id="searchDesktop">
+        <a class="btn btn-search" href="/search">
+            <span class="fa fa-search" aria-hidden="true"></span>
+        </a>
+    </li>#}
+{% endblock %}
+
+
 {% block give_button %}
     <li>
         <a class="btn btn--with-icon header-give-btn" href="{{ header_give_button }}">
@@ -37,10 +50,11 @@
     </li>
 {% endblock %}
 
+
+
 {% block toggles %}
     <ul class="nav-mobile-toggles">
-        <li><button class="mobile-search-form-toggle"><span class="visually-hidden">Search giving.ucsf.edu</span><span class="fa fa-search"></span></button></li>
-        <li><button class="mobile-menu-toggle"><span class="visually-hidden">Toggle Menu</span><span class="fa fa-bars"></span></button></li>
+        <li><button class="mobile-search-form-toggle"><span class="fa fa-search fa-fw"></span> <span class="text-indent">Search giving.ucsf.edu</span></button></li>
+        <li><button class="mobile-menu-toggle"><span class="fa fa-bars fa-fw"></span> <span class="text-indent">Toggle Menu</span></button></li>
     </ul>
 {% endblock %}
-

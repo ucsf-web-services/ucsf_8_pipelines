@@ -1,0 +1,51 @@
+/*** Page ***/
+
+/*.contents--wrapper {
+	& > div:last-child {
+		padding-bottom: 60px;
+		&.block--homepage-prefooter {
+			padding-bottom: 0px;
+		}
+		&.block--give-block-full-width {
+			padding-bottom: 0px;
+		}
+	}
+}
+
+@media screen and (min-width: $width-small) {
+	.contents--wrapper {
+		& > div:last-child {
+			&.block--homepage-prefooter {
+				padding-bottom: 0px;
+			}
+			&.block--give-block-full-width {
+				padding-bottom: 0px;
+			}
+		}
+	}
+}
+*/
+
+.page-body {
+	margin-bottom: 60px;
+}
+
+.page--content{
+	margin-top: 0px;
+	margin-bottom: 60px;
+}
+@page {
+  size: 8.5in 11.5in;
+  margin: 0.5in 0.5in;
+}
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    overflow: hidden;
+    height: 1px;
+}
+.text-indent {
+    display: inline-block;
+    left: -99999px;
+		position: absolute;
+}

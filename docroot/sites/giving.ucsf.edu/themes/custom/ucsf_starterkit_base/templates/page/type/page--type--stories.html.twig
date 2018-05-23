@@ -1,9 +1,11 @@
 {% extends "@pages/_article-base-template.twig" %}
 
+
 {% block header %}
     {% include directory ~ '/templates/includes/header.html.twig' with {
         'logo' : '/' ~ directory ~ '/images/UCSF_logo_white_RGB.svg',
-        'logo_box' :  '/' ~ directory ~ '/images/UCSF_logobox_navy_RGB.svg',
+        'logo_box' :  '/' ~ directory ~ '/images/UCSF-campaign-black.svg',
+        'logo_box_white' : '/' ~ directory ~ '/images/UCSF-campaign-white.svg',
         'site_slogan' : site.slogan,
         'site_name': site.name,
         'header_give_button' : header_give_button,
@@ -15,7 +17,7 @@
 {% endblock %}
 
 {% block top_section %}
-    <div class="content-area">
+    <div class="content-area" id="main-content">
         <div class="column-wrapper">
             {% if page.breadcrumb %}
                 <div class="column-large-12 column-medium-12 column-small-12 column-xsmall-12">

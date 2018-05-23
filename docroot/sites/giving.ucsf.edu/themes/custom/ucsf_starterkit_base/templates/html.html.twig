@@ -25,6 +25,16 @@
  * @ingroup themeable
  */
 #}
+
+{%
+set body_classes = [
+logged_in ? 'user-logged-in',
+not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+node_type ? 'page-node-type-' ~ node_type|clean_class,
+db_offline ? 'db-offline',
+current_path ? 'context' ~ current_path|clean_class,
+]
+%}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>
@@ -41,7 +51,10 @@
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
 
-  <body{{ attributes }}>
+  <body{{ attributes.addClass(body_classes) }}>
+  <div id="skip-link">
+      <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BQZDW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

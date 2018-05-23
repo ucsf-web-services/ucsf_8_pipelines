@@ -100,6 +100,8 @@
         '#title' => t('Header Give Button Link'),
         '#default_value' => theme_get_setting('header_give_button'),
       );
+
+
     }
 
     function ucsf_starterkit_base_preprocess_page(&$variables) {
@@ -130,7 +132,7 @@
       if(\Drupal::routeMatch()->getRouteName() === "entity.node.preview"){
         $variables['node'] = \Drupal::routeMatch()->getParameter('node_preview');
       }
-  
+
     }
 
     function ucsf_starterkit_base_theme_suggestions_block_alter(array &$suggestions, array $variables)
@@ -142,7 +144,10 @@
             $suggestions[] = 'block__' . $blockType . '__' . $bundle;
             $suggestions[] = 'block__block_type__' . $bundle;
         }
+
+
     }
+
 
     function ucsf_starterkit_base_theme_suggestions_page_alter(array &$suggestions, array $variables) {
         $current_path = \Drupal::service('path.current')->getPath();
@@ -175,16 +180,16 @@
         $node =  \Drupal\node\Entity\Node::load($id['node']);
         $field_hero_image = count($node->field_hero_image);
         $node_type = $variables['node_type'];
-
+        $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($path);
         $variables['_navigation']['is_transparent'] = ($field_hero_image > 0 && $node_type == 'landing_page') ? 'transparent' : 'xtransparent';
       }
 
-      // $path_class = !$variables['root_path'] ? 'transparent' : '';
-      // if (isset($path_class)) {
-      //   $variables['attributes']['class'][] = $path_class;
-      // }
+      if ($node = \Drupal::request()->attributes->get('node')) {
+        $variables['attributes']['class'][] = 'page-node-' . $node->id();
 
+      }
     }
+
 
     function ucsf_starterkit_base_preprocess_breadcrumb(&$variables){
       $node = \Drupal::routeMatch()->getParameter('node');

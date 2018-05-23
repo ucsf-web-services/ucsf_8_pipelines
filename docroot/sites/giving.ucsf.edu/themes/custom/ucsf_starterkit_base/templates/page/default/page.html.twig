@@ -3,7 +3,8 @@
 {% block header %}
     {% include directory ~ '/templates/includes/header.html.twig' with {
         'logo' : '/' ~ directory ~ '/images/UCSF_logo_white_RGB.svg',
-        'logo_box' :  '/' ~ directory ~ '/images/UCSF_logobox_navy_RGB.svg',
+        'logo_box' :  '/' ~ directory ~ '/images/UCSF-campaign-black.svg',
+        'logo_box_white' : '/' ~ directory ~ '/images/UCSF-campaign-white.svg',
         'site_slogan' : site.slogan,
         'site_name': site.name,
         'header_give_button' : header_give_button,
@@ -15,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-  <div class="contents--wrapper">
+  <div class="contents--wrapper" id="main-content">
     {% block top_section %}
       {% if node.field_hero_image.value %}
         {% set image = [{ 'background_image' : file_url(node.field_hero_image['0'].entity.uri.value) }] %}

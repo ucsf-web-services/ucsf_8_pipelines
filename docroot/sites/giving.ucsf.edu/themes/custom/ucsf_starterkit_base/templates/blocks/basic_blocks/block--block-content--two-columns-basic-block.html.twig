@@ -1,11 +1,9 @@
 {% extends directory ~ '/templates/blocks/block.html.twig' %}
-
 {% block content %}
     {% embed "@organisms/01-content-blocks/03-home-ankle.twig" %}
         {% block left %}
            {{ content.field_left_column_content }}
         {% endblock %}
-
         {% block right %}
             {{ content.field_right_column_content }}
         {% endblock %}

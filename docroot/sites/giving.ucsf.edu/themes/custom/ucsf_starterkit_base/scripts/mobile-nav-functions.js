@@ -15,7 +15,9 @@ jQuery(function($){
 			$mobileMenuToggle.on('click', function(e){
 				e.preventDefault();
 				var $navMainMobile = $(this).parent().parent().parent().parent().parent().parent().find('.nav-main-mobile');
-				$navMainMobile.toggleClass('open');
+        
+        $navMainMobile.slideToggle( "slow" );
+        $mobileMenuToggle.toggleClass('close');
 
 				if($(this).hasClass('active')) {
 					$navMainMobile.prop('aria-hidden',false);

@@ -1,0 +1,184 @@
+@media print {
+  * {
+    overflow: visible !important;
+    float: none !important;
+  }
+  html, body {
+    background-color: transparent;
+    height: auto;
+  }
+  div[class*="column-large-"] {
+    width: 100%;
+    float:none;
+    clear:both;
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav-brand a .nav-logo, .nav-global--wrapper, .nav-main--wrapper .nav-main .nav-mobile-toggles,
+  .breadcrumb,
+  .block--share-btns,
+  .block--give-block-full-width .block--give-to-ucsf-content,
+  .block--impact-stories-grid.related-articles,
+  footer,
+  .block--story-detail-hero, .hero-background, .ways-to-give--wrapper, .ways-to-give-options--wrapper,
+  .block--article-carousel.desktop-block,
+  .block--item.block--impact-stories-panel .block--item-image-panel,
+  .story-nugget-display-image,
+  .block-ways-to-get-involved--item .block--item-image {
+    display: none !important;
+  }
+
+  .slick-list {
+    height: auto !important;
+    .slick-track {
+      width: auto !important;
+      .slick-slide {
+        width: auto !important;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  img {
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: avoid; /* or 'auto' */
+  }
+  .block--item.block--impact-stories-panel .block--item-colored-panel {
+    width: 100%;
+    float: left !important;
+  }
+  .block.block--landing-hero {
+    height: auto !important;
+    background: #fff;
+    margin-bottom: 0;
+    .hero-text {
+      position: static;
+      text-align: left;
+      h1 {
+        color: #000;
+      }
+      p {
+        display: block;
+        color: #000;
+      }
+    }
+  }
+  .accordion-item .accordion-content {
+    display: block !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .body-content--wrapper {
+    display: block;
+  }
+  .nav-main--wrapper .nav-main .nav-main-brand a .nav-logo {
+    display: inline-block;
+  }
+  .nav--wrapper ~ .contents--wrapper {
+    margin-top: auto;
+  }
+  nav.nav--wrapper {
+    position: relative !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .column-wrapper {
+    margin: 0 0;
+  }
+  .fund-intro p {
+    margin-top: 25px;
+  }
+  .header-section.story h3 {
+    margin: 20px 0;
+  }
+  .photo-caption--wrapper {
+    color: #5c5c5c;
+    background-color: transparent;
+  }
+  .photo-caption--wrapper .photo-caption p {
+    color: #5c5c5c;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  .nav-main--wrapper .nav-main {
+    height: auto;
+  }
+  .block-quote-custom .quote .open-quote {
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .block-contact-us {
+    max-width: 100%;
+  }
+  #block-endowmentscontactus {
+    display: none;
+  }
+}
+
+.messages-fixed-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #33787d;
+  width: 100%;
+}
+.messages-fixed-bottom div {
+  text-align: center;
+}
+.block .messages-fixed-bottom div  {
+  color: #FFFFFF;
+  margin: 0 0;
+}
+div.kint {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  z-index: 10000;
+}
+pre.sf-dump {
+  position: absolute !important;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  z-index:1000;
+
+}
+
+.messages-fixed-bottom:hover {
+  background-color: #2c5459;
+}
+.messages-fixed-bottom a {
+  text-decoration: none;
+}
+.nav-main--wrapper .nav-main .nav-main-brand a .nav-logo {
+
+}
+.nav-main--wrapper .nav-main .nav-main-brand a .nav-logo.white {
+  display: none;
+}
+
+
+#toolbar-administration, #toolbar-administration * {
+  z-index: 1500;
+}
+
+.form-item, .description {
+  padding: 5px;
+}

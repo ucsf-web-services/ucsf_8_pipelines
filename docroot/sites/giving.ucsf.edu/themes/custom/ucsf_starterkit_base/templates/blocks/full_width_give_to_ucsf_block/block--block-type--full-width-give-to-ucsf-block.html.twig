@@ -1,5 +1,8 @@
 {% extends directory ~ '/templates/blocks/block.html.twig' %}
-
+{% set icons = ['','fa-heart','fa-podcast','fa-play-circle','fa-download',
+'fa-link','fa-chevron-right','fa-paper-plane','fa-phone','fa-share-square','fa-video-camera']  %}
+{% set icon = icons[content.field_button_style_fw['#items'].value - 1] %}
+{% set color = content.field_color_option['#items'].value %}
 {% block content %}
     {% embed "@molecules/02-blocks/07-give-block-full-width.twig" %}
         {% block content %}
@@ -13,9 +16,9 @@
                 {% set link_url = path(content.field_link_to[0]['#url'].routeName, {'node': content.field_link_to[0]['#url'].routeParameters.node }) %}
             {% endif %}
 
-            {% if content.field_button_style['#items'].value == 0 %}
-                <a class="btn btn--secondary" href="{{ link_url }}">
-                    {{ content.field_link_to['#items'].title }}
+            {% if (content.field_button_style['#items'].value == 0 or content.field_button_style_fw['#items'].value == 1) %}
+                <a class="btn btn--secondary {{ color }}" href="{{ link_url }}">
+                    {{ content.field_link_to['#items'].title }} <i class="fa {{ icon }}"></i>
                 </a>
             {% else %}
                 <a class="btn btn--with-icon" href="{{ link_url }}">

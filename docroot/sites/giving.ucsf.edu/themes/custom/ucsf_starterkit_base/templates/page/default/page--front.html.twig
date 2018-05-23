@@ -10,28 +10,34 @@
 {% block header %}
     {% include directory ~ '/templates/includes/header.html.twig' with {
         'logo' : '/' ~ directory ~ '/images/UCSF_logo_white_RGB.svg',
-        'logo_box' :  '/' ~ directory ~ '/images/UCSF_logobox_navy_RGB.svg',
+        'logo_box' :  '/' ~ directory ~ '/images/UCSF-campaign-black.svg',
+        'logo_box_white' : '/' ~ directory ~ '/images/UCSF-campaign-white.svg',
         'site_slogan' : site.slogan,
         'site_name': site.name,
         'header_give_button' : header_give_button,
-        'global_nav_header_link' : 'http://www.ucsf.edu/',
+        'global_nav_header_link' : 'https://www.ucsf.edu/',
         'footer':{
           'copyright' : copyright_text
         }
     } %}
+
+
 {% endblock %}
 
 {% block content %}
   <div class="contents--wrapper">
     {% block top_section %}
       {% include "@molecules/02-blocks/01-block-hero.twig" with {
-        "backgrounds" : hero_items,
-        "heading" : node.field_page_name.value,
-        "alignment" : "right",
-        "body" : node.field_copy_text.value,
-        "link_text" : 'SEE YOUR IMPACT',
-        "link_href" : path('entity.node.canonical', {'node': node.field_link_to.entity.nid.value})
+          "backgrounds" : hero_items,
+          "heading" : node.field_page_name.value,
+          "alignment" : "right",
+          "body" : node.field_copy_text.value,
+          "link_text" : 'EXPLORE THE CAMPAIGN',
+            "link_href" : path('entity.node.canonical', {'node': node.field_link_to.entity.nid.value}),
+            "cta_link"  : (node.field_cta_link.0.url.external) ? node.field_cta_link.0.url : (node.field_cta_link.0.url.routeName) ? path(node.field_cta_link.0.url.routeName, node.field_cta_link.0.url.routeParameters) : '',
+            "cta_text" : node.field_cta_link.title
       } %}
+
       {% if alert_bar_is_visible %}
         {% include "@molecules/08-messaging/00-alert.twig" with {
           'alert' : {
@@ -42,9 +48,11 @@
       {% endif %}
     {% endblock %}
     {% block middle_section %}
-        {% if page.content %}
-          {{ page.content }}
-        {% endif %}
+        <div id="main-content">
+          {% if page.content %}
+            {{ page.content }}
+          {% endif %}
+        </div>
     {% endblock %}
     {% block bottom_section %}
       {% if page.footer %}
@@ -58,4 +66,6 @@
     {% include directory ~ '/templates/includes/footer.html.twig' with {
       'logo' : '/' ~ directory ~ '/images/UCSF_logobox_white.png'
     } %}
+
+
 {% endblock %}

@@ -12,7 +12,6 @@ jQuery(function($){
 	var $searchFormToggle = $('.mobile-search-form-toggle'),
 	$searchForm = $('.nav-main-mobile-search');
 
-
 	var mobileSearchEvents = {
 		init: function() {
 			this.toggleSearchForm();
@@ -25,7 +24,8 @@ jQuery(function($){
 				e.preventDefault();
 				var $searchForm = $(this).parent().parent().parent().parent().parent().parent().find('.nav-main-mobile-search');
 
-				$searchForm.toggleClass('open');
+        $searchForm.slideToggle( "slow" );
+        $searchFormToggle.toggleClass('close');
 
 			});
 		},
@@ -37,7 +37,7 @@ jQuery(function($){
 					if( '' != val) {
 						 return;
 					}
-					console.log('working focusin');
+					//console.log('working focusin');
 					$('.placeholder').hide();
 				})
 				.on('focusout', '#searchMobile', function(e){
@@ -46,7 +46,7 @@ jQuery(function($){
 					if( '' != val) {
 						 return;
 					}
-					console.log('working focusout');
+					//console.log('working focusout');
 					$('.placeholder').show();
 				});
 			
